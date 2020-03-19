@@ -4,39 +4,35 @@ using UnityEngine;
 
 public class FlashlightController : MonoBehaviour
 {
-    public GameObject Flashlight;
-    private bool FlashlightE = false;
+    AudioSource flashlightsound;
+    public GameObject spotlight;
+    private bool isactive = true;
     void Start()
     {
-
+        flashlightsound = GetComponent<AudioSource>();
     }
 
-
+    // Update is called once per frame
     void Update()
     {
-        if (FlashlightE == true)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (Input.GetKeyDown(KeyCode.F)) 
-            { 
-                Flashlight.SetActive(false);
-                FlashlightE = false;
-                return;
-            }
-        }
-        if (FlashlightE == false)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (isactive == true)
             {
-                Flashlight.SetActive(true);
-                FlashlightE = true;
+                flashlightsound.Play(0);
+                isactive = false;
+                spotlight.SetActive(false);
                 return;
+
+            }
+            if (isactive == false)
+            {
+                flashlightsound.Play(0);
+                isactive = true;
+                spotlight.SetActive(true);
+                return;
+
             }
         }
-
-        
-        
-
-
-        
     }
 }
