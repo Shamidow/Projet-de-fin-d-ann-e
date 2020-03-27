@@ -48296,6 +48296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_WalkSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Height
       value: 1.65
@@ -52508,11 +52512,11 @@ Transform:
   - {fileID: 1674928821}
   - {fileID: 1809229923}
   - {fileID: 1172276136}
-  - {fileID: 472295812}
   - {fileID: 1884056970}
+  - {fileID: 472295812}
   - {fileID: 1368473368}
-  - {fileID: 1649304349}
   - {fileID: 1707066958610371059}
+  - {fileID: 1649304349}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
