@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHP : MonoBehaviour
 {
-    public static float hp = 100;
+    public static float hp = 100, xMin = 0, xMax = 100;
     private bool trigger;
     void Start()
     {
