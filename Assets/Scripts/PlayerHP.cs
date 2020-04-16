@@ -23,6 +23,7 @@ public class PlayerHP : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        hp = Mathf.Clamp(hp, 0, 100);
     }
     private void OnTriggerEnter(Collider other)
     {
