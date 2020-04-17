@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private bool ventolineCheck = false;
+    private float timervento = 0f;
     void Start()
     {
         
@@ -13,9 +14,19 @@ public class PlayerActions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.V))
+        if(ventolineCheck == true)
         {
             Ventoline();
+            timervento = timervento + Time.deltaTime;
+            Debug.Log(PlayerHP.hp);
+        }
+        if(timervento >= 5f)
+        {
+            ventolineCheck = false;
+        }
+        if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false)
+        {
+            ventolineCheck = true;
         }
     }
     public void Ventoline()
