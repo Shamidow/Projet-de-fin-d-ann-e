@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class RaycastPerso : MonoBehaviour
 {
-    public static bool getDoor = false; // Appel de la prise de flashlight
+    // Labo 
+
+    // DoorLabo
+    public static bool getDoorLabo = false; 
+    // Keylabo
+    public static bool keyLabo = false;
+    // Game Object
+    public GameObject objectLaboKey;
 
     void Start()
     {
@@ -36,10 +43,15 @@ public class RaycastPerso : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.E)) // Input sur le E
             {
-                if (hit.collider.gameObject.CompareTag("Door")) // Un comparetag sur le raycast
+                if (hit.collider.gameObject.CompareTag("Door Labo")) // Un comparetag sur le raycast
                 {
-                    getDoor = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorLabo = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
+                }
+                if (hit.collider.gameObject.CompareTag("KeyLabo"))
+                {
+                    objectLaboKey.SetActive(true);
+                    keyLabo = true;
                 }
             }
 
