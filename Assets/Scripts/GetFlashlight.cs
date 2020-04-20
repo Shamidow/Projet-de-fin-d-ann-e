@@ -17,11 +17,11 @@ public class GetFlashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (RaycastPerso.getFlash == true)
+      /*  if (RaycastPerso.getFlash == true)
         {
             playerLight.SetActive(true);
             sofaLight.SetActive(false);
-        }
+        } */
     }
 
 

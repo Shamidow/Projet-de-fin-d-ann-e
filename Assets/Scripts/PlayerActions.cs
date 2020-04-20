@@ -23,6 +23,7 @@ public class PlayerActions : MonoBehaviour
         if(timervento >= 5f)
         {
             ventolineCheck = false;
+            timervento = 0f;
         }
         if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false)
         {

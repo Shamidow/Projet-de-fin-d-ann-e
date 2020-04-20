@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaycastPerso : MonoBehaviour
 {
-    public static bool getFlash = false; // Appel de la prise de flashlight
+    public static bool getDoor = false; // Appel de la prise de flashlight
 
     void Start()
     {
@@ -32,21 +32,20 @@ public class RaycastPerso : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3, layerMask)) //Range de 3
         {
             Debug.Log(hit.transform.name);
+
             
-            
-            if (hit.collider.gameObject.CompareTag("Flashlight")) // Un comparetag sur le raycast
+            if (Input.GetKeyDown(KeyCode.E)) // Input sur le E
             {
-                Debug.Log("Flashlight OK");
-                if (Input.GetKeyDown(KeyCode.E)) // Input sur le E
+                if (hit.collider.gameObject.CompareTag("Door")) // Un comparetag sur le raycast
                 {
-                    getFlash = true; // getFlash est un static qui va tirgger le script de la flashlight
-                    Debug.Log("GetFlashTrue");
+                    getDoor = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
                 }
             }
-            
-            
 
-           
+
+
+
 
             else
             {
