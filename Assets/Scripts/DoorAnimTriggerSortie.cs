@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorAnimTriggerSDM : MonoBehaviour
+public class DoorAnimTriggerSortie : MonoBehaviour
 {
     Animator m_Animator;
     // Start is called before the first frame update
@@ -17,10 +17,10 @@ public class DoorAnimTriggerSDM : MonoBehaviour
 
 
         // On prends le raycast dans le raycast perso, on l'utilise pour trigger le triger bouger
-        if (RaycastPerso.getDoorSDM == true)
+        if (RaycastPerso.getDoorSortie == true)
         {
             // Ici présent 
-            m_Animator.SetTrigger("AisseDM");
+            m_Animator.SetTrigger("Sortie");
         }
 
     }

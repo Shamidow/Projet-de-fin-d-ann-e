@@ -9,6 +9,8 @@ TagManager:
   - Door
   - KeyLabo
   - Door Labo
+  - Door SDM
+  - Door Sortie
   layers:
   - Default
   - TransparentFX
