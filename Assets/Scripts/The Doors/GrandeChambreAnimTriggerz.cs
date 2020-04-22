@@ -21,6 +21,7 @@ public class GrandeChambreAnimTriggerz : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("GC");
+            RaycastPerso.getDoorGC = false;
         }
 
     }

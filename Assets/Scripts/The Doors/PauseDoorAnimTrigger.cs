@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AChambreDoorTrigger : MonoBehaviour
+public class PauseDoorAnimTrigger : MonoBehaviour
 {
     Animator m_Animator;
     // Start is called before the first frame update
@@ -17,11 +17,11 @@ public class AChambreDoorTrigger : MonoBehaviour
 
 
         // On prends le raycast dans le raycast perso, on l'utilise pour trigger le triger bouger
-        if (RaycastPerso.getDoorA == true)
+        if (RaycastPerso.getDoorPause == true)
         {
             // Ici présent 
-            m_Animator.SetTrigger("A");
-            RaycastPerso.getDoorA = false;
+            m_Animator.SetTrigger("Pause");
+            RaycastPerso.getDoorPause = false;
         }
 
     }

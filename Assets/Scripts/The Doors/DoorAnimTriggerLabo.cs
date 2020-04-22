@@ -21,6 +21,7 @@ public class DoorAnimTriggerLabo : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("Labo");
+            RaycastPerso.getDoorLabo = false;
         }
 
     }

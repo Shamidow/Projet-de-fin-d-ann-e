@@ -21,6 +21,7 @@ public class CChambreAnimTrigger : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("C");
+            RaycastPerso.getDoorC = false;
         }
 
     }

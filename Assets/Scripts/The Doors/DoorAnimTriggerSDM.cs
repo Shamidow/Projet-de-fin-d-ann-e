@@ -21,6 +21,7 @@ public class DoorAnimTriggerSDM : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("AisseDM");
+            RaycastPerso.getDoorSDM = false;
         }
 
     }

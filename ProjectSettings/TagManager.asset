@@ -17,6 +17,7 @@ TagManager:
   - Door A
   - Door B
   - Door C
+  - Door Pause
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,7 @@ public class DoorAnimTriggerSortie : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("Sortie");
+            RaycastPerso.getDoorSortie = false;
         }
 
     }

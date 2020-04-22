@@ -21,6 +21,7 @@ public class QuartiersDoorAnimTrigger : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("Quartiers");
+            RaycastPerso.getDoorQuartiers = false;
         }
 
     }

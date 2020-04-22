@@ -17,10 +17,11 @@ public class CouloirDoorAnimTrigger : MonoBehaviour
 
 
         // On prends le raycast dans le raycast perso, on l'utilise pour trigger le triger bouger
-        if (RaycastPerso.getDoorSortie == true)
+        if (RaycastPerso.getDoorCouloir == true)
         {
             // Ici présent 
             m_Animator.SetTrigger("Sortie");
+            RaycastPerso.getDoorCouloir = false;
         }
 
     }
