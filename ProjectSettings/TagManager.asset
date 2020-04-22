@@ -7,6 +7,8 @@ TagManager:
   - ball
   - Cloud
   - Door
+  - KeyLabo
+  - Door Labo
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,9 @@ public class RaycastPerso : MonoBehaviour
     // DoorLabo
     public static bool getDoorLabo = false; 
     // Keylabo
-    public static bool keyLabo = false;
+    // public static bool keyLabo = false;
     // Game Object
-    public GameObject objectLaboKey;
+    // public GameObject objectLaboKey;
 
     void Start()
     {
@@ -40,18 +40,23 @@ public class RaycastPerso : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            
-            if (Input.GetKeyDown(KeyCode.E)) // Input sur le E
+            // Input sur le E
+
+            if (Input.GetKeyDown(KeyCode.E)) 
             {
-                if (hit.collider.gameObject.CompareTag("Door Labo")) // Un comparetag sur le raycast
+
+                // LABO
+
+                if (hit.collider.gameObject.CompareTag("Door Labo")) 
                 {
                     getDoorLabo = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
+
                 if (hit.collider.gameObject.CompareTag("KeyLabo"))
                 {
-                    objectLaboKey.SetActive(true);
-                    keyLabo = true;
+                    // objectLaboKey.SetActive(true);
+                    // keyLabo = true;
                 }
             }
 

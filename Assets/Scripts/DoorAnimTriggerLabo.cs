@@ -17,7 +17,7 @@ public class DoorAnimTriggerLabo : MonoBehaviour
         
 
         // On prends le raycast dans le raycast perso, on l'utilise pour trigger le triger bouger
-        if (RaycastPerso.getDoor == true)
+        if (RaycastPerso.getDoorLabo == true)
         {
             // Ici présent 
             m_Animator.SetTrigger("Labo");
