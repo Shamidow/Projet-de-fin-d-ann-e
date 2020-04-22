@@ -14,6 +14,9 @@ TagManager:
   - Door Couloir
   - Door Quartiers
   - Door GC
+  - Door A
+  - Door B
+  - Door C
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,12 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorGC = false;
 
+    public static bool getDoorA = false;
+
+    public static bool getDoorB = false;
+
+    public static bool getDoorC = false;
+
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -95,6 +101,30 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Door GC"))
                 {
                     getDoorGC = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                }
+
+                // Chambre A
+
+                if (hit.collider.gameObject.CompareTag("Door A"))
+                {
+                    getDoorA = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                }
+
+                // Chambre B
+
+                if (hit.collider.gameObject.CompareTag("Door B"))
+                {
+                    getDoorB = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                }
+
+                // Chambre C
+
+                if (hit.collider.gameObject.CompareTag("Door C"))
+                {
+                    getDoorC = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
 
