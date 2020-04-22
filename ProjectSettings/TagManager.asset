@@ -11,6 +11,9 @@ TagManager:
   - Door Labo
   - Door SDM
   - Door Sortie
+  - Door Couloir
+  - Door Quartiers
+  - Door GC
   layers:
   - Default
   - TransparentFX

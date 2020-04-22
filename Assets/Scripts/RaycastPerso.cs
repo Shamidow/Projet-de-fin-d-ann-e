@@ -17,6 +17,10 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorSortie = false;
 
+    public static bool getDoorQuartiers = false;
+
+    public static bool getDoorGC = false;
+
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -56,11 +60,21 @@ public class RaycastPerso : MonoBehaviour
                     getDoorLabo = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
+                if (hit.collider.gameObject.CompareTag("KeyLabo"))
+                {
+                    // objectLaboKey.SetActive(true);
+                    // keyLabo = true;
+                }
+
+                // Sortie
+
                 if (hit.collider.gameObject.CompareTag("Door Sortie"))
                 {
                     getDoorSortie = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
+
+                // SDM
 
                 if (hit.collider.gameObject.CompareTag("Door SDM"))
                 {
@@ -68,11 +82,23 @@ public class RaycastPerso : MonoBehaviour
                     Debug.Log("Door Opening");
                 }
 
-                if (hit.collider.gameObject.CompareTag("KeyLabo"))
+                // Quartiers
+
+                if (hit.collider.gameObject.CompareTag("Door Quartiers"))
                 {
-                    // objectLaboKey.SetActive(true);
-                    // keyLabo = true;
+                    getDoorQuartiers = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
                 }
+
+                // Grande Chambre
+
+                if (hit.collider.gameObject.CompareTag("Door GC"))
+                {
+                    getDoorGC = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                }
+
+
             }
 
 
