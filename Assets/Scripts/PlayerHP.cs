@@ -14,11 +14,13 @@ public class PlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (trigger == true)
-        {
-            hp = hp - 3 * Time.deltaTime;
-            Debug.Log(hp);
-        }
+            if (trigger == true)
+            {
+                hp = hp - 3 * Time.deltaTime;
+                Debug.Log(hp);
+                
+            }
+        
         if(hp <= 0)
         {
             Destroy(gameObject);

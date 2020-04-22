@@ -31,6 +31,8 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorCouloir = false;
 
+    public static bool getMedic1 = false;
+
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -146,6 +148,16 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorCouloir = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
+                }
+
+                // Medics 
+
+                // Medic 1
+
+                if (hit.collider.gameObject.CompareTag("Boite Medic 1"))
+                {
+                    getMedic1 = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Medic !");
                 }
 
 

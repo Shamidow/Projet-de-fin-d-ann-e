@@ -18,6 +18,7 @@ TagManager:
   - Door B
   - Door C
   - Door Pause
+  - Boite Medic 1
   layers:
   - Default
   - TransparentFX

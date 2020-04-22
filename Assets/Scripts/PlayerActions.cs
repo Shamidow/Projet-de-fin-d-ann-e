@@ -6,6 +6,7 @@ public class PlayerActions : MonoBehaviour
 {
     private bool ventolineCheck = false;
     private float timervento = 0f;
+    public static int ventoline = 0;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -24,9 +25,10 @@ public class PlayerActions : MonoBehaviour
         if(timervento >= 5f)
         {
             ventolineCheck = false;
+            ventoline--;
             timervento = 0f;
         }
-        if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false)
+        if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false && ventoline != 0)
         {
             ventolineCheck = true;
         }
