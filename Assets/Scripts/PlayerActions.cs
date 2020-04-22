@@ -8,7 +8,8 @@ public class PlayerActions : MonoBehaviour
     private float timervento = 0f;
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
