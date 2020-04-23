@@ -192,6 +192,15 @@ public class RaycastPerso : MonoBehaviour
                     Debug.Log("Medic !");
                 }
 
+                // Ventoline
+
+                if (hit.collider.gameObject.CompareTag("Ventoline"))
+                {
+                    PlayerActions.ventoline++;
+                    Debug.Log("J'ai  trouvé de la Ventoline");
+                    Destroy(hit.transform.gameObject);
+                }
+
 
             }
 

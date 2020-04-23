@@ -23,6 +23,7 @@ TagManager:
   - Boite Medic 3
   - Boite Medic 4
   - Boite Medic 5
+  - Ventoline
   layers:
   - Default
   - TransparentFX
