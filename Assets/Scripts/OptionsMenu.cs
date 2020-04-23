@@ -8,6 +8,11 @@ public class OptionsMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void  volumemanager(float volume)
     {
         audioMixer.SetFloat("volume", volume);
