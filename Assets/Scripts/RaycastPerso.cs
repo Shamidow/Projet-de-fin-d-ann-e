@@ -33,6 +33,14 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getMedic1 = false;
 
+    public static bool getMedic2 = false;
+
+    public static bool getMedic3 = false;
+
+    public static bool getMedic4 = false;
+
+    public static bool getMedic5 = false;
+
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -157,6 +165,30 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Boite Medic 1"))
                 {
                     getMedic1 = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Medic !");
+                }
+
+                if (hit.collider.gameObject.CompareTag("Boite Medic 2"))
+                {
+                    getMedic2 = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Medic !");
+                }
+
+                if (hit.collider.gameObject.CompareTag("Boite Medic 3"))
+                {
+                    getMedic3 = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Medic !");
+                }
+
+                if (hit.collider.gameObject.CompareTag("Boite Medic 4"))
+                {
+                    getMedic4 = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Medic !");
+                }
+
+                if (hit.collider.gameObject.CompareTag("Boite Medic 5"))
+                {
+                    getMedic5 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
                 }
 
