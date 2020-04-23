@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour
 {
     public GameObject commandesmenu;
     public GameObject commandes;
+    public GameObject optionsMenu;
+    public GameObject menuMenu;
     void Start()
     {
 
@@ -36,5 +38,17 @@ public class Menu : MonoBehaviour
     {
         commandes.SetActive(false);
         commandesmenu.SetActive(true);
+    }
+
+    public void ReturnOptions()
+    {
+        optionsMenu.SetActive(false);
+        menuMenu.SetActive(true);
+    }
+
+    public void Options()
+    {
+        optionsMenu.SetActive(true);
+        menuMenu.SetActive(false);
     }
 }
