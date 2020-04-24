@@ -64,7 +64,7 @@ public class RaycastPerso : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         Debug.DrawRay(transform.position, transform.forward * 5, Color.red);
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3, layerMask)) //Range de 3
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 4, layerMask)) //Range de 4
         {
             Debug.Log(hit.transform.name);
 
