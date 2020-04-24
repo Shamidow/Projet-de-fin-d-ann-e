@@ -9,6 +9,8 @@ public class FlashlightController : MonoBehaviour
     private bool isactive = true;
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         flashlightsound = GetComponent<AudioSource>();
     }
 

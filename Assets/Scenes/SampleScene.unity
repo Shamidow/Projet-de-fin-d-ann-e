@@ -9164,7 +9164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289863017}
   m_LocalRotation: {x: -0.6816333, y: 0.21068102, z: 0.2528169, w: 0.6535085}
-  m_LocalPosition: {x: -0.0066, y: 0.2356, z: 0}
+  m_LocalPosition: {x: -0.0063, y: 0.2235, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1341405497}
@@ -9182,8 +9182,8 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 0.75686276, a: 0.78431374}
   m_Intensity: 1
-  m_Range: 20
-  m_SpotAngle: 101.3
+  m_Range: 52.876343
+  m_SpotAngle: 61.598812
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -14509,7 +14509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3c78979a2f25a4faa705f0269561f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CrouchButton: 99
+  CrouchButton: 306
   characterController: {fileID: 1486957697917988889}
   High: {fileID: 5408910894803069682}
   horizontalInputName: Horizontal
