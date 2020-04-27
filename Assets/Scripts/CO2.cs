@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CO2 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject extincteur;
+    public GameObject empty;
+    public GameObject auEx;
     void Start()
     {
         
@@ -19,7 +21,27 @@ public class CO2 : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Destroy(other.transform.gameObject);
+            extincteur.SetActive(false);
+            ;
+            ;
+            ;
+            ;
+            ;
+            ;
+            ;
+            ;
+            ;
+            ;
+            auEx.SetActive(true);
+            auEx.transform.parent = null;
+            ;
+            ;
+            ;
+            ;
+            ;
+            RaycastPerso.extincteur = false;
+            Destroy(other.transform.gameObject);            
+            empty.SetActive(false);
         }
     }
 }
