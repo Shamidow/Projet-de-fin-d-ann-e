@@ -9,6 +9,11 @@ public class RaycastPerso : MonoBehaviour
     // DoorLabo
     public static bool getDoorLabo = false;
     // Keylabo
+    public static bool keyLabo = false;
+    // LecteurLabo
+    public static bool lecteurLabo = false;
+    public GameObject lecteurRouge;
+    public GameObject lecteurRougeValide;
     // public static bool keyLabo = false;
     // Game Object
     // public GameObject objectLaboKey;
@@ -40,6 +45,11 @@ public class RaycastPerso : MonoBehaviour
     public static bool getMedic4 = false;
 
     public static bool getMedic5 = false;
+
+    // Composant Machines
+    public static bool composant = false;
+    public GameObject composantMachine;
+    public static bool cdm = false;
 
     void Start()
     {
@@ -75,20 +85,26 @@ public class RaycastPerso : MonoBehaviour
 
                 // LABO
 
-                if (hit.collider.gameObject.CompareTag("Door Labo")) 
+                if (hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == true) 
                 {
                     getDoorLabo = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
                 if (hit.collider.gameObject.CompareTag("KeyLabo"))
                 {
-                    // objectLaboKey.SetActive(true);
-                    // keyLabo = true;
+                    keyLabo = true;
+                    Destroy(hit.transform.gameObject);
+                }
+                if (hit.collider.gameObject.CompareTag("LecteurLabo") && keyLabo == true)
+                {
+                    lecteurRouge.SetActive(false);
+                    lecteurRougeValide.SetActive(true);
+                    lecteurLabo = true;
                 }
 
-                // Sortie
+                    // Sortie
 
-                if (hit.collider.gameObject.CompareTag("Door Sortie"))
+                    if (hit.collider.gameObject.CompareTag("Door Sortie"))
                 {
                     getDoorSortie = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
@@ -199,6 +215,19 @@ public class RaycastPerso : MonoBehaviour
                     PlayerActions.ventoline++;
                     Debug.Log("J'ai  trouvé de la Ventoline");
                     Destroy(hit.transform.gameObject);
+                }
+
+                // Composant Electrique et machine
+
+                if (hit.collider.gameObject.CompareTag("Composant"))
+                {
+                    composant = true;
+                    Destroy(hit.transform.gameObject);
+                }
+                if (hit.collider.gameObject.CompareTag("Machine") && composant == true);
+                {
+                    cdm = true;
+                    composantMachine.SetActive(true);
                 }
 
 
