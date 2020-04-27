@@ -35,6 +35,7 @@ TagManager:
   - LecteurPause
   - KeyGucci
   - LGucci
+  - Extincteur
   layers:
   - Default
   - TransparentFX
