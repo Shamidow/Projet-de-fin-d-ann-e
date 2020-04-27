@@ -7,6 +7,8 @@ public class PlayerActions : MonoBehaviour
     private bool ventolineCheck = false;
     private float timervento = 0f;
     public static int ventoline = 0;
+    public GameObject flash;
+    public GameObject fire;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -31,6 +33,16 @@ public class PlayerActions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false && ventoline != 0)
         {
             ventolineCheck = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            fire.SetActive(false);
+            flash.SetActive(true);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha2) && RaycastPerso.extincteur == true)
+        {
+            fire.SetActive(true);
+            flash.SetActive(false);
         }
     }
     public void Ventoline()

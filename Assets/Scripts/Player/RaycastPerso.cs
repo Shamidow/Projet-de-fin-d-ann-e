@@ -87,6 +87,12 @@ public class RaycastPerso : MonoBehaviour
     public GameObject composantMachine;
     public static bool cdm = false;
 
+    //Extincteur
+
+    public static bool extincteur = false;
+    public GameObject pchit;
+    public GameObject flash;
+
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -304,10 +310,20 @@ public class RaycastPerso : MonoBehaviour
                     composant = true;
                     Destroy(hit.transform.gameObject);
                 }
-                if (hit.collider.gameObject.CompareTag("Machine") && composant == true);
+                if (hit.collider.gameObject.CompareTag("Machine") && composant == true) 
                 {
                     cdm = true;
-                    // composantMachine.SetActive(true);
+                    composantMachine.SetActive(true);
+                }
+
+                // Extincteur
+
+                if (hit.collider.gameObject.CompareTag("Extincteur"))
+                {
+                    extincteur = true;
+                    Destroy(hit.transform.gameObject);
+                    flash.SetActive(false);
+                    pchit.SetActive(true);
                 }
 
 
