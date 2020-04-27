@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LecteurBadge
+  m_Name: BadgeVert
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 2
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: c6afd252192a8514aa876885b7208fe7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 06f17ccf09ccc204480aa3fcc688d688, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -36,15 +36,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: ceab45e972ee8a74daf889df3c0aaa0f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 74ba8f8253949c447bbbf8b402d23559, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ffe1dba6a194e7943aa9179d4803aed7, type: 3}
+        m_Texture: {fileID: 2800000, guid: dce8c5f70544a8b438c6974c66e4c406, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 0d227f6374bf2f74ba2324296f6e60cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: f60fe3ba54107ee4bb5a7ba79d72748c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
