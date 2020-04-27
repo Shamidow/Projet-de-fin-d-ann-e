@@ -24,6 +24,9 @@ TagManager:
   - Boite Medic 4
   - Boite Medic 5
   - Ventoline
+  - LecteurLabo
+  - Composant
+  - Machine
   layers:
   - Default
   - TransparentFX
