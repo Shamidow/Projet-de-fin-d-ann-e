@@ -36,6 +36,8 @@ TagManager:
   - KeyGucci
   - LGucci
   - Extincteur
+  - CO2
+  - Obstacle
   layers:
   - Default
   - TransparentFX
