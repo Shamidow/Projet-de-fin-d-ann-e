@@ -27,6 +27,14 @@ TagManager:
   - LecteurLabo
   - Composant
   - Machine
+  - KeyA
+  - LecteurCarteA
+  - LecteurC
+  - KeyC
+  - KeyPause
+  - LecteurPause
+  - KeyGucci
+  - LGucci
   layers:
   - Default
   - TransparentFX

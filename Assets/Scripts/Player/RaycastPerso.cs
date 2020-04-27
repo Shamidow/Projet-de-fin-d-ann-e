@@ -24,15 +24,51 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorQuartiers = false;
 
+    // Chambre Gucci
+
     public static bool getDoorGC = false;
+    // KeyA
+    public static bool keyGucci = false;
+    // LecteurA
+    public static bool lecteurG = false;
+    public GameObject lecteurCG;
+    public GameObject lecteurGValide;
+
+    // Chambre A
 
     public static bool getDoorA = false;
+    // KeyA
+    public static bool keyA = false;
+    // LecteurA
+    public static bool lecteurA = false;
+    public GameObject lecteurCA;
+    public GameObject lecteurAValide;
+
+    // Chambre B
 
     public static bool getDoorB = false;
 
+    // Chambre C
+
     public static bool getDoorC = false;
 
+    // KeyA
+    public static bool keyC = false;
+    // LecteurA
+    public static bool lecteurC = false;
+    public GameObject lecteurCC;
+    public GameObject lecteurCValide;
+
+
+    // Salle de Pause
+
     public static bool getDoorPause = false;
+    // KeyA
+    public static bool keyPause = false;
+    // LecteurA
+    public static bool lecteurP = false;
+    public GameObject lecteurCP;
+    public GameObject lecteurPValide;
 
     public static bool getDoorCouloir = false;
 
@@ -128,18 +164,40 @@ public class RaycastPerso : MonoBehaviour
 
                 // Grande Chambre
 
-                if (hit.collider.gameObject.CompareTag("Door GC"))
+                if (hit.collider.gameObject.CompareTag("Door GC") && lecteurG == true)
                 {
                     getDoorGC = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
+                if (hit.collider.gameObject.CompareTag("KeyGucci"))
+                {
+                    keyGucci = true;
+                    Destroy(hit.transform.gameObject);
+                }
+                if (hit.collider.gameObject.CompareTag("LGucci") && keyGucci == true)
+                {
+                    lecteurCG.SetActive(false);
+                    lecteurGValide.SetActive(true);
+                    lecteurG = true;
+                }
 
                 // Chambre A
 
-                if (hit.collider.gameObject.CompareTag("Door A"))
+                if (hit.collider.gameObject.CompareTag("Door A") && lecteurA == true)
                 {
                     getDoorA = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
+                }
+                if (hit.collider.gameObject.CompareTag("KeyA"))
+                {
+                    keyA = true;
+                    Destroy(hit.transform.gameObject);
+                }
+                if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true)
+                {
+                    lecteurCA.SetActive(false);
+                    lecteurAValide.SetActive(true);
+                    lecteurA = true;
                 }
 
                 // Chambre B
@@ -152,18 +210,40 @@ public class RaycastPerso : MonoBehaviour
 
                 // Chambre C
 
-                if (hit.collider.gameObject.CompareTag("Door C"))
+                if (hit.collider.gameObject.CompareTag("Door C") && lecteurC == true)
                 {
                     getDoorC = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
+                if (hit.collider.gameObject.CompareTag("KeyC"))
+                {
+                    keyC = true;
+                    Destroy(hit.transform.gameObject);
+                }
+                if (hit.collider.gameObject.CompareTag("LecteurC") && keyC == true)
+                {
+                    lecteurCC.SetActive(false);
+                    lecteurCValide.SetActive(true);
+                    lecteurC = true;
+                }
 
                 // Salle Pause
 
-                if (hit.collider.gameObject.CompareTag("Door Pause"))
+                if (hit.collider.gameObject.CompareTag("Door Pause") && lecteurP == true)
                 {
                     getDoorPause = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
+                }
+                if (hit.collider.gameObject.CompareTag("KeyPause"))
+                {
+                    keyPause = true;
+                    Destroy(hit.transform.gameObject);
+                }
+                if (hit.collider.gameObject.CompareTag("LecteurPause") && keyPause == true)
+                {
+                    lecteurCP.SetActive(false);
+                    lecteurPValide.SetActive(true);
+                    lecteurP = true;
                 }
 
                 // Couloir
@@ -227,7 +307,7 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Machine") && composant == true);
                 {
                     cdm = true;
-                    composantMachine.SetActive(true);
+                    // composantMachine.SetActive(true);
                 }
 
 
