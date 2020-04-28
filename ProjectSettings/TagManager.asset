@@ -40,6 +40,8 @@ TagManager:
   - Obstacle
   - Lunettes
   - DoorGrillage
+  - KeySortie
+  - LSortie
   layers:
   - Default
   - TransparentFX
