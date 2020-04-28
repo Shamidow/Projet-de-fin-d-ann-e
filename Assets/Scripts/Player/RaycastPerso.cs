@@ -102,6 +102,7 @@ public class RaycastPerso : MonoBehaviour
     public GameObject lunettes6;
     public GameObject lunettesmap;
     public GameObject lunettesfollowme;
+    public GameObject lunettespass;
 
 
 
@@ -350,6 +351,7 @@ public class RaycastPerso : MonoBehaviour
                     lunettes6.SetActive(true);
                     lunettesmap.SetActive(true);
                     lunettesfollowme.SetActive(true);
+                    lunettespass.SetActive(true);
                     Destroy(hit.transform.gameObject);
                 }
 
