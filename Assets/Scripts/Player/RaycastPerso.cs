@@ -93,6 +93,18 @@ public class RaycastPerso : MonoBehaviour
     public GameObject pchit;
     public GameObject flash;
 
+    [Header("Lunettes Go")]
+    public GameObject lunettes1;
+    public GameObject lunettes2;
+    public GameObject lunettes3;
+    public GameObject lunettes4;
+    public GameObject lunettes5;
+    public GameObject lunettes6;
+    public GameObject lunettesmap;
+    public GameObject lunettesfollowme;
+
+
+
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -324,6 +336,21 @@ public class RaycastPerso : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                     flash.SetActive(false);
                     pchit.SetActive(true);
+                }
+
+                // Lunettes
+
+                if (hit.collider.gameObject.CompareTag("Lunettes"))
+                {
+                    lunettes1.SetActive(true);
+                    lunettes2.SetActive(true);
+                    lunettes3.SetActive(true);
+                    lunettes4.SetActive(true);
+                    lunettes5.SetActive(true);
+                    lunettes6.SetActive(true);
+                    lunettesmap.SetActive(true);
+                    lunettesfollowme.SetActive(true);
+                    Destroy(hit.transform.gameObject);
                 }
 
 
