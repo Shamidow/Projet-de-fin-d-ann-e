@@ -38,6 +38,7 @@ TagManager:
   - Extincteur
   - CO2
   - Obstacle
+  - Lunettes
   layers:
   - Default
   - TransparentFX
