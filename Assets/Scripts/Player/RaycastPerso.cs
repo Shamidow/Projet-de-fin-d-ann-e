@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RaycastPerso : MonoBehaviour
 {
+    // Grillage
+
+    public static bool getDoorGrillage = false;
     // Labo 
 
     // DoorLabo
@@ -270,6 +273,14 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Door Couloir"))
                 {
                     getDoorCouloir = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                }
+
+                // Grillage
+
+                if (hit.collider.gameObject.CompareTag("DoorGrillage"))
+                {
+                    getDoorGrillage = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                 }
 

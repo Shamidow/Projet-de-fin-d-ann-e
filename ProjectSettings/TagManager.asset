@@ -39,6 +39,7 @@ TagManager:
   - CO2
   - Obstacle
   - Lunettes
+  - DoorGrillage
   layers:
   - Default
   - TransparentFX
