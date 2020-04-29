@@ -170,7 +170,7 @@ public class RaycastPerso : MonoBehaviour
 
                     // Sortie
 
-                    if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurG == true)
+                    if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == true)
                 {
                     getDoorSortie = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
@@ -182,9 +182,9 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("LSortie") && keySortie == true)
                 {
-                    lecteurCG.SetActive(false);
-                    lecteurGValide.SetActive(true);
-                    lecteurG = true;
+                    lecteurCS.SetActive(false);
+                    lecteurSValide.SetActive(true);
+                    lecteurS = true;
                 }
 
                 // SDM
