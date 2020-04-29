@@ -8,8 +8,21 @@ public class Pausemenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject crosshair;
+    Scene currentScene = SceneManager.GetActiveScene();
+
+    string scenename;
+    void Start()
+    {
+        scenename = currentScene.name;
+    }
+
+    // Update is called once per frame
     void Update()
     {
+        scenename = currentScene.name;
+
+        Debug.Log(scenename);
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -22,6 +35,7 @@ public class Pausemenu : MonoBehaviour
             }
         }
     }
+    
     void Resume()
     {
         Cursor.visible = false;

@@ -9,19 +9,25 @@ public class Menu : MonoBehaviour
     public GameObject commandes;
     public GameObject optionsMenu;
     public GameObject menuMenu;
+    public GameObject pausemenu;
+
+    Scene currentScene = SceneManager.GetActiveScene();
+
+    string scenename;
     void Start()
     {
-
+        scenename = currentScene.name;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        scenename = currentScene.name;
     }
 
     public void Jouer() // Permets de load une scène
     {
+        menuMenu.SetActive(false);
         SceneManager.LoadScene(1);
     }
 
@@ -43,12 +49,25 @@ public class Menu : MonoBehaviour
     public void ReturnOptions()
     {
         optionsMenu.SetActive(false);
-        menuMenu.SetActive(true);
+        pausemenu.SetActive(true);
+        if (scenename == "Menu")
+        {
+            menuMenu.SetActive(true);
+        }
     }
 
     public void Options()
     {
         optionsMenu.SetActive(true);
-        menuMenu.SetActive(false);
+        pausemenu.SetActive(false);
+        if (scenename == "Menu")
+        {
+            menuMenu.SetActive(false);
+        }
+    }
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        menuMenu.SetActive(true);
     }
 }
