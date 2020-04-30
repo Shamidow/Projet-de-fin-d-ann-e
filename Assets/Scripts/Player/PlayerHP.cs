@@ -6,6 +6,7 @@ public class PlayerHP : MonoBehaviour
 {
     public static float hp = 100, xMin = 0, xMax = 100;
     private bool trigger;
+    public AudioSource death;
     void Start()
     {
         
@@ -24,6 +25,7 @@ public class PlayerHP : MonoBehaviour
         if(hp <= 0)
         {
             Destroy(gameObject);
+            death.Play(0);
         }
         hp = Mathf.Clamp(hp, 0, 100);
     }

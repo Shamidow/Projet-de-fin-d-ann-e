@@ -7817,6 +7817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   co2: {fileID: 1345021862}
+  pshit: {fileID: 1684350872}
 --- !u!1 &667290571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 2a76b05bb89869d41b8ba052e6da9afd,
@@ -22924,6 +22925,11 @@ MonoBehaviour:
   medicboxsound: {fileID: 1684350872}
   dooropening: {fileID: 1684350872}
   badger: {fileID: 1684350872}
+  vento: {fileID: 1684350872}
+  composantas: {fileID: 1684350872}
+  machineas: {fileID: 1684350872}
+  extincteuras: {fileID: 1684350872}
+  lunettesas: {fileID: 1684350872}
 --- !u!1001 &1413308585423031581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23051,6 +23057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flash: {fileID: 1341405496}
   fire: {fileID: 664823382}
+  ventolineas: {fileID: 1684350872}
+  changewpn: {fileID: 1684350872}
 --- !u!114 &1486957697917988869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23063,6 +23071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec525841430ea8344982fe754acfb8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  death: {fileID: 1684350872}
 --- !u!114 &1486957697917988870
 MonoBehaviour:
   m_ObjectHideFlags: 0

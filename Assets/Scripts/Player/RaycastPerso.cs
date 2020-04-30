@@ -119,6 +119,11 @@ public class RaycastPerso : MonoBehaviour
     public AudioSource medicboxsound;
     public AudioSource dooropening;
     public AudioSource badger;
+    public AudioSource vento;
+    public AudioSource composantas;
+    public AudioSource machineas;
+    public AudioSource extincteuras;
+    public AudioSource lunettesas;
 
     //Medic Bool
 
@@ -127,6 +132,7 @@ public class RaycastPerso : MonoBehaviour
     private bool medicbool3 = false;
     private bool medicbool4 = false;
     private bool medicbool5 = false;
+    private bool machinecheck = false;
 
 
 
@@ -390,6 +396,7 @@ public class RaycastPerso : MonoBehaviour
                     PlayerActions.ventoline++;
                     Debug.Log("J'ai  trouvé de la Ventoline");
                     Destroy(hit.transform.gameObject);
+                    vento.Play(0);
                 }
 
                 // Composant Electrique et machine
@@ -398,11 +405,14 @@ public class RaycastPerso : MonoBehaviour
                 {
                     composant = true;
                     Destroy(hit.transform.gameObject);
+                    composantas.Play(0);
                 }
-                if (hit.collider.gameObject.CompareTag("Machine") && composant == true) 
+                if (hit.collider.gameObject.CompareTag("Machine") && composant == true && machinecheck == false) 
                 {
                     cdm = true;
                     composantMachine.SetActive(true);
+                    machineas.Play(0);
+                    machinecheck = true;
                 }
 
                 // Extincteur
@@ -413,12 +423,14 @@ public class RaycastPerso : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                     flash.SetActive(false);
                     pchit.SetActive(true);
+                    extincteuras.Play(0);
                 }
 
                 // Lunettes
 
                 if (hit.collider.gameObject.CompareTag("Lunettes"))
                 {
+                    Destroy(hit.transform.gameObject);
                     lunettes1.SetActive(true);
                     lunettes2.SetActive(true);
                     lunettes3.SetActive(true);
@@ -428,7 +440,7 @@ public class RaycastPerso : MonoBehaviour
                     lunettesmap.SetActive(true);
                     lunettesfollowme.SetActive(true);
                     lunettespass.SetActive(true);
-                    Destroy(hit.transform.gameObject);
+                    lunettesas.Play(0);
                 }
 
 
