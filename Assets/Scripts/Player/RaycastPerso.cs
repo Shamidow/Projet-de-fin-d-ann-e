@@ -463,7 +463,7 @@ public class RaycastPerso : MonoBehaviour
                     lunettes6.SetActive(true);
                     lunettesmap.SetActive(true);
                     lunettesfollowme.SetActive(true);
-                    lunettespass.SetActive(true);
+                    // lunettespass.SetActive(true);
                     lunettesas.Play(0);
                 }
 
