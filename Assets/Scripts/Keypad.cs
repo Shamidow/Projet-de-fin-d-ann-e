@@ -15,6 +15,9 @@ public class Keypad : MonoBehaviour
     private string newchar;
     private string typedcode = "";
     private KeyCode[] button;
+
+    public AudioSource touche;
+    public AudioSource correct;
     // Start is called before the first frame update
     void Start()
     {
@@ -93,6 +96,7 @@ public class Keypad : MonoBehaviour
     void writekeypad(int chara)
     {
         //SON : taper une touche
+        touche.Play(0);
         newchar = "";
         if(chara == 10)
         {
@@ -132,6 +136,7 @@ public class Keypad : MonoBehaviour
       if (typedcode == code)
         {
             // SON: Code correct
+            correct.Play(0);
             PowerGoodCode = true;
             Debug.Log("Le Code est bon");
         }

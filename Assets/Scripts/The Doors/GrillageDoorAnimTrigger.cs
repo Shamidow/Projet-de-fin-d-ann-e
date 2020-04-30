@@ -5,6 +5,8 @@ using UnityEngine;
 public class GrillageDoorAnimTrigger : MonoBehaviour
 {
     Animator m_Animator;
+    public AudioSource dooropening;
+    public AudioSource lockeddoor;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +27,19 @@ public class GrillageDoorAnimTrigger : MonoBehaviour
 
         if (RaycastPerso.getDoorGrillage == true)
         {
-            // Ici présent 
-            m_Animator.SetTrigger("Open");
-            RaycastPerso.getDoorGrillage = false;
+            if (Keypad.PowerGoodCode == true)
+            {
+                // Ici présent 
+                m_Animator.SetTrigger("Open");
+                dooropening.Play(0);
+                RaycastPerso.getDoorGrillage = false;
+            }
+
+            else
+            {
+                lockeddoor.Play(0);
+                RaycastPerso.getDoorGrillage = false;
+            }
         }
         
     }
