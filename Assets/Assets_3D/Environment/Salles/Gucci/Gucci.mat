@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Laboratoire
+  m_Name: Gucci
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: b35da5217baede34489c8c9967ba743e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4cc79aea8dd1457479ab0fffb568ea72, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ca2cf9e4ef38ea249b54075589ab945e, type: 3}
+        m_Texture: {fileID: 2800000, guid: d5e01bd6b4def4e41b7ba19bd6ae9284, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 2cdda7de2095e88449f927e9945ce880, type: 3}
+        m_Texture: {fileID: 2800000, guid: 90fd8aaa46584574d82aca19b89eb19c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -60,7 +60,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.505
+    - _GlossMapScale: 0.497
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
