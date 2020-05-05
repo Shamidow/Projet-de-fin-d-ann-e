@@ -104,7 +104,7 @@ public class RaycastPerso : MonoBehaviour
     public GameObject pchit;
     public GameObject flash;
 
-    [Header("Lunettes Go")]
+    /* [Header("Lunettes Go")]
     public GameObject lunettes1;
     public GameObject lunettes2;
     public GameObject lunettes3;
@@ -125,6 +125,7 @@ public class RaycastPerso : MonoBehaviour
     public AudioSource extincteuras;
     public AudioSource lunettesas;
     public AudioSource lockeddoor;
+    */
 
     //Medic Bool
 
@@ -175,16 +176,17 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorLabo = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
                 if(hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == false)
                 {
-                    // lockeddoor.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
                 if (hit.collider.gameObject.CompareTag("KeyLabo"))
                 {
                     keyLabo = true;
-                    // keySound.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurLabo") && keyLabo == true)
@@ -192,7 +194,8 @@ public class RaycastPerso : MonoBehaviour
                     lecteurRouge.SetActive(false);
                     lecteurRougeValide.SetActive(true);
                     lecteurLabo = true;
-                    // badger.Play(0);
+
+                    FindObjectOfType<AudioManager>().Play("Badger");
                 }
 
                     // Sortie
@@ -201,16 +204,16 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorSortie = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
                     if(hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == false)
                 {
-                    // lockeddoor.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
                 if (hit.collider.gameObject.CompareTag("KeySortie"))
                 {
                     keySortie = true;
-                    // keySound.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
                 }
                 if (hit.collider.gameObject.CompareTag("LSortie") && keySortie == true)
@@ -218,7 +221,8 @@ public class RaycastPerso : MonoBehaviour
                     lecteurCS.SetActive(false);
                     lecteurSValide.SetActive(true);
                     lecteurS = true;
-                    // badger.Play(0);
+
+                    FindObjectOfType<AudioManager>().Play("Badger");
                 }
 
                 // SDM
@@ -227,7 +231,7 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorSDM = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
 
                 // Quartiers
@@ -236,7 +240,7 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorQuartiers = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
 
                 // Grande Chambre
@@ -245,16 +249,16 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorGC = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
                 if(hit.collider.gameObject.CompareTag("Door GC") && lecteurG == false)
                 {
-                    lockeddoor.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
                 if (hit.collider.gameObject.CompareTag("KeyGucci"))
                 {
                     keyGucci = true;
-                    // keySound.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
                 }
                 if (hit.collider.gameObject.CompareTag("LGucci") && keyGucci == true)
@@ -262,7 +266,8 @@ public class RaycastPerso : MonoBehaviour
                     lecteurCG.SetActive(false);
                     lecteurGValide.SetActive(true);
                     lecteurG = true;
-                    // badger.Play(0);
+
+                    FindObjectOfType<AudioManager>().Play("Badger");
                 }
 
                 // Chambre A
@@ -271,16 +276,16 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorA = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
                 if(hit.collider.gameObject.CompareTag("Door A") && lecteurA == false)
                 {
-                    // lockeddoor.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
                 if (hit.collider.gameObject.CompareTag("KeyA"))
                 {
                     keyA = true;
-                    // keySound.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true)
@@ -288,7 +293,8 @@ public class RaycastPerso : MonoBehaviour
                     lecteurCA.SetActive(false);
                     lecteurAValide.SetActive(true);
                     lecteurA = true;
-                    // badger.Play(0);
+
+                    FindObjectOfType<AudioManager>().Play("Badger");
                 }
 
                 // Chambre B
@@ -297,7 +303,7 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorB = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
 
                 // Chambre C
@@ -306,16 +312,16 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorC = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
                 if(hit.collider.gameObject.CompareTag("Door C") && lecteurC == false)
                 {
-                    // lockeddoor.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
                 if (hit.collider.gameObject.CompareTag("KeyC"))
                 {
                     keyC = true;
-                    // keySound.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurC") && keyC == true)
@@ -323,7 +329,8 @@ public class RaycastPerso : MonoBehaviour
                     lecteurCC.SetActive(false);
                     lecteurCValide.SetActive(true);
                     lecteurC = true;
-                    // badger.Play(0);
+
+                    FindObjectOfType<AudioManager>().Play("Badger");
                 }
 
                 // Salle Pause
@@ -332,16 +339,16 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorPause = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
                 if (hit.collider.gameObject.CompareTag("Door Pause") && lecteurP == false)
                 {
-                    // lockeddoor.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
                 if (hit.collider.gameObject.CompareTag("KeyPause"))
                 {
                     keyPause = true;
-                    // keySound.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurPause") && keyPause == true)
@@ -349,7 +356,8 @@ public class RaycastPerso : MonoBehaviour
                     lecteurCP.SetActive(false);
                     lecteurPValide.SetActive(true);
                     lecteurP = true;
-                    // badger.Play(0);
+
+                    FindObjectOfType<AudioManager>().Play("Badger");
                 }
 
                 // Couloir
@@ -358,7 +366,7 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorCouloir = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
-                    // dooropening.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door");
                 }
 
                 // Grillage
@@ -377,23 +385,23 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getMedic1 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
-                    medicboxsound.Play(0);
-                    // medicbool1 = true;
+                    FindObjectOfType<AudioManager>().Play("Door Medic");
+                    medicbool1 = true;
                 }
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 2") && medicbool2 == false)
                 {
                     getMedic2 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
-                    medicboxsound.Play(0);
-                    // medicbool2 = true;
+                    FindObjectOfType<AudioManager>().Play("Door Medic");
+                    medicbool2 = true;
                 }
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 3") && medicbool3 == false)
                 {
                     getMedic3 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
-                    // medicboxsound.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Door Medic");
                     medicbool3 = true;
                 }
 
@@ -401,16 +409,16 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getMedic4 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
-                    medicboxsound.Play(0);
-                    // medicbool4 = true;
+                    FindObjectOfType<AudioManager>().Play("Door Medic");
+                    medicbool4 = true;
                 }
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 5") && medicbool5 == false)
                 {
                     getMedic5 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
-                    medicboxsound.Play(0);
-                    // medicbool5 = true;
+                    FindObjectOfType<AudioManager>().Play("Door Medic");
+                    medicbool5 = true;
                 }
 
                 // Ventoline
@@ -420,7 +428,7 @@ public class RaycastPerso : MonoBehaviour
                     PlayerActions.ventoline++;
                     Debug.Log("J'ai  trouvé de la Ventoline");
                     Destroy(hit.transform.gameObject);
-                    // vento.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                 }
 
                 // Composant Electrique et machine
@@ -429,13 +437,13 @@ public class RaycastPerso : MonoBehaviour
                 {
                     composant = true;
                     Destroy(hit.transform.gameObject);
-                    // composantas.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                 }
                 if (hit.collider.gameObject.CompareTag("Machine") && composant == true && machinecheck == false) 
                 {
                     cdm = true;
                     composantMachine.SetActive(true);
-                    // machineas.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Machine");
                     machinecheck = true;
                 }
 
@@ -447,7 +455,7 @@ public class RaycastPerso : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                     flash.SetActive(false);
                     pchit.SetActive(true);
-                    // extincteuras.Play(0);
+                    FindObjectOfType<AudioManager>().Play("Take");
                 }
 
                 // Lunettes
@@ -455,16 +463,16 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Lunettes"))
                 {
                     Destroy(hit.transform.gameObject);
-                    lunettes1.SetActive(true);
-                    lunettes2.SetActive(true);
-                    lunettes3.SetActive(true);
-                    lunettes4.SetActive(true);
-                    lunettes5.SetActive(true);
-                    lunettes6.SetActive(true);
-                    lunettesmap.SetActive(true);
-                    lunettesfollowme.SetActive(true);
-                    lunettespass.SetActive(true);
-                    // lunettesas.Play(0);
+                    /* lunettes1.SetActive(true);
+                     lunettes2.SetActive(true);
+                     lunettes3.SetActive(true);
+                     lunettes4.SetActive(true);
+                     lunettes5.SetActive(true);
+                     lunettes6.SetActive(true);
+                     lunettesmap.SetActive(true);
+                     lunettesfollowme.SetActive(true);
+                     lunettespass.SetActive(true); */
+                    FindObjectOfType<AudioManager>().Play("Take");
                 }
 
 
