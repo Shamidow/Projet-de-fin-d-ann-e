@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Chaise
+  m_Name: BoiteGant
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 22c8c81f0968705498d208ece48cdef9, type: 3}
+        m_Texture: {fileID: 2800000, guid: f27ec1caafbfad44dad8c8389531fdd3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 45bfe03a8969d734ba528decc2519cc3, type: 3}
+        m_Texture: {fileID: 2800000, guid: aa21800a739ae39409cac452ef7fdf03, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: f7ef16a0b3ed2b9439a449f3ccd45c2e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 67a5f17f93d92ad4691c41cbe1e08880, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -60,7 +60,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.675
+    - _GlossMapScale: 0.612
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
