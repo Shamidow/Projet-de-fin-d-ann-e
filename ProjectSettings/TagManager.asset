@@ -42,6 +42,7 @@ TagManager:
   - DoorGrillage
   - KeySortie
   - LSortie
+  - AudioManager
   layers:
   - Default
   - TransparentFX
