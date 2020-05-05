@@ -21,7 +21,7 @@ public class Pausemenu : MonoBehaviour
     {
         scenename = currentScene.name;
 
-        Debug.Log(scenename);
+        //Debug.Log(scenename);
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {

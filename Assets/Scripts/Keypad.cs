@@ -15,9 +15,10 @@ public class Keypad : MonoBehaviour
     private string newchar;
     private string typedcode = "";
     private KeyCode[] button;
-
+    public GameObject disablecrosshair;
     public AudioSource touche;
     public AudioSource correct;
+    //  public Texture2D cursorArrow;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,24 +45,48 @@ public class Keypad : MonoBehaviour
         
         if (iskeying == true)
         {
+          //  cursorbutton.transform.position = Cursor.position;
             DetectKey();
         }
             if (Input.GetKeyUp(KeyCode.E) && enter == true && iskeying == false)
             {
-                FPSController.gameObject.SetActive(false);
+            Screen.lockCursor = true;
+
+            FPSController.gameObject.SetActive(false);
+            disablecrosshair.gameObject.SetActive(false);
                 transform.GetChild(0).gameObject.SetActive(true);
                 iskeying = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+
+        //Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.Auto);
+
             }
             else
             if (Input.GetKeyUp(KeyCode.E) && iskeying == true)
         {
+            
+            disablecrosshair.gameObject.SetActive(true);
             transform.GetChild(0).gameObject.SetActive(false);
             FPSController.gameObject.SetActive(true);
+            Cursor.visible = false;
             iskeying = false;
         }
     }
+    /*
+    void OnMouseEnter()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 
-    void OnTriggerEnter(Collider other)
+    void OnMouseExit()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }*/
+
+
+
+        void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -93,10 +118,9 @@ public class Keypad : MonoBehaviour
         }
     }
 
-    void writekeypad(int chara)
+    public void writekeypad(int chara)
     {
         //SON : taper une touche
-        touche.Play(0);
         newchar = "";
         if(chara == 10)
         {

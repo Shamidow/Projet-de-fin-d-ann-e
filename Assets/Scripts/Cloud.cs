@@ -21,7 +21,7 @@ public class Cloud : MonoBehaviour
         {
             transform.localScale = transform.localScale + new Vector3(0.001f, 0.001f, 0.001f);
             timer = timer + Time.deltaTime;
-            Debug.Log(timer);
+            //Debug.Log(timer);
         }
     }
 
