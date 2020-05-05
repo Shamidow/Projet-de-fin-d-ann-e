@@ -11,7 +11,6 @@ public class FlashlightController : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
-        flashlightsound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,7 +20,7 @@ public class FlashlightController : MonoBehaviour
         {
             if (isactive == true)
             {
-                flashlightsound.Play(0);
+                FindObjectOfType<AudioManager>().Play("Flashlight");
                 isactive = false;
                 spotlight.SetActive(false);
                 return;
@@ -29,7 +28,7 @@ public class FlashlightController : MonoBehaviour
             }
             if (isactive == false)
             {
-                flashlightsound.Play(0);
+                FindObjectOfType<AudioManager>().Play("Flashlight");
                 isactive = true;
                 spotlight.SetActive(true);
                 return;

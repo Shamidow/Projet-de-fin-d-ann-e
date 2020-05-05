@@ -7,11 +7,9 @@ public class CloudScript : MonoBehaviour
     public GameObject cloud1;
     private bool firstTime = false;
     public static bool firstclose = false;
-    AudioSource flashlightsound;
 
     void Start()
     {
-        flashlightsound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,7 +26,7 @@ public class CloudScript : MonoBehaviour
             {
                 firstclose = true;
                 firstTime = true;
-                flashlightsound.Play(0);
+                FindObjectOfType<AudioManager>().Play("Door Grillage");
             }
         }
     }

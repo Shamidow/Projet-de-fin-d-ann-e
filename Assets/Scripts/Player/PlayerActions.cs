@@ -35,19 +35,19 @@ public class PlayerActions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false && ventoline != 0)
         {
             ventolineCheck = true;
-            ventolineas.Play(0);
+            FindObjectOfType<AudioManager>().Play("Ventoline");
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             fire.SetActive(false);
             flash.SetActive(true);
-            changewpn.Play(0);
+            FindObjectOfType<AudioManager>().Play("Change Weapon");
         }
         if(Input.GetKeyDown(KeyCode.Alpha2) && RaycastPerso.extincteur == true)
         {
             fire.SetActive(true);
             flash.SetActive(false);
-            changewpn.Play(0);
+            FindObjectOfType<AudioManager>().Play("Change Weapon");
         }
     }
     public void Ventoline()

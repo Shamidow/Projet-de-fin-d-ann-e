@@ -31,13 +31,13 @@ public class GrillageDoorAnimTrigger : MonoBehaviour
             {
                 // Ici présent 
                 m_Animator.SetTrigger("Open");
-                dooropening.Play(0);
+                FindObjectOfType<AudioManager>().Play("Door Grillage");
                 RaycastPerso.getDoorGrillage = false;
             }
 
             else
             {
-                lockeddoor.Play(0);
+                FindObjectOfType<AudioManager>().Play("Door Locked");
                 RaycastPerso.getDoorGrillage = false;
             }
         }
