@@ -22,6 +22,7 @@ public class GrillageDoorAnimTrigger : MonoBehaviour
         if (CloudScript.firstclose == true)
         {
             m_Animator.SetTrigger("FirstClose");
+            FindObjectOfType<AudioManager>().Play("Grid");
             CloudScript.firstclose = false;
         }
 
@@ -31,13 +32,13 @@ public class GrillageDoorAnimTrigger : MonoBehaviour
             {
                 // Ici présent 
                 m_Animator.SetTrigger("Open");
-                FindObjectOfType<AudioManager>().Play("Door Grillage");
+                FindObjectOfType<AudioManager>().Play("Open Grid");
                 RaycastPerso.getDoorGrillage = false;
             }
 
             else
             {
-                FindObjectOfType<AudioManager>().Play("Door Locked");
+                FindObjectOfType<AudioManager>().Play("Locked Grid");
                 RaycastPerso.getDoorGrillage = false;
             }
         }

@@ -20,7 +20,7 @@ public class FlashlightController : MonoBehaviour
         {
             if (isactive == true)
             {
-                FindObjectOfType<AudioManager>().Play("Flashlight");
+                FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
                 isactive = false;
                 spotlight.SetActive(false);
                 return;
@@ -28,7 +28,7 @@ public class FlashlightController : MonoBehaviour
             }
             if (isactive == false)
             {
-                FindObjectOfType<AudioManager>().Play("Flashlight");
+                FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
                 isactive = true;
                 spotlight.SetActive(true);
                 return;

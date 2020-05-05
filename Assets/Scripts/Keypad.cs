@@ -121,6 +121,7 @@ public class Keypad : MonoBehaviour
     public void writekeypad(int chara)
     {
         //SON : taper une touche
+        FindObjectOfType<AudioManager>().Play("Digicode Keys");
         newchar = "";
         if(chara == 10)
         {
@@ -160,10 +161,15 @@ public class Keypad : MonoBehaviour
       if (typedcode == code)
         {
             // SON: Code correct
-            correct.Play(0);
+            FindObjectOfType<AudioManager>().Play("Correct Code");
             PowerGoodCode = true;
             Debug.Log("Le Code est bon");
         }
+        else if (charnum >= 5)
+        {
+            FindObjectOfType<AudioManager>().Play("Wrong Code");
+        }
+
     }
 
 }

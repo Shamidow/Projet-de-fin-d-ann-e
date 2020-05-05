@@ -22,6 +22,7 @@ public class BChambreAnimTrigger : MonoBehaviour
             // Ici présent 
             m_Animator.SetTrigger("B");
             RaycastPerso.getDoorB = false;
+
         }
 
     }

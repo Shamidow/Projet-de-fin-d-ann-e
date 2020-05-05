@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Crouch : MonoBehaviour
 {
-   // public GameObject PlayerHeight;
+    // public GameObject PlayerHeight;
     public KeyCode CrouchButton;
     private bool m_crouch = true;
     public CharacterController characterController;
@@ -19,8 +19,13 @@ public class Crouch : MonoBehaviour
     [SerializeField] private float SprintSpeed;
     [SerializeField] private float crouchSpeed;
 
-
-
+    private bool couroutineOn;
+    private float stepDelay = 0.5f;
+    private bool iswalking = false;
+    private bool isSprinting = false;
+    public float stepDelayWalking = 0;
+    public float stepDelayCouching = 0;
+    public float stepDelaySprinting = 0;
 
     void Start()
     {
@@ -28,7 +33,51 @@ public class Crouch : MonoBehaviour
         m_originalHeight = characterController.height;
         movementSpeed = NormalMovementSpeed;
         m_crouch = false;
+        couroutineOn = true;
+        
+        StartCoroutine(Walking());
 
+    }
+
+
+    IEnumerator Walking()
+    {
+
+        while (couroutineOn == true)
+        {
+
+            if (iswalking == true && m_crouch == false && isSprinting == false)
+            {
+
+                //Son : marcher
+                FindObjectOfType<AudioManager>().Play("Footstep");
+                Debug.Log("marche");
+                stepDelay = stepDelayWalking;
+            }
+            else
+             if (m_crouch == true && iswalking == true && isSprinting == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Footstep Crouch");
+                stepDelay = stepDelayCouching;
+            }
+            else
+             if(isSprinting == true && iswalking == true && m_crouch == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Footstep Sprint");
+                stepDelay = stepDelaySprinting;
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Stop("Footstep");
+                Debug.Log("arreter le son");
+            }
+
+            yield return new WaitForSeconds(stepDelay);
+
+
+        }
+
+       
     }
 
     void Update()
@@ -37,28 +86,29 @@ public class Crouch : MonoBehaviour
         PlayerMovement();
         if (Input.GetButton("Fire3") && m_crouch == false)
         {
-            
+
             movementSpeed = SprintSpeed;
-            
+            isSprinting = true;
         }
 
         // Reduce speed to normal
         if (Input.GetButtonUp("Fire3"))
         {
+            isSprinting = false;
             movementSpeed = NormalMovementSpeed;
-            if(characterController.height == 0.5f)
+            if (characterController.height == 0.5f)
             {
                 movementSpeed = crouchSpeed;
             }
         }
         if (Input.GetKeyDown(CrouchButton))
-        {         
-           
+        {
+
             CheckCrouch();
         }
     }
 
-    
+
 
     private void PlayerMovement()
     {
@@ -68,13 +118,18 @@ public class Crouch : MonoBehaviour
         Vector3 forwardMovement = transform.forward * vertInput;
         Vector3 rightMovement = transform.right * horizInput;
 
-         characterController.SimpleMove(forwardMovement + rightMovement);
-       
+        characterController.SimpleMove(forwardMovement + rightMovement);
+        if (characterController.velocity.sqrMagnitude > 0 && (horizInput != 0 || vertInput != 0))
+        {
+            iswalking = true;
+        }
+        else
+            iswalking = false;
     }
 
     void CheckCrouch()
     {
-        
+
         if (m_crouch == false || High.touch == 1)
         {
             characterController.height = 0.5f;
@@ -86,10 +141,10 @@ public class Crouch : MonoBehaviour
             High.touch = 0;
         }
         else
-          {
-            if(High.touch == 0)
-            { 
-              characterController.height = PlayerHeightSize;
+        {
+            if (High.touch == 0)
+            {
+                characterController.height = PlayerHeightSize;
                 movementSpeed = NormalMovementSpeed;
                 m_crouch = !m_crouch;
             }
@@ -98,6 +153,6 @@ public class Crouch : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+
     }
 }

@@ -22,6 +22,7 @@ public class AChambreDoorTrigger : MonoBehaviour
             // Ici présent 
             m_Animator.SetTrigger("A");
             RaycastPerso.getDoorA = false;
+
         }
 
     }

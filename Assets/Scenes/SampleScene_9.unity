@@ -49368,54 +49368,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Take
-    clip: {fileID: 0}
-    volume: 1
+    clip: {fileID: 8300000, guid: e34e29e003ac9cc4aafaf8fd69cfabc2, type: 3}
+    volume: 0.036
     pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Badger
+    clip: {fileID: 8300000, guid: 576b09274ccff8146a6dae52b587573e, type: 3}
+    volume: 0.33
+    pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Grid
+    clip: {fileID: 8300000, guid: 9b686bb15e1060b4d80f3722c79791c5, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
-  - name: 
+  - name: Locked Grid
     clip: {fileID: 0}
     volume: 0
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Open Grid
+    clip: {fileID: 8300000, guid: 31d9eb7ed2e36f64c86e933ba68ca8ee, type: 3}
+    volume: 0.616
+    pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Flashlight ON/OFF
+    clip: {fileID: 8300000, guid: 1e814bb33fcd5ae4eb98942fe10db31f, type: 3}
+    volume: 0.179
+    pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Composant Elec
+    clip: {fileID: 8300000, guid: 010019de57dddef4f9aa3898d33a6c35, type: 3}
+    volume: 0.232
+    pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Digicode Keys
+    clip: {fileID: 8300000, guid: 0351772123775354f8827c870e977e10, type: 3}
+    volume: 0.205
+    pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Wrong Code
+    clip: {fileID: 8300000, guid: 483950aac5b086042aaa14fd355d1516, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Correct Code
+    clip: {fileID: 8300000, guid: 5dcf6f4d9c0315048b63b003f5f09600, type: 3}
+    volume: 0.33
+    pitch: 1
+    source: {fileID: 0}
+  - name: Footstep
+    clip: {fileID: 8300000, guid: e0bda403647cf6e45bab54ee748a22e4, type: 3}
+    volume: 0.223
+    pitch: 1
+    source: {fileID: 0}
+  - name: Footstep Sprint
+    clip: {fileID: 8300000, guid: e0bda403647cf6e45bab54ee748a22e4, type: 3}
+    volume: 0.535
+    pitch: 1
+    source: {fileID: 0}
+  - name: Footstep Crouch
+    clip: {fileID: 8300000, guid: e0bda403647cf6e45bab54ee748a22e4, type: 3}
+    volume: 0.098
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &1684350873
 Transform:
@@ -68292,6 +68307,9 @@ MonoBehaviour:
   NormalMovementSpeed: 6
   SprintSpeed: 10
   crouchSpeed: 2
+  stepDelayWalking: 0.5
+  stepDelayCouching: 0.8
+  stepDelaySprinting: 0.35
 --- !u!114 &1486957697917988871
 MonoBehaviour:
   m_ObjectHideFlags: 0
