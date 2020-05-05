@@ -162,7 +162,7 @@ public class RaycastPerso : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 4, layerMask)) //Range de 4
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             // Input sur le E
 
@@ -477,7 +477,7 @@ public class RaycastPerso : MonoBehaviour
             else
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-                Debug.Log("Did not Hit");
+                //Debug.Log("Did not Hit");
             }
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5, layerMask))
             {

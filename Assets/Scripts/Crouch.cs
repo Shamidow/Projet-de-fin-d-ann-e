@@ -33,7 +33,7 @@ public class Crouch : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(High.touch);
+        //Debug.Log(High.touch);
         PlayerMovement();
         if (Input.GetButton("Fire3") && m_crouch == false)
         {
