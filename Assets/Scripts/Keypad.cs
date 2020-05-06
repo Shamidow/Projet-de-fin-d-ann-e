@@ -160,10 +160,15 @@ public class Keypad : MonoBehaviour
       if (typedcode == code)
         {
             // SON: Code correct
-            FindObjectOfType<AudioManager>().Play("Code Bon");
+            FindObjectOfType<AudioManager>().Play("Correct Code");
             PowerGoodCode = true;
             Debug.Log("Le Code est bon");
         }
+        else if (charnum >= 5)
+        {
+            FindObjectOfType<AudioManager>().Play("Wrong Code");
+        }
+
     }
 
 }
