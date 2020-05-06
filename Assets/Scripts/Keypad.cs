@@ -41,7 +41,6 @@ public class Keypad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // VerifyCode();
         
         if (iskeying == true)
         {
@@ -64,14 +63,14 @@ public class Keypad : MonoBehaviour
             }
             else
             if (Input.GetKeyUp(KeyCode.E) && iskeying == true)
-        {
+            {
             
             disablecrosshair.gameObject.SetActive(true);
             transform.GetChild(0).gameObject.SetActive(false);
             FPSController.gameObject.SetActive(true);
             Cursor.visible = false;
             iskeying = false;
-        }
+            }
     }
     /*
     void OnMouseEnter()
@@ -120,37 +119,39 @@ public class Keypad : MonoBehaviour
 
     public void writekeypad(int chara)
     {
-        //SON : taper une touche
-        newchar = "";
-        if(chara == 10)
+        if (iskeying == true)
         {
-            newchar = "A";
+            //SON : taper une touche
+            newchar = "";
+            if (chara == 10)
+            {
+                newchar = "A";
+            }
+            else
+            if (chara == 11)
+            {
+                typedcode = "";
+                charnum = 0;
+            }
+            else
+            {
+                newchar = chara.ToString();
+            }
+
+            typedcode = typedcode + newchar;
+            if (chara != 11)
+            {
+                charnum++;
+            }
+            transform.GetChild(0).GetChild(0).gameObject.GetComponentInChildren<Text>().text = typedcode;
+            VerifyCode();
+
+            if (charnum >= 5)
+            {
+                typedcode = "";
+                charnum = 0;
+            }
         }
-        else
-        if (chara == 11 )
-        {
-            typedcode = "";
-            charnum = 0;
-        }
-        else
-        {
-           newchar = chara.ToString();
-        }
-        
-        typedcode = typedcode + newchar;
-        if (chara != 11)
-        {
-         charnum++;
-        }
-            
-         VerifyCode();
-        transform.GetChild(0).GetChild(0).gameObject.GetComponentInChildren<Text>().text = typedcode;
-        if (charnum >= 5)
-        {
-            typedcode = "";
-            charnum = 0;
-        }
-        
      //   Debug.Log(typedcode);
     }
 
@@ -159,16 +160,42 @@ public class Keypad : MonoBehaviour
         
       if (typedcode == code)
         {
-            // SON: Code correct
-            FindObjectOfType<AudioManager>().Play("Correct Code");
-            PowerGoodCode = true;
-            Debug.Log("Le Code est bon");
+
+            StartCoroutine(CorrectCode());
         }
         else if (charnum >= 5)
         {
-            FindObjectOfType<AudioManager>().Play("Wrong Code");
+
+            StartCoroutine(WrongCode());
         }
 
+    }
+
+    IEnumerator CorrectCode()
+    {
+        iskeying = false;
+        yield return new WaitForSeconds(1f);
+             // SON: Code correct
+            transform.GetChild(0).GetChild(0).gameObject.GetComponentInChildren<Text>().text = "Correct";
+            FindObjectOfType<AudioManager>().Play("Correct Code");
+            PowerGoodCode = true;
+            Debug.Log("Le Code est bon");
+        yield return new WaitForSeconds(2f);
+        disablecrosshair.gameObject.SetActive(true);
+        transform.GetChild(0).gameObject.SetActive(false);
+        FPSController.gameObject.SetActive(true);
+        Cursor.visible = false;
+    }
+
+    IEnumerator WrongCode()
+    {
+        iskeying = false;
+        yield return new WaitForSeconds(1f);
+transform.GetChild(0).GetChild(0).gameObject.GetComponentInChildren<Text>().text = "Wrong";
+            FindObjectOfType<AudioManager>().Play("Wrong Code");
+        yield return new WaitForSeconds(1.5f);
+        transform.GetChild(0).GetChild(0).gameObject.GetComponentInChildren<Text>().text = "";
+        iskeying = true;
     }
 
 }
