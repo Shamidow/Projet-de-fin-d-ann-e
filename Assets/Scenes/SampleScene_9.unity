@@ -21551,7 +21551,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: db574a21350ac9f4bac05dc31dc96c0c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: db574a21350ac9f4bac05dc31dc96c0c,
         type: 3}
@@ -24824,42 +24824,42 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1935671176}
+    m_TransformParent: {fileID: 1029583760}
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.768135
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.0992098
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.069142
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 1.0587912e-21
+      value: 0.000000010721875
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -9.947598e-14
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000119209275
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000011608904
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
@@ -24884,17 +24884,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
@@ -31786,6 +31786,7 @@ Transform:
   m_LocalPosition: {x: -6.17, y: 3.7827902, z: -6.477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1838341001}
   - {fileID: 1935671176}
   - {fileID: 684950929}
   m_Father: {fileID: 0}
@@ -55367,6 +55368,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 813833616}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1838341001 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
+    type: 3}
+  m_PrefabInstance: {fileID: 813833616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1838451720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3286529902642766527, guid: 4b9f9985b50b4c048baf983264d72151,
@@ -62751,7 +62758,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2a76b05bb89869d41b8ba052e6da9afd,
         type: 3}
