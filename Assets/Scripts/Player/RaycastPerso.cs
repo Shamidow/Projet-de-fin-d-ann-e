@@ -127,6 +127,18 @@ public class RaycastPerso : MonoBehaviour
     public AudioSource lockeddoor;
     */
 
+    [Header("Bool Checklist")]
+    public static bool ltb = false;
+    public static bool keycardrouge = false;
+    public static bool keycardblanc = false;
+    public static bool keycardvert = false;
+    public static bool keycardjaune = false;
+    public static bool keycardbleu = false;
+    public static bool keycardviolet = false;
+    public static bool composantb = false;
+    public static bool protolunettes = false;
+    public static bool extincteurb = false;
+
     //Medic Bool
 
     private bool medicbool1 = false;
@@ -188,6 +200,7 @@ public class RaycastPerso : MonoBehaviour
                     keyLabo = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    keycardrouge = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurLabo") && keyLabo == true)
                 {
@@ -215,6 +228,7 @@ public class RaycastPerso : MonoBehaviour
                     keySortie = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    keycardblanc = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LSortie") && keySortie == true)
                 {
@@ -260,6 +274,7 @@ public class RaycastPerso : MonoBehaviour
                     keyGucci = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    keycardviolet = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LGucci") && keyGucci == true)
                 {
@@ -287,6 +302,7 @@ public class RaycastPerso : MonoBehaviour
                     keyA = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    keycardbleu = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true)
                 {
@@ -323,6 +339,7 @@ public class RaycastPerso : MonoBehaviour
                     keyC = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    keycardvert = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurC") && keyC == true)
                 {
@@ -350,6 +367,7 @@ public class RaycastPerso : MonoBehaviour
                     keyPause = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    keycardjaune = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurPause") && keyPause == true)
                 {
@@ -438,6 +456,7 @@ public class RaycastPerso : MonoBehaviour
                     composant = true;
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
+                    composantb = true;
                 }
                 if (hit.collider.gameObject.CompareTag("Machine") && composant == true && machinecheck == false) 
                 {
@@ -456,6 +475,7 @@ public class RaycastPerso : MonoBehaviour
                     flash.SetActive(false);
                     pchit.SetActive(true);
                     FindObjectOfType<AudioManager>().Play("Take");
+                    extincteurb = true;
                 }
 
                 // Lunettes
@@ -473,6 +493,7 @@ public class RaycastPerso : MonoBehaviour
                      lunettesfollowme.SetActive(true);
                      lunettespass.SetActive(true); */
                     FindObjectOfType<AudioManager>().Play("Take");
+                    protolunettes = true;
                 }
 
 
