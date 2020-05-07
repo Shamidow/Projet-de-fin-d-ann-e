@@ -11,7 +11,9 @@ public class FlashlightController : MonoBehaviour
     public float timerflash = 0f;
     public bool flCheck = false;
     public bool once = false;
-    
+    public bool onceextin = false;
+
+
     void Start()
     {
         Cursor.visible = false;
@@ -97,6 +99,13 @@ public class FlashlightController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
             isactive = true;
             spotlight.SetActive(true);
+        }
+        if(RaycastPerso.extincteur && onceextin == false)
+        {
+            FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
+            isactive = false;
+            spotlight.SetActive(false);
+            onceextin = true;
         }
     }
 
