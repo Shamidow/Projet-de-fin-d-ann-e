@@ -10,6 +10,7 @@ public class FlashlightController : MonoBehaviour
     public static float tl = 100f;
     public float timerflash = 0f;
     public bool flCheck = false;
+    public bool once = false;
     
     void Start()
     {
@@ -32,7 +33,11 @@ public class FlashlightController : MonoBehaviour
             Lighttorch();
             timerflash = timerflash + Time.deltaTime;
             Debug.Log(tl);
-            FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
+            if (once == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
+                once = true;
+            }
             isactive = false;
             spotlight.SetActive(false);
         }
@@ -43,11 +48,13 @@ public class FlashlightController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
             isactive = true;
             spotlight.SetActive(true);
+            once = false;
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             flCheck = true;
+            once = false;
         }
 
         if (Input.GetKeyDown(KeyCode.F))
@@ -60,7 +67,7 @@ public class FlashlightController : MonoBehaviour
                 return;
 
             }
-            if (isactive == false)
+            if (isactive == false && tl >= 1)
             {
                 FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
                 isactive = true;
@@ -68,6 +75,28 @@ public class FlashlightController : MonoBehaviour
                 return;
 
             }
+        }
+        if(tl <= 1)
+        {
+            if (once == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
+                once = true;
+            }
+            isactive = false;
+            spotlight.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
+            isactive = false;
+            spotlight.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
+            isactive = true;
+            spotlight.SetActive(true);
         }
     }
 
