@@ -10778,6 +10778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 351541898}
   - component: {fileID: 351541897}
+  - component: {fileID: 351541899}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -10859,6 +10860,41 @@ Transform:
   m_Father: {fileID: 1403097932}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 262.151, y: -220.024, z: 41.108994}
+--- !u!114 &351541899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351541896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 1
+  useScattering: 0
+  overrideScattering: 0
+  overridingScattering: 0.5
+  scatteringBias: 0
+  useColorTemperatureTint: 0
+  overrideColor: 0
+  overridingColor: {r: 1, g: 1, b: 1, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
 --- !u!4 &353109045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5941502710387760117, guid: f3a7e8aac65e9f44a9d7ebe413cac273,
@@ -16258,6 +16294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498049281}
   - component: {fileID: 498049280}
+  - component: {fileID: 498049282}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -16339,6 +16376,41 @@ Transform:
   m_Father: {fileID: 1403097932}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 260.182, y: -127.82599, z: -51.763977}
+--- !u!114 &498049282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498049279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 1
+  useScattering: 0
+  overrideScattering: 0
+  overridingScattering: 0.5
+  scatteringBias: 0
+  useColorTemperatureTint: 0
+  overrideColor: 0
+  overridingColor: {r: 1, g: 1, b: 1, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
 --- !u!1001 &500569955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28726,6 +28798,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477b93d35b47b3f44a4cf1f4abcf554b, type: 3}
+--- !u!114 &971212479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59306422a2ca4454aabce3daa79c3334, type: 3}
+  m_Name: New Aura Base Settings
+  m_EditorClassIdentifier: 
+  useDensity: 1
+  density: 0.25
+  useScattering: 1
+  scattering: 0.626
+  useAmbientLighting: 1
+  ambientLightingStrength: 1
+  useColor: 0
+  color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
+  colorStrength: 1
+  useTint: 0
+  tint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  tintStrength: 1
+  useExtinction: 0
+  extinction: 0.75
 --- !u!1001 &972548898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31625,6 +31723,7 @@ GameObject:
   - component: {fileID: 1073420068}
   - component: {fileID: 1073420067}
   - component: {fileID: 1073420066}
+  - component: {fileID: 1073420069}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -31662,7 +31761,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8679245, g: 0.78759557, b: 0.11053756, a: 0.65882355}
-  m_Intensity: 3
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -31704,7 +31803,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 3
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -31725,6 +31824,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1073420069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073420065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 1
+  useScattering: 0
+  overrideScattering: 0
+  overridingScattering: 0.5
+  scatteringBias: 0
+  useColorTemperatureTint: 0
+  overrideColor: 0
+  overridingColor: {r: 0.999999, g: 0.4371828, b: 0.29943794, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
 --- !u!4 &1075388275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2378222868460750141, guid: 477b93d35b47b3f44a4cf1f4abcf554b,
@@ -38473,6 +38607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289863018}
   - component: {fileID: 1289863019}
+  - component: {fileID: 1289863020}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -38506,9 +38641,9 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 0.75686276, a: 0.78431374}
-  m_Intensity: 1
-  m_Range: 52.876343
-  m_SpotAngle: 61.598812
+  m_Intensity: 4.79
+  m_Range: 21.0422
+  m_SpotAngle: 35.926594
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -38555,6 +38690,41 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1289863020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289863017}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 2.7
+  useScattering: 0
+  overrideScattering: 0
+  overridingScattering: 0.5
+  scatteringBias: 0
+  useColorTemperatureTint: 0
+  overrideColor: 1
+  overridingColor: {r: 0.9953253, g: 0.999999, b: 0.8356972, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.363
+  customDistanceFalloffPower: 1.3
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.824
+  customAngularFalloffPower: 1.35
 --- !u!4 &1290414272 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6816759291577983358, guid: 6a825217039a3214eaf02a294ba13076,
@@ -39625,7 +39795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1341405497
 Transform:
   m_ObjectHideFlags: 0
@@ -51739,7 +51909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1733796006
 Transform:
   m_ObjectHideFlags: 0
@@ -69223,15 +69393,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486957697917988865}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73.85, y: 5.25, z: -4.53}
+  m_LocalRotation: {x: -0, y: 0.6982416, z: -0, w: 0.7158623}
+  m_LocalPosition: {x: -56.84, y: 5.25, z: -3.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1226313562232083309}
   - {fileID: 1486957698206646740}
   m_Father: {fileID: 0}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 88.57201, z: 0}
 --- !u!20 &1226313562232083296
 Camera:
   m_ObjectHideFlags: 0
@@ -69337,6 +69507,7 @@ GameObject:
   - component: {fileID: 1226313562232083298}
   - component: {fileID: 1226313562232083308}
   - component: {fileID: 1226313562232083312}
+  - component: {fileID: 1226313562232083313}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -69371,6 +69542,21 @@ MonoBehaviour:
   composantMachine: {fileID: 0}
   pchit: {fileID: 664823382}
   flash: {fileID: 1341405496}
+--- !u!114 &1226313562232083313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226313562232083311}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frustumSettings:
+    baseSettings: {fileID: 971212479}
+    qualitySettings: {fileID: 11400000, guid: cc13ea9ec11f8834d9eaf09f0c76d5d3, type: 2}
 --- !u!1001 &1281071562870682375
 PrefabInstance:
   m_ObjectHideFlags: 0
