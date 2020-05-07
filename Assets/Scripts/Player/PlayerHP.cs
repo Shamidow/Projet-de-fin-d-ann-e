@@ -14,6 +14,7 @@ public class PlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
             if (trigger == true)
             {
                 hp = hp - 3 * Time.deltaTime;
