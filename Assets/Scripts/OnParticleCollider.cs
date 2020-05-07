@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class OnParticleCollider : MonoBehaviour
 {
-    // Start is called before the first frame update
+    List<ParticleCollisionEvent> collisionEvents;
     void Start()
     {
-        
+        collisionEvents = new List<ParticleCollisionEvent>(); 
     }
 
     // Update is called once per frame
@@ -17,9 +17,6 @@ public class OnParticleCollider : MonoBehaviour
     }
     OnParticleCollider()
     {
-
-            PlayerHP.hp--;
-            Debug.Log("Les HPs baissent grâce aux particules" + PlayerHP.hp);
         
     }
 }

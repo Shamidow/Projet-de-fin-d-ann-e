@@ -711,7 +711,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16818281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e65934cb14ef444892d6880a2862592, type: 3}
   m_Name: 
@@ -2839,6 +2839,7 @@ GameObject:
   - component: {fileID: 141513762}
   - component: {fileID: 141513761}
   - component: {fileID: 141513760}
+  - component: {fileID: 141513763}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -6635,17 +6636,17 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
+    collisionShape1: {fileID: 2051051452}
     collisionShape2: {fileID: 0}
     collisionShape3: {fileID: 0}
     collisionShape4: {fileID: 0}
     collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
-    enter: 0
-    exit: 0
+    enter: 2
+    exit: 2
     radiusScale: 1
   SubModule:
     serializedVersion: 2
@@ -7600,6 +7601,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -179.996, y: 89.99999, z: -90}
+--- !u!114 &141513763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141513759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf61e6205589ba4c846db3ce1d78b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 0}
 --- !u!4 &141702167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5941502710387760117, guid: f3a7e8aac65e9f44a9d7ebe413cac273,
@@ -16444,6 +16458,7 @@ GameObject:
   - component: {fileID: 697933491}
   - component: {fileID: 697933490}
   - component: {fileID: 697933489}
+  - component: {fileID: 697933492}
   m_Layer: 0
   m_Name: Spores
   m_TagString: Untagged
@@ -20216,9 +20231,9 @@ ParticleSystem:
       serializedVersion: 2
       m_Bits: 4294967295
     maxCollisionShapes: 256
-    quality: 2
+    quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -21186,6 +21201,19 @@ Transform:
   m_Father: {fileID: 141513762}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -179.996, y: 89.99999, z: -90}
+--- !u!114 &697933492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697933488}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf61e6205589ba4c846db3ce1d78b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 0}
 --- !u!4 &697943293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3286529902642766527, guid: 4b9f9985b50b4c048baf983264d72151,
@@ -41727,7 +41755,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051051447}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e65934cb14ef444892d6880a2862592, type: 3}
   m_Name: 
@@ -41799,7 +41827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051051447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.36, y: 6.94, z: -5.411}
+  m_LocalPosition: {x: -34.68, y: 6.94, z: -5.411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
