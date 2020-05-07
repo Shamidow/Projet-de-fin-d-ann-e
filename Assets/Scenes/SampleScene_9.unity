@@ -49553,7 +49553,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Footstep
     clip: {fileID: 8300000, guid: e0bda403647cf6e45bab54ee748a22e4, type: 3}
-    volume: 0.223
+    volume: 0.052
     pitch: 1
     source: {fileID: 0}
   - name: Footstep Sprint
@@ -68777,6 +68777,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spotlight: {fileID: 1289863017}
+  timerflash: 0
+  flCheck: 0
+  once: 0
+  onceextin: 0
 --- !u!114 &1486957697917988888
 MonoBehaviour:
   m_ObjectHideFlags: 0
