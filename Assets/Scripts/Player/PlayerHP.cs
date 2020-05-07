@@ -15,12 +15,12 @@ public class PlayerHP : MonoBehaviour
     void Update()
     {
 
-            if (trigger == true)
+            /* if (trigger == true)
             {
                 hp = hp - 3 * Time.deltaTime;
                 Debug.Log(hp);
                 
-            }
+            }*/
         
         if(hp <= 0)
         {
