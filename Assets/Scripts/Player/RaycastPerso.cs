@@ -150,16 +150,16 @@ public class RaycastPerso : MonoBehaviour
 
     // Door Bool
 
-    public bool door1;
-    public bool door2;
-    public bool door3;
-    public bool door4;
-    public bool door5;
-    public bool door6;
-    public bool door7;
-    public bool door8;
-    public bool door9;
-    public bool door10;
+    public bool door1 = false;
+    public bool door2 = false;
+    public bool door3 = false;
+    public bool door4 = false;
+    public bool door5 = false;
+    public bool door6 = false;
+    public bool door7 = false;
+    public bool door8 = false;
+    public bool door9 = false;
+    public bool door10 = false;
 
 
 
@@ -205,10 +205,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door1 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door1 = true;
                     }
                     if(door1 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door1 = false;
                     }
                 }
                 if(hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == false)
@@ -240,10 +242,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door2 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door2 = true;
                     }
                     if (door2 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door2 = false;
                     }
                 }
                     if(hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == false)
@@ -275,10 +279,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door3 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door3 = true;
                     }
                     if (door3 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door3 = false;
                     }
                 }
 
@@ -291,10 +297,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door4 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door4 = true;
                     }
                     if (door4 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door4 = false;
                     }
                 }
 
@@ -307,10 +315,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door5 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door5 = true;
                     }
                     if (door5 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door5 = false;
                     }
                 }
                 if(hit.collider.gameObject.CompareTag("Door GC") && lecteurG == false)
@@ -342,10 +352,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door6 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door6 = true;
                     }
                     if (door6 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door6 = false;
                     }
                 }
                 if(hit.collider.gameObject.CompareTag("Door A") && lecteurA == false)
@@ -377,10 +389,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door7 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
                     }
                     if (door7 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
                     }
                 }
 
@@ -393,10 +407,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door8 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door8 = true;
                     }
                     if (door8 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door8 = false;
                     }
                 }
                 if(hit.collider.gameObject.CompareTag("Door C") && lecteurC == false)
@@ -428,10 +444,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door9 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door9 = true;
                     }
                     if (door9 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door9 = false;
                     }
                 }
                 if (hit.collider.gameObject.CompareTag("Door Pause") && lecteurP == false)
@@ -463,10 +481,12 @@ public class RaycastPerso : MonoBehaviour
                     if (door10 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
+                        door10 = true;
                     }
                     if (door10 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
+                        door10 = false;
                     }
                 }
 
