@@ -17,7 +17,7 @@ public class FireController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             co2.SetActive(true);
-            FindObjectOfType<AudioManager>().Play("Pshit");
+            FindObjectOfType<AudioManager>().Play("Extincteur use");
         }
         if (Input.GetKeyUp(KeyCode.Mouse0)) 
         {
