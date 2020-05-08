@@ -22,23 +22,23 @@ public class CO2 : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             extincteur.SetActive(false);
-            ;
-            ;
-            ;
-            ;
-            ;
-            ;
-            ;
-            ;
-            ;
-            ;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             auEx.SetActive(true);
             auEx.transform.parent = null;
-            ;
-            ;
-            ;
-            ;
-            ;
+            
+            
+            
+            
+            
             RaycastPerso.extincteur = false;
             Destroy(other.transform.gameObject);            
             empty.SetActive(false);

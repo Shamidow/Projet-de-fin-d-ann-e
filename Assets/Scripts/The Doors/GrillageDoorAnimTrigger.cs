@@ -38,7 +38,8 @@ public class GrillageDoorAnimTrigger : MonoBehaviour
 
             else
             {
-                FindObjectOfType<AudioManager>().Play("Locked Grid");
+                FindObjectOfType<AudioManager>().Play("Grid locked");
+                Debug.Log("joue zebi");
                 RaycastPerso.getDoorGrillage = false;
             }
         }

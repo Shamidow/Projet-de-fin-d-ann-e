@@ -19743,7 +19743,7 @@ Transform:
   - {fileID: 1406544498}
   - {fileID: 1928012978}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &581029474 stripped
 Transform:
@@ -19848,7 +19848,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &582484450
 MonoBehaviour:
@@ -35118,7 +35118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1129414528
 AudioSource:
@@ -36309,7 +36309,7 @@ Transform:
   - {fileID: 1851031154}
   - {fileID: 252876993}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1164936932
 PrefabInstance:
@@ -49776,7 +49776,7 @@ Transform:
   - {fileID: 698802359}
   - {fileID: 1202137054}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1607283810 stripped
 Transform:
@@ -50003,6 +50003,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de18868e0598084dab464dbcd70304f, type: 3}
+--- !u!1 &1619200689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 3222827703050823209}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619200690}
+  m_Layer: 0
+  m_Name: Canvas (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1619200690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 3222827703050823209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619200689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620750350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52103,8 +52133,23 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: Door
-    clip: {fileID: 8300000, guid: 9cb427b482189c04c90365b7b57c3573, type: 3}
+    clip: {fileID: 8300000, guid: 62e5a4ec31d0f984fb0d943bdfafd7f9, type: 3}
     volume: 0.098
+    pitch: 1
+    source: {fileID: 0}
+  - name: Extincteur fall
+    clip: {fileID: 8300000, guid: 62e5a4ec31d0f984fb0d943bdfafd7f9, type: 3}
+    volume: 0.225
+    pitch: 1
+    source: {fileID: 0}
+  - name: Extincteur use
+    clip: {fileID: 8300000, guid: d5be929b6d481ef4fa1cfba955d698a5, type: 3}
+    volume: 0.713
+    pitch: 1
+    source: {fileID: 0}
+  - name: Grid locked
+    clip: {fileID: 8300000, guid: a1e738890e1079c43b26aa00ad7df7f3, type: 3}
+    volume: 0.125
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1684350873
@@ -59027,7 +59072,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1931544594
 ParticleSystemRenderer:
@@ -71677,7 +71722,7 @@ Transform:
   - {fileID: 1226313562232083309}
   - {fileID: 1486957698206646740}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1226313562232083296
 Camera:

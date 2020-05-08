@@ -122,6 +122,7 @@ public class Keypad : MonoBehaviour
         if (iskeying == true)
         {
             //SON : taper une touche
+            FindObjectOfType<AudioManager>().Play("Digicode Keys");
             newchar = "";
             if (chara == 10)
             {
