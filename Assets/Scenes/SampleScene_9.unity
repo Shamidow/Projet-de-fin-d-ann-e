@@ -52114,17 +52114,17 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Footstep
     clip: {fileID: 8300000, guid: e0bda403647cf6e45bab54ee748a22e4, type: 3}
-    volume: 0.052
+    volume: 0.071
     pitch: 1
     source: {fileID: 0}
   - name: Footstep Sprint
     clip: {fileID: 8300000, guid: e0bda403647cf6e45bab54ee748a22e4, type: 3}
-    volume: 0.535
+    volume: 0.319
     pitch: 1
     source: {fileID: 0}
   - name: Footstep Crouch
     clip: {fileID: 8300000, guid: e0bda403647cf6e45bab54ee748a22e4, type: 3}
-    volume: 0.098
+    volume: 0.041
     pitch: 1
     source: {fileID: 0}
   - name: Door Close
