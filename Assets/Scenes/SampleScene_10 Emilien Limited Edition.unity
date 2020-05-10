@@ -20979,6 +20979,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1798096339}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &500132214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2468012561759161285, guid: 94d6ad7b8537ac54ea1c5ad41fff6039,
+    type: 3}
+  m_PrefabInstance: {fileID: 2468012561829995187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &500569955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103088,6 +103094,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2468012561759161285, guid: 94d6ad7b8537ac54ea1c5ad41fff6039,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468012562461246699, guid: 94d6ad7b8537ac54ea1c5ad41fff6039,
+        type: 3}
+      propertyPath: co2
+      value: 
+      objectReference: {fileID: 500132214}
     - target: {fileID: 3694246821783302595, guid: 94d6ad7b8537ac54ea1c5ad41fff6039,
         type: 3}
       propertyPath: lecteurRouge
