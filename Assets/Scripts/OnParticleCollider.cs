@@ -4,19 +4,44 @@ using UnityEngine;
 
 public class OnParticleCollider : MonoBehaviour
 {
-    List<ParticleCollisionEvent> collisionEvents;
+    public ParticleSystem part;
+    public GameObject extincteur;
+    public GameObject empty;
+    public GameObject auEx;
+
     void Start()
     {
-        collisionEvents = new List<ParticleCollisionEvent>(); 
+        part = GetComponent<ParticleSystem>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnParticleCollision(GameObject other)
     {
-        
-    }
-    OnParticleCollider()
-    {
-        
+        if (other.tag == "Obstacle")
+        {
+            Debug.Log(other.tag);
+            Debug.Log("Oeoeoe");
+
+            extincteur.SetActive(false);
+
+
+
+
+
+
+
+
+
+
+            auEx.SetActive(true);
+            auEx.transform.parent = null;
+
+
+
+
+
+            RaycastPerso.extincteur = false;
+            Destroy(other.transform.gameObject);
+            empty.SetActive(false);
+        }
     }
 }
