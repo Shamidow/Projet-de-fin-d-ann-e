@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9155243913830581574}
   - component: {fileID: 168589674093412208}
   - component: {fileID: 5866635609751749513}
+  - component: {fileID: 5705848678167253454}
   m_Layer: 0
   m_Name: etabli 1
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5284600387494164309}
-  m_LocalRotation: {x: -0.29600242, y: 0.6421703, z: 0.64217013, w: 0.29600242}
-  m_LocalPosition: {x: -59.417, y: 5.1048484, z: 5.706}
+  m_LocalRotation: {x: -0.7071071, y: -0, z: -0, w: 0.7071065}
+  m_LocalPosition: {x: -59.417, y: 4.900368, z: 5.8005376}
   m_LocalScale: {x: 1.0949898, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 130.50601}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!33 &168589674093412208
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5705848678167253454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284600387494164309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0552342, y: 0.8189913, z: 0.90018845}
+  m_Center: {x: 0, y: -0.054971635, z: -0.24115455}
