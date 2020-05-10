@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 690624889441725645}
   - component: {fileID: 690624889441725650}
   - component: {fileID: 690624889441725651}
+  - component: {fileID: 1297299771833467764}
   m_Layer: 0
   m_Name: tabouret
   m_TagString: Untagged
@@ -57,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 839779d9a1f5c2c469f0bb5fbe486fc6, type: 2}
+  - {fileID: 2100000, guid: 94f27c1ee97833945829c063023d0f25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1297299771833467764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690624889441725648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45340335, y: 0.5668192, z: 0.4466383}
+  m_Center: {x: -0.2292476, y: 0.2773103, z: 0.0014632723}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8513526319378287675}
   - component: {fileID: 8513526319378287674}
   m_Layer: 0
-  m_Name: Monseigneur (1)
+  m_Name: Monseigneur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8513526319378287677}
-  m_LocalRotation: {x: -0.6443248, y: 0.6126407, z: -0.054425962, w: 0.45448306}
-  m_LocalPosition: {x: -21.786, y: 4.735, z: 8.281}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -21.786, y: 4.832615, z: 8.321325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -31.264002, y: 132.817, z: -78.954}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8513526319378287675
 MeshFilter:
   m_ObjectHideFlags: 0
