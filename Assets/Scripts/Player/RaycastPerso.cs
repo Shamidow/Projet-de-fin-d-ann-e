@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class RaycastPerso : MonoBehaviour
 {
+    public static int Ventolines = 0;
+    
     // Grillage
 
     public static bool getDoorGrillage = false;
@@ -167,6 +169,8 @@ public class RaycastPerso : MonoBehaviour
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        
+
     }
 
     // Update is called once per frame
@@ -567,6 +571,8 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Ventoline"))
                 {
                     PlayerActions.ventoline++;
+                    Ventolines = Ventolines + 1;
+
                     Debug.Log("J'ai  trouvé de la Ventoline");
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
