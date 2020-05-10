@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class FlashlightController : MonoBehaviour
 {
     AudioSource flashlightsound;
@@ -12,21 +12,24 @@ public class FlashlightController : MonoBehaviour
     public bool flCheck = false;
     public bool once = false;
     public bool onceextin = false;
+    public Image FlashBar;
 
 
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         tl = Mathf.Clamp(tl, 0, 100);
-
+        FlashBar.fillAmount = tl / 100f;
         if (isactive == true)
         {
+            
             tl = tl - 6 * Time.deltaTime;
             Debug.Log("Torchlight =" + tl);
         }
@@ -112,5 +115,6 @@ public class FlashlightController : MonoBehaviour
     public void Lighttorch()
     {
         tl = tl + 15 * Time.deltaTime;
+       
     }
 }
