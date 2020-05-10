@@ -9,8 +9,6 @@ public class PlayerActions : MonoBehaviour
     public static int ventoline = 0;
     public GameObject flash;
     public GameObject fire;
-    public AudioSource ventolineas;
-    public AudioSource changewpn;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -35,7 +33,7 @@ public class PlayerActions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false && ventoline != 0)
         {
             ventolineCheck = true;
-            FindObjectOfType<AudioManager>().Play("Ventoline");
+            // FindObjectOfType<AudioManager>().Play("Ventoline");
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
