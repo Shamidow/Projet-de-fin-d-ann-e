@@ -375,6 +375,13 @@ namespace GreatArcStudios
         /// </summary>
         public void Resume()
         {
+            Debug.Log("resume");
+            Screen.lockCursor = true;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
+            OtherCanvas.SetActive(true);
+            
             Time.timeScale = timeScale;
 
             mainPanel.SetActive(false);
@@ -458,6 +465,8 @@ namespace GreatArcStudios
 
             if (Input.GetKeyDown(KeyCode.Escape) && mainPanel.active == false)
             {
+                // Screen.lockCursor = true;
+                Cursor.visible = true;
                 OtherCanvas.SetActive(false);
         CanvasStart.SetActive(true);
                 uiEventSystem.SetSelectedGameObject(defualtSelectedMain);
@@ -477,8 +486,12 @@ namespace GreatArcStudios
                  }  */
             }
             else if(Input.GetKeyDown(KeyCode.Escape) && mainPanel.active == true) {
-                OtherCanvas.SetActive(true);
+                
                 Time.timeScale = timeScale;
+Screen.lockCursor = true;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;
+                OtherCanvas.SetActive(true);
                 mainPanel.SetActive(false);
                 vidPanel.SetActive(false);
                 audioPanel.SetActive(false);

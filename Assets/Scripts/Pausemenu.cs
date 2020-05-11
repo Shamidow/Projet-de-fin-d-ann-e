@@ -8,11 +8,12 @@ public class Pausemenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject crosshair;
-    Scene currentScene = SceneManager.GetActiveScene();
+    public Scene currentScene;
 
     string scenename;
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
         scenename = currentScene.name;
     }
 
