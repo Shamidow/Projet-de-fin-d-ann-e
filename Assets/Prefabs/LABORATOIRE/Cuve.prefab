@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 3179292772832409187}
   - component: {fileID: 282889228295534857}
   - component: {fileID: 8976198471986029037}
+  - component: {fileID: 7140265287000429243}
   m_Layer: 0
   m_Name: CuveBase
   m_TagString: Untagged
@@ -267,3 +268,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7140265287000429243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8213807769984732652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5547589, y: 0.5424344, z: 1.1323136}
+  m_Center: {x: -0.000093208524, y: 0.0049249395, z: 0.557026}
