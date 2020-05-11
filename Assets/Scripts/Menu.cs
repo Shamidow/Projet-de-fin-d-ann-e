@@ -11,11 +11,12 @@ public class Menu : MonoBehaviour
     public GameObject menuMenu;
     public GameObject pausemenu;
 
-    Scene currentScene = SceneManager.GetActiveScene();
+    public Scene currentScene;
 
     string scenename;
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
         scenename = currentScene.name;
     }
 
