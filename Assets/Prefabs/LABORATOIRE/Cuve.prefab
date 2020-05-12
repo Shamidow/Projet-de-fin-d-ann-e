@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6431618371234336509}
   - component: {fileID: 6463483162944110012}
   - component: {fileID: 5806977630557810839}
+  - component: {fileID: 7328675493291925516}
   m_Layer: 0
   m_Name: CuveVerre
   m_TagString: Untagged
@@ -78,6 +79,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7328675493291925516
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077771415116575455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4323480940668751093, guid: f327dd3fab5114c43ab62a5385dedfd0, type: 3}
 --- !u!1 &3123957755845227708
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +216,7 @@ GameObject:
   - component: {fileID: 282889228295534857}
   - component: {fileID: 8976198471986029037}
   - component: {fileID: 7140265287000429243}
+  - component: {fileID: 3558883376420205901}
   m_Layer: 0
   m_Name: CuveBase
   m_TagString: Untagged
@@ -279,5 +295,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5547589, y: 0.5424344, z: 1.1323136}
-  m_Center: {x: -0.000093208524, y: 0.0049249395, z: 0.557026}
+  m_Size: {x: 0.5547589, y: 0.5424344, z: 0.15952748}
+  m_Center: {x: -0.000093208524, y: 0.0049249395, z: 0.07063279}
+--- !u!65 &3558883376420205901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8213807769984732652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5610577, y: 0.5189601, z: 0.16337095}
+  m_Center: {x: 0.0033356543, y: 0.0184008, z: 1.0414972}
