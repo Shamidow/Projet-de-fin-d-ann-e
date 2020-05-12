@@ -49,6 +49,7 @@ TagManager:
   - ARight
   - CRight
   - CLeft
+  - LaboRight
   layers:
   - Default
   - TransparentFX

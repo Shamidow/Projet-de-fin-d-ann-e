@@ -107,6 +107,9 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorCleft = false;
 
+    public static bool getDoorLabo1right = false;
+
+
 
     // Composant Machines
     public static bool composant = false;
@@ -726,6 +729,23 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("CLeft"))
                 {
                     getDoorCleft = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                    /*if (door7 == false)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
+                        return;
+                    }
+                    if (door7 == true)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
+                        return;
+                    }*/
+                }
+                if (hit.collider.gameObject.CompareTag("LaboRight"))
+                {
+                    getDoorLabo1right = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
