@@ -219,10 +219,10 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }
                 }
-                if(hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == false)
+                /*if(hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Locked");
-                }
+                }*/
                 if (hit.collider.gameObject.CompareTag("KeyLabo"))
                 {
                     keyLabo = true;
