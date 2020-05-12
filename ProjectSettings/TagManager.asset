@@ -43,6 +43,12 @@ TagManager:
   - KeySortie
   - LSortie
   - AudioManager
+  - PlacardGucci
+  - PlacardGucci2
+  - ALeft
+  - ARight
+  - CRight
+  - CLeft
   layers:
   - Default
   - TransparentFX
