@@ -8,6 +8,7 @@ public class DoorAnimTriggerLabo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Set Door Anim");
         m_Animator = gameObject.GetComponent<Animator>(); // Prendre l'animator        
     }
 
@@ -20,7 +21,8 @@ public class DoorAnimTriggerLabo : MonoBehaviour
         if (RaycastPerso.getDoorLabo == true)
         {
             // Ici présent 
-            m_Animator.SetTrigger("Labo");
+            m_Animator.SetTrigger("Autre");
+            Debug.Log("SetTrigger");
             RaycastPerso.getDoorLabo = false;
         }
 

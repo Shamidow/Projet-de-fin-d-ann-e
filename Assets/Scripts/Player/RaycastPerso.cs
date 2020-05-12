@@ -204,7 +204,7 @@ public class RaycastPerso : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == true) 
                 {
-                    getDoorLabo = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorLabo = true; // getDoorLabo est un static qui va tirgger le script de la door
                     Debug.Log("Door Opening");
                     if (door1 == false)
                     {
@@ -219,10 +219,10 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }
                 }
-                if(hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == false)
+                /*if(hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Locked");
-                }
+                }*/
                 if (hit.collider.gameObject.CompareTag("KeyLabo"))
                 {
                     keyLabo = true;

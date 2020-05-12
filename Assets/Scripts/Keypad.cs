@@ -9,6 +9,7 @@ public class Keypad : MonoBehaviour
     public static bool PowerGoodCode = false;
     private GameObject FPSController;
     public string code;
+    public bool isactive = false;
     private bool enter = false;
     private bool iskeying = false;
     private int charnum = 0;
@@ -18,6 +19,8 @@ public class Keypad : MonoBehaviour
     public GameObject disablecrosshair;
     public AudioSource touche;
     public AudioSource correct;
+
+
     //  public Texture2D cursorArrow;
     // Start is called before the first frame update
     void Start()
@@ -57,10 +60,12 @@ public class Keypad : MonoBehaviour
                 iskeying = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
+            //int newscore = 10;
+         bool newsstatus = false;
+        Crouch.ControllerStatus = newsstatus;
+            //Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.Auto);
 
-        //Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.Auto);
-
-            }
+        }
             else
             if (Input.GetKeyUp(KeyCode.E) && iskeying == true)
             {
@@ -68,6 +73,9 @@ public class Keypad : MonoBehaviour
             disablecrosshair.gameObject.SetActive(true);
             transform.GetChild(0).gameObject.SetActive(false);
             FPSController.gameObject.SetActive(true);
+            bool newsstatus = true;
+            Crouch.ControllerStatus = newsstatus;
+
             Cursor.visible = false;
             iskeying = false;
             }
@@ -185,6 +193,8 @@ public class Keypad : MonoBehaviour
         disablecrosshair.gameObject.SetActive(true);
         transform.GetChild(0).gameObject.SetActive(false);
         FPSController.gameObject.SetActive(true);
+        bool newsstatus = true;
+        Crouch.ControllerStatus = newsstatus;
         Cursor.visible = false;
     }
 

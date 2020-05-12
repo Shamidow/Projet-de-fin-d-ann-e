@@ -19,7 +19,8 @@ public class Crouch : MonoBehaviour
     [SerializeField] private float SprintSpeed;
     [SerializeField] private float crouchSpeed;
 
-    private bool couroutineOn;
+    public static bool ControllerStatus;
+    public bool couroutineOn;
     private float stepDelay = 0.5f;
     private bool iswalking = false;
     private bool isSprinting = false;
@@ -36,7 +37,6 @@ public class Crouch : MonoBehaviour
         couroutineOn = true;
         
         StartCoroutine(Walking());
-
     }
 
 
@@ -82,7 +82,13 @@ public class Crouch : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(High.touch);
+ 
+           if(ControllerStatus == true)
+        {
+            ControllerStatus = false;
+            StartCoroutine(Walking());
+        }
+
         PlayerMovement();
         if (Input.GetButton("Fire3") && m_crouch == false)
         {
