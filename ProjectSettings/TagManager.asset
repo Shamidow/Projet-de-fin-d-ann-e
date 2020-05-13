@@ -50,6 +50,8 @@ TagManager:
   - CRight
   - CLeft
   - LaboRight
+  - ReposRight
+  - ReposLeft
   layers:
   - Default
   - TransparentFX

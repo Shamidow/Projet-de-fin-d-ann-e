@@ -109,6 +109,10 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorLabo1right = false;
 
+    public static bool getDoorreposright = false;
+
+    public static bool getDoorreposleft = false;
+
 
 
     // Composant Machines
@@ -760,6 +764,41 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }*/
                 }
+                if (hit.collider.gameObject.CompareTag("ReposRight"))
+                {
+                    getDoorreposright = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                    /*if (door7 == false)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
+                        return;
+                    }
+                    if (door7 == true)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
+                        return;
+                    }*/
+                }
+                if (hit.collider.gameObject.CompareTag("ReposLeft"))
+                {
+                    getDoorreposleft = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                    /*if (door7 == false)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
+                        return;
+                    }
+                    if (door7 == true)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
+                        return;
+                    }*/
+                }
+
 
 
             }
