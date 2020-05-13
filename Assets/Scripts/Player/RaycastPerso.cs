@@ -133,21 +133,11 @@ public class RaycastPerso : MonoBehaviour
     public GameObject lunettes4;
     public GameObject lunettes5;
     public GameObject lunettes6;
-    public GameObject lunettesmap;
+    public GameObject lunettesmap;*/
     public GameObject lunettesfollowme;
-    public GameObject lunettespass;
+    // public GameObject lunettespass;
 
-    public AudioSource keySound;
-    public AudioSource medicboxsound;
-    public AudioSource dooropening;
-    public AudioSource badger;
-    public AudioSource vento;
-    public AudioSource composantas;
-    public AudioSource machineas;
-    public AudioSource extincteuras;
-    public AudioSource lunettesas;
-    public AudioSource lockeddoor;
-    */
+    
 
     [Header("Bool Checklist")]
     public static bool ltb = false;
@@ -638,8 +628,8 @@ public class RaycastPerso : MonoBehaviour
                      lunettes4.SetActive(true);
                      lunettes5.SetActive(true);
                      lunettes6.SetActive(true);
-                     lunettesmap.SetActive(true);
-                     lunettesfollowme.SetActive(true);
+                     lunettesmap.SetActive(true); */
+                     lunettesfollowme.SetActive(true);/*
                      lunettespass.SetActive(true); */
                     FindObjectOfType<AudioManager>().Play("Take");
                     protolunettes = true;
