@@ -52,6 +52,10 @@ TagManager:
   - LaboRight
   - ReposRight
   - ReposLeft
+  - GucciRight
+  - GucciLeft
+  - Gucci1Right
+  - Gucci1Left
   layers:
   - Default
   - TransparentFX

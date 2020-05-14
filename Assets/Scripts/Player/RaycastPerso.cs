@@ -113,6 +113,14 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorreposleft = false;
 
+    public static bool getDoorgucci1right = false;
+
+    public static bool getDoorgucci1left = false;
+
+    public static bool getDoorgucci2right = false;
+
+    public static bool getDoorgucci2left = false;
+
 
 
     // Composant Machines
@@ -774,6 +782,74 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("ReposLeft"))
                 {
                     getDoorreposleft = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                    /*if (door7 == false)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
+                        return;
+                    }
+                    if (door7 == true)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
+                        return;
+                    }*/
+                }
+                if (hit.collider.gameObject.CompareTag("GucciRight"))
+                {
+                    getDoorgucci1right = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                    /*if (door7 == false)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
+                        return;
+                    }
+                    if (door7 == true)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
+                        return;
+                    }*/
+                }
+                if (hit.collider.gameObject.CompareTag("GucciLeft"))
+                {
+                    getDoorgucci1left = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                    /*if (door7 == false)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
+                        return;
+                    }
+                    if (door7 == true)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
+                        return;
+                    }*/
+                }
+                if (hit.collider.gameObject.CompareTag("Gucci1Right"))
+                {
+                    getDoorgucci2right = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    Debug.Log("Door Opening");
+                    /*if (door7 == false)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door");
+                        door7 = true;
+                        return;
+                    }
+                    if (door7 == true)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Door Close");
+                        door7 = false;
+                        return;
+                    }*/
+                }
+                if (hit.collider.gameObject.CompareTag("Gucci1Left"))
+                {
+                    getDoorgucci2left = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
