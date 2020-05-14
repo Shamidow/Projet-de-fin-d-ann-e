@@ -56,6 +56,9 @@ TagManager:
   - GucciLeft
   - Gucci1Right
   - Gucci1Left
+  - BureauB
+  - BureauA
+  - BureauC
   layers:
   - Default
   - TransparentFX
