@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ca7dfec32d75d64ea54def230270827, type: 2}
+  - {fileID: 2100000, guid: 48824d93d9debd84c8793bb0fe6b1619, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,7 +91,7 @@ MeshCollider:
   m_GameObject: {fileID: 1368944301516364244}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -119,7 +119,7 @@ Animator:
   m_GameObject: {fileID: 1368944301516364244}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d6f00236648d5e547adeec239b4abe3b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6f817766131653347ac44868d5e3778e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -199,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ca7dfec32d75d64ea54def230270827, type: 2}
+  - {fileID: 2100000, guid: 48824d93d9debd84c8793bb0fe6b1619, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229,7 +229,7 @@ MeshCollider:
   m_GameObject: {fileID: 3526985409195892773}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -259,7 +259,7 @@ GameObject:
   m_Layer: 0
   m_Name: PorteLabo
   m_TagString: Door Labo
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -270,7 +270,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4902658612508909154}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: -0.0000001872535}
   m_LocalPosition: {x: -73.6, y: 4.4136, z: -0.36989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
