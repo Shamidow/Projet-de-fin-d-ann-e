@@ -28,7 +28,7 @@ MonoBehaviour:
     maxFloatLength: 1
     maxAdhesionDistance: 1
     minLength: 1
-    maxLength: 3
+    maxLength: 2.8990908
     maxBranchesTotal: 64
     primaryWeight: 0.5
     randomWeight: 2.6299999
