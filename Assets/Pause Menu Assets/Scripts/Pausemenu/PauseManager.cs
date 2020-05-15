@@ -367,7 +367,8 @@ namespace GreatArcStudios
         /// </summary>
         public void Restart()
         {
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Resume();
             uiEventSystem.firstSelectedGameObject = defualtSelectedMain;
         }
         /// <summary>
@@ -376,13 +377,14 @@ namespace GreatArcStudios
         public void Resume()
         {
             Debug.Log("resume");
+Time.timeScale = timeScale;
             Screen.lockCursor = true;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
             OtherCanvas.SetActive(true);
             
-            Time.timeScale = timeScale;
+            
 
             mainPanel.SetActive(false);
             vidPanel.SetActive(false);
@@ -393,6 +395,8 @@ namespace GreatArcStudios
             {
                 otherUIElements[i].gameObject.SetActive(true);
             }
+
+
             /* if (blurBool == false)
              {
                  blurEffect.enabled = false;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class RaycastPerso : MonoBehaviour
 {
     public static int Ventolines = 0;
-    
+
     // Grillage
 
     public static bool getDoorGrillage = false;
@@ -151,7 +151,7 @@ public class RaycastPerso : MonoBehaviour
     public GameObject lunettesfollowme;
     // public GameObject lunettespass;
 
-    
+
 
     [Header("Bool Checklist")]
     public static bool ltb = false;
@@ -193,7 +193,7 @@ public class RaycastPerso : MonoBehaviour
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        
+
 
     }
 
@@ -221,12 +221,12 @@ public class RaycastPerso : MonoBehaviour
 
             // Input sur le E
 
-            if (Input.GetKeyDown(KeyCode.E)) 
+            if (Input.GetKeyDown(KeyCode.E))
             {
 
                 // LABO
 
-                if (hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == true) 
+                if (hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == true)
                 {
                     getDoorLabo = true; // getDoorLabo est un static qui va tirgger le script de la door
                     Debug.Log("Door Opening");
@@ -236,7 +236,7 @@ public class RaycastPerso : MonoBehaviour
                         door1 = true;
                         return;
                     }
-                    if(door1 == true)
+                    if (door1 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
                         door1 = false;
@@ -252,20 +252,24 @@ public class RaycastPerso : MonoBehaviour
                     keyLabo = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    ChatBox.SetMessage = "Red Key picked up";
+                    ChatBox.ChatUpdated = true;
                     keycardrouge = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurLabo") && keyLabo == true)
                 {
                     lecteurRouge.SetActive(false);
                     lecteurRougeValide.SetActive(true);
+                    ChatBox.SetMessage = "Card reader picked up";
+                    ChatBox.ChatUpdated = true;
                     lecteurLabo = true;
 
                     FindObjectOfType<AudioManager>().Play("Badger");
                 }
 
-                    // Sortie
+                // Sortie
 
-                    if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == true)
+                if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == true)
                 {
                     getDoorSortie = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
@@ -282,7 +286,7 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }
                 }
-                    if(hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == false)
+                if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
@@ -291,6 +295,8 @@ public class RaycastPerso : MonoBehaviour
                     keySortie = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    ChatBox.SetMessage = "White card picked up";
+                    ChatBox.ChatUpdated = true;
                     keycardblanc = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LSortie") && keySortie == true)
@@ -361,7 +367,7 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }
                 }
-                if(hit.collider.gameObject.CompareTag("Door GC") && lecteurG == false)
+                if (hit.collider.gameObject.CompareTag("Door GC") && lecteurG == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
@@ -370,6 +376,8 @@ public class RaycastPerso : MonoBehaviour
                     keyGucci = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    ChatBox.SetMessage = "Purple card picked up";
+                    ChatBox.ChatUpdated = true;
                     keycardviolet = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LGucci") && keyGucci == true)
@@ -400,7 +408,7 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }
                 }
-                if(hit.collider.gameObject.CompareTag("Door A") && lecteurA == false)
+                if (hit.collider.gameObject.CompareTag("Door A") && lecteurA == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
@@ -409,12 +417,16 @@ public class RaycastPerso : MonoBehaviour
                     keyA = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    ChatBox.SetMessage = "Blue card picked up";
+                    ChatBox.ChatUpdated = true;
                     keycardbleu = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true)
                 {
                     lecteurCA.SetActive(false);
                     lecteurAValide.SetActive(true);
+                    ChatBox.SetMessage = "Card A picked up";
+                    ChatBox.ChatUpdated = true;
                     lecteurA = true;
 
                     FindObjectOfType<AudioManager>().Play("Badger");
@@ -459,7 +471,7 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }
                 }
-                if(hit.collider.gameObject.CompareTag("Door C") && lecteurC == false)
+                if (hit.collider.gameObject.CompareTag("Door C") && lecteurC == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Locked");
                 }
@@ -507,6 +519,8 @@ public class RaycastPerso : MonoBehaviour
                     keyPause = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    ChatBox.SetMessage = "Yellow card picked up";
+                    ChatBox.ChatUpdated = true;
                     keycardjaune = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurPause") && keyPause == true)
@@ -598,6 +612,8 @@ public class RaycastPerso : MonoBehaviour
                     Ventolines = Ventolines + 1;
 
                     Debug.Log("J'ai  trouvé de la Ventoline");
+                    ChatBox.SetMessage = "Ventoline picked up";
+                    ChatBox.ChatUpdated = true;
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
                 }
@@ -609,9 +625,11 @@ public class RaycastPerso : MonoBehaviour
                     composant = true;
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
+                    ChatBox.SetMessage = "Component picked up";
+                    ChatBox.ChatUpdated = true;
                     composantb = true;
                 }
-                if (hit.collider.gameObject.CompareTag("Machine") && composant == true && machinecheck == false) 
+                if (hit.collider.gameObject.CompareTag("Machine") && composant == true && machinecheck == false)
                 {
                     cdm = true;
                     composantMachine.SetActive(true);
@@ -628,6 +646,8 @@ public class RaycastPerso : MonoBehaviour
                     flash.SetActive(false);
                     pchit.SetActive(true);
                     FindObjectOfType<AudioManager>().Play("Take");
+                    ChatBox.SetMessage = "Extinguisher picked up";
+                    ChatBox.ChatUpdated = true;
                     extincteurb = true;
                 }
 
@@ -643,7 +663,7 @@ public class RaycastPerso : MonoBehaviour
                      lunettes5.SetActive(true);
                      lunettes6.SetActive(true);
                      lunettesmap.SetActive(true); */
-                     lunettesfollowme.SetActive(true);/*
+                    lunettesfollowme.SetActive(true);/*
                      lunettespass.SetActive(true); */
                     FindObjectOfType<AudioManager>().Play("Take");
                     protolunettes = true;

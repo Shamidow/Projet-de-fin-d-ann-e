@@ -196,6 +196,7 @@ public class Keypad : MonoBehaviour
         bool newsstatus = true;
         Crouch.ControllerStatus = newsstatus;
         Cursor.visible = false;
+        iskeying = false;
     }
 
     IEnumerator WrongCode()
