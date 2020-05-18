@@ -189,6 +189,11 @@ public class RaycastPerso : MonoBehaviour
     public bool door9 = false;
     public bool door10 = false;
 
+    // Les e tuto
+
+    public GameObject placardguccie;
+    public GameObject placardguccie2;
+
 
 
 
@@ -688,6 +693,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    placardguccie.SetActive(false);
                 }
                 if (hit.collider.gameObject.CompareTag("PlacardGucci2"))
                 {
@@ -705,6 +711,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    placardguccie2.SetActive(false);
                 }
                 if (hit.collider.gameObject.CompareTag("ALeft"))
                 {
