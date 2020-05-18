@@ -9,7 +9,7 @@ public class RaycastPerso : MonoBehaviour
     // Grillage
 
     public static bool getDoorGrillage = false;
-    // Labo 
+    /*// Labo 
 
     // DoorLabo
     public static bool getDoorLabo = false;
@@ -22,6 +22,8 @@ public class RaycastPerso : MonoBehaviour
     // public static bool keyLabo = false;
     // Game Object
     // public GameObject objectLaboKey;
+    */
+
 
     public static bool getDoorSDM = false;
 
@@ -155,7 +157,7 @@ public class RaycastPerso : MonoBehaviour
 
     [Header("Bool Checklist")]
     public static bool ltb = false;
-    public static bool keycardrouge = false;
+    //public static bool keycardrouge = false;
     public static bool keycardblanc = false;
     public static bool keycardvert = false;
     public static bool keycardjaune = false;
@@ -176,7 +178,7 @@ public class RaycastPerso : MonoBehaviour
 
     // Door Bool
 
-    public bool door1 = false;
+    //public bool door1 = false;
     public bool door2 = false;
     public bool door3 = false;
     public bool door4 = false;
@@ -226,7 +228,7 @@ public class RaycastPerso : MonoBehaviour
 
                 // LABO
 
-                if (hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == true)
+                /*if (hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == true)
                 {
                     getDoorLabo = true; // getDoorLabo est un static qui va tirgger le script de la door
                     Debug.Log("Door Opening");
@@ -246,7 +248,7 @@ public class RaycastPerso : MonoBehaviour
                 /*if(hit.collider.gameObject.CompareTag("Door Labo") && lecteurLabo == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Locked");
-                }*/
+                }
                 if (hit.collider.gameObject.CompareTag("KeyLabo"))
                 {
                     keyLabo = true;
@@ -266,6 +268,7 @@ public class RaycastPerso : MonoBehaviour
 
                     FindObjectOfType<AudioManager>().Play("Badger");
                 }
+                */
 
                 // Sortie
 
@@ -943,23 +946,26 @@ public class RaycastPerso : MonoBehaviour
                 }
 
 
+                else
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                    //Debug.Log("Did not Hit");
+                }
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5, layerMask))
+                {
 
-            }
-
-
-
-
-
-            else
-            {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-                //Debug.Log("Did not Hit");
-            }
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5, layerMask))
-            {
-
+                }
             }
         }
-
     }
 }
+
+
+
+
+
+          
+        
+
+    
+

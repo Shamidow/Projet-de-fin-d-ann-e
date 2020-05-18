@@ -45,7 +45,7 @@ public class Checklist : MonoBehaviour
         {
             ltp.SetActive(true);
         }
-        if(RaycastPerso.keycardrouge == true)
+        if(InshallahRaycast.keycardrouge == true)
         {
             keycardrouge.SetActive(true);
         }
