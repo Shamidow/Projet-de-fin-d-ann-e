@@ -226,9 +226,18 @@ public class RaycastPerso : MonoBehaviour
         {
             //Debug.Log(hit.transform.name);
 
-            // Input sur le E
+            if (hit.collider.gameObject.CompareTag("PlacardGucci"))
+            {
+                placardguccie.SetActive(true);
+            }
+            if (hit.collider.gameObject.CompareTag("PlacardGucci2"))
+            {
+                placardguccie2.SetActive(true);
+            }
 
-            if (Input.GetKeyDown(KeyCode.E))
+                // Input sur le E
+
+                if (Input.GetKeyDown(KeyCode.E))
             {
 
                 // LABO
@@ -693,7 +702,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
-                    placardguccie.SetActive(false);
+                    Destroy(placardguccie);
                 }
                 if (hit.collider.gameObject.CompareTag("PlacardGucci2"))
                 {
@@ -711,7 +720,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
-                    placardguccie2.SetActive(false);
+                    Destroy(placardguccie2);
                 }
                 if (hit.collider.gameObject.CompareTag("ALeft"))
                 {
@@ -952,11 +961,30 @@ public class RaycastPerso : MonoBehaviour
                     }*/
                 }
 
+                if (Physics.Raycast(transform.position, transform.forward, out hit, 100, layerMask)) //Range de 4
+                {
+                    if (hit.collider.tag != "PlacardGucci")
+                    {
+                        placardguccie.SetActive(false);
+                    }
+                    if (hit.collider.tag != "PlacardGucci2")
+                    {
+                        placardguccie2.SetActive(false);
+                    }
+                }
 
                 else
                 {
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
                     //Debug.Log("Did not Hit");
+                    /*if (hit.collider.tag != "PlacardGucci")
+                    {
+                        placardguccie.SetActive(false);
+                    }
+                    if (hit.collider.tag != "PlacardGucci2")
+                    {
+                        placardguccie2.SetActive(false);
+                    }*/
                 }
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5, layerMask))
                 {
