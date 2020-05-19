@@ -222,22 +222,13 @@ public class RaycastPerso : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         Debug.DrawRay(transform.position, transform.forward * 5, Color.red);
 
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, 4, layerMask)) //Range de 4
         {
-            //Debug.Log(hit.transform.name);
 
-            if (hit.collider.gameObject.CompareTag("PlacardGucci"))
-            {
-                placardguccie.SetActive(true);
-            }
-            if (hit.collider.gameObject.CompareTag("PlacardGucci2"))
-            {
-                placardguccie2.SetActive(true);
-            }
+            // Input sur le E
 
-                // Input sur le E
-
-                if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
 
                 // LABO
@@ -961,17 +952,7 @@ public class RaycastPerso : MonoBehaviour
                     }*/
                 }
 
-                if (Physics.Raycast(transform.position, transform.forward, out hit, 100, layerMask)) //Range de 4
-                {
-                    if (hit.collider.tag != "PlacardGucci")
-                    {
-                        placardguccie.SetActive(false);
-                    }
-                    if (hit.collider.tag != "PlacardGucci2")
-                    {
-                        placardguccie2.SetActive(false);
-                    }
-                }
+                
 
                 else
                 {
