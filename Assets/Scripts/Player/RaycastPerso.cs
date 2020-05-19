@@ -193,6 +193,20 @@ public class RaycastPerso : MonoBehaviour
 
     public GameObject placardguccie;
     public GameObject placardguccie2;
+    public GameObject gre;
+    public GameObject gle;
+    public GameObject g1re;
+    public GameObject g1le;
+    public GameObject ar;
+    public GameObject al;
+    public GameObject cr;
+    public GameObject cl;
+    public GameObject lr;
+    public GameObject rr;
+    public GameObject rl;
+    public GameObject a;
+    public GameObject b;
+    public GameObject c;
 
 
 
@@ -729,6 +743,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(al);
                 }
                 if (hit.collider.gameObject.CompareTag("ARight"))
                 {
@@ -746,6 +761,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(ar);
                 }
                 if (hit.collider.gameObject.CompareTag("CRight"))
                 {
@@ -763,6 +779,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(cr);
                 }
                 if (hit.collider.gameObject.CompareTag("CLeft"))
                 {
@@ -780,6 +797,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(cl);
                 }
                 if (hit.collider.gameObject.CompareTag("LaboRight"))
                 {
@@ -797,6 +815,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(lr);
                 }
                 if (hit.collider.gameObject.CompareTag("ReposRight"))
                 {
@@ -814,6 +833,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(rr);
                 }
                 if (hit.collider.gameObject.CompareTag("ReposLeft"))
                 {
@@ -831,6 +851,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(rl);
                 }
                 if (hit.collider.gameObject.CompareTag("GucciRight"))
                 {
@@ -848,6 +869,8 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(gre);
+                    
                 }
                 if (hit.collider.gameObject.CompareTag("GucciLeft"))
                 {
@@ -865,6 +888,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(gle);
                 }
                 if (hit.collider.gameObject.CompareTag("Gucci1Right"))
                 {
@@ -882,6 +906,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(g1re);
                 }
                 if (hit.collider.gameObject.CompareTag("Gucci1Left"))
                 {
@@ -899,6 +924,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(g1le);
                 }
                 if (hit.collider.gameObject.CompareTag("BureauB"))
                 {
@@ -916,6 +942,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(b);
                 }
                 if (hit.collider.gameObject.CompareTag("BureauA"))
                 {
@@ -933,6 +960,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(a);
                 }
                 if (hit.collider.gameObject.CompareTag("BureauC"))
                 {
@@ -950,6 +978,7 @@ public class RaycastPerso : MonoBehaviour
                         door7 = false;
                         return;
                     }*/
+                    Destroy(c);
                 }
 
                 
