@@ -31,7 +31,7 @@ public class FlashlightController : MonoBehaviour
         {
             
             tl = tl - 6 * Time.deltaTime;
-            Debug.Log("Torchlight =" + tl);
+
         }
         if (flCheck == true)
         {
