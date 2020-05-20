@@ -207,6 +207,14 @@ public class RaycastPerso : MonoBehaviour
     public GameObject a;
     public GameObject b;
     public GameObject c;
+    public GameObject sdm;
+    public GameObject bm5;
+    public GameObject bm4;
+    public GameObject bm3;
+    public GameObject bm2;
+    public GameObject bm1;
+    public GameObject gc;
+    public GameObject cgc;
 
 
 
@@ -336,6 +344,7 @@ public class RaycastPerso : MonoBehaviour
                 {
                     getDoorSDM = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Door Opening");
+                    Destroy(sdm);
                     if (door3 == false)
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
@@ -395,6 +404,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("KeyGucci"))
                 {
+                    Destroy(gc);
                     keyGucci = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
@@ -499,6 +509,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("KeyC"))
                 {
+                    Destroy(cgc);
                     keyC = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
@@ -588,42 +599,55 @@ public class RaycastPerso : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 1") && medicbool1 == false)
                 {
+                    Destroy(bm1);
                     getMedic1 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
                     FindObjectOfType<AudioManager>().Play("Door Medic");
                     medicbool1 = true;
+                    
+                    
                 }
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 2") && medicbool2 == false)
                 {
+                    Destroy(bm2);
                     getMedic2 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
                     FindObjectOfType<AudioManager>().Play("Door Medic");
                     medicbool2 = true;
+                    
                 }
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 3") && medicbool3 == false)
                 {
+                    Destroy(bm3);
                     getMedic3 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
                     FindObjectOfType<AudioManager>().Play("Door Medic");
                     medicbool3 = true;
+                    
                 }
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 4") && medicbool4 == false)
                 {
+                    Destroy(bm4);
                     getMedic4 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
                     FindObjectOfType<AudioManager>().Play("Door Medic");
                     medicbool4 = true;
+                    
+
                 }
 
                 if (hit.collider.gameObject.CompareTag("Boite Medic 5") && medicbool5 == false)
                 {
+                    Destroy(bm5);
                     getMedic5 = true; // getFlash est un static qui va tirgger le script de la flashlight
                     Debug.Log("Medic !");
                     FindObjectOfType<AudioManager>().Play("Door Medic");
                     medicbool5 = true;
+                    
+
                 }
 
                 // Ventoline
