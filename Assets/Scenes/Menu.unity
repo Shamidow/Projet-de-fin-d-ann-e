@@ -127,6 +127,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2001873835447148916, guid: 897df94c187e72a4a9b0eb00703188b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995217463258009309, guid: 897df94c187e72a4a9b0eb00703188b2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4262543385217825699, guid: 897df94c187e72a4a9b0eb00703188b2,
         type: 3}
       propertyPath: m_LocalPosition.x

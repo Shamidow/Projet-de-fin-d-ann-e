@@ -26,11 +26,12 @@ public class Menu : MonoBehaviour
         scenename = currentScene.name;
     }
 
-    public void Jouer() // Permets de load une scène
+    public void PlayGame()
     {
-        menuMenu.SetActive(false);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SampleScene 15");
+        Time.timeScale = 1f;
     }
+
 
     public void Quitter() // Permets de quitter le jeu dans la build
     {
