@@ -713,6 +713,7 @@ public class RaycastPerso : MonoBehaviour
                      lunettespass.SetActive(true); */
                     FindObjectOfType<AudioManager>().Play("Take");
                     protolunettes = true;
+                    FindObjectOfType<AudioManager>().Play("VLunettes");
                 }
 
                 if (hit.collider.gameObject.CompareTag("PlacardGucci"))
