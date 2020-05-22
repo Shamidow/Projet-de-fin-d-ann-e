@@ -13,6 +13,7 @@ public class FlashlightController : MonoBehaviour
     public bool once = false;
     public bool onceextin = false;
     public Image FlashBar;
+    public Image FlashBarG;
 
 
     void Start()
@@ -27,6 +28,7 @@ public class FlashlightController : MonoBehaviour
     {
         tl = Mathf.Clamp(tl, 0, 100);
         FlashBar.fillAmount = tl / 100f;
+        FlashBarG.fillAmount = tl / 100f;
         if (isactive == true)
         {
             

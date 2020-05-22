@@ -216,7 +216,16 @@ public class RaycastPerso : MonoBehaviour
     public GameObject gc;
     public GameObject cgc;
 
+    [Header("Interfaces")]
+    public GameObject lunetteshud;
+    public GameObject oeilhud;
 
+    [Header("BoolDoorClose")]
+    bool vonce1 = false;
+    bool vonce2 = false;
+    bool vonce3 = false;
+    bool vonce4 = false;
+    bool vonce5 = false;
 
 
     void Start()
@@ -327,7 +336,12 @@ public class RaycastPerso : MonoBehaviour
                     ChatBox.ChatUpdated = true;
                     keycardblanc = true;
                 }
-                if (hit.collider.gameObject.CompareTag("LSortie") && keySortie == true)
+                if (hit.collider.gameObject.CompareTag("LSortie") && keySortie == false && vonce1 == false)
+                {
+                    FindObjectOfType<AudioManager>().Play("Door Close");
+                    vonce1 = true;
+                }
+                    if (hit.collider.gameObject.CompareTag("LSortie") && keySortie == true)
                 {
                     lecteurCS.SetActive(false);
                     lecteurSValide.SetActive(true);
@@ -410,7 +424,12 @@ public class RaycastPerso : MonoBehaviour
                     ChatBox.ChatUpdated = true;
                     keycardviolet = true;
                 }
-                if (hit.collider.gameObject.CompareTag("LGucci") && keyGucci == true)
+                if (hit.collider.gameObject.CompareTag("LGucci") && keyGucci == false && vonce2 == false)
+                {
+                    FindObjectOfType<AudioManager>().Play("Door Close");
+                    vonce2 = true;
+                }
+                    if (hit.collider.gameObject.CompareTag("LGucci") && keyGucci == true)
                 {
                     lecteurCG.SetActive(false);
                     lecteurGValide.SetActive(true);
@@ -451,7 +470,12 @@ public class RaycastPerso : MonoBehaviour
                     ChatBox.ChatUpdated = true;
                     keycardbleu = true;
                 }
-                if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true)
+                if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true && vonce3 == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Door Close");
+                    vonce3 = true;
+                }
+                    if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true)
                 {
                     lecteurCA.SetActive(false);
                     lecteurAValide.SetActive(true);
@@ -513,7 +537,12 @@ public class RaycastPerso : MonoBehaviour
                     ChatBox.ChatUpdated = true;
                     keycardvert = true;
                 }
-                if (hit.collider.gameObject.CompareTag("LecteurC") && keyC == true)
+                if (hit.collider.gameObject.CompareTag("LecteurC") && keyC == false && vonce4 == false)
+                {
+                    FindObjectOfType<AudioManager>().Play("Door Close");
+                    vonce4 = true;
+                }
+                    if (hit.collider.gameObject.CompareTag("LecteurC") && keyC == true)
                 {
                     lecteurCC.SetActive(false);
                     lecteurCValide.SetActive(true);
@@ -554,7 +583,12 @@ public class RaycastPerso : MonoBehaviour
                     ChatBox.ChatUpdated = true;
                     keycardjaune = true;
                 }
-                if (hit.collider.gameObject.CompareTag("LecteurPause") && keyPause == true)
+                if (hit.collider.gameObject.CompareTag("LecteurPause") && keyPause == false && vonce5 == false)
+                {
+                    FindObjectOfType<AudioManager>().Play("Door Close");
+                    vonce5 = true;
+                }
+                    if (hit.collider.gameObject.CompareTag("LecteurPause") && keyPause == true)
                 {
                     lecteurCP.SetActive(false);
                     lecteurPValide.SetActive(true);
@@ -712,6 +746,8 @@ public class RaycastPerso : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("Take");
                     protolunettes = true;
                     FindObjectOfType<AudioManager>().Play("VLunettes");
+                    lunetteshud.SetActive(true);
+                    oeilhud.SetActive(false);
                 }
 
                 if (hit.collider.gameObject.CompareTag("PlacardGucci"))
