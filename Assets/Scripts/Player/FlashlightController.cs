@@ -28,7 +28,7 @@ public class FlashlightController : MonoBehaviour
     {
         tl = Mathf.Clamp(tl, 0, 100);
         FlashBar.fillAmount = tl / 100f;
-        FlashBarG.fillAmount = tl / 100f;
+        // FlashBarG.fillAmount = tl / 100f;
         if (isactive == true)
         {
             
@@ -37,7 +37,11 @@ public class FlashlightController : MonoBehaviour
         }
         if (flCheck == true)
         {
-            Lighttorch();
+            // Lighttorch();
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                tl = tl + 15;
+            }
             timerflash = timerflash + Time.deltaTime;
             Debug.Log(tl);
             if (once == false)
@@ -116,7 +120,7 @@ public class FlashlightController : MonoBehaviour
 
     public void Lighttorch()
     {
-        tl = tl + 15 * Time.deltaTime;
+        tl = tl + 0.01f * Time.deltaTime;
        
     }
 }
