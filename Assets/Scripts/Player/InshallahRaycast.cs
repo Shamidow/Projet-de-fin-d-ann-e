@@ -14,6 +14,8 @@ public class InshallahRaycast : MonoBehaviour
     public bool door1 = false;
     public static bool keycardrouge = false;
 
+    bool vonce1 = false;
+
     void Start()
     {
 
@@ -77,6 +79,11 @@ public class InshallahRaycast : MonoBehaviour
                     ChatBox.SetMessage = "Red Key picked up";
                     ChatBox.ChatUpdated = true;
                     keycardrouge = true;
+                }
+                if (hit.collider.gameObject.CompareTag("LecteurLabo") && keyLabo == false && vonce1 == false)
+                {
+                    FindObjectOfType<AudioManager>().Play("Door Close");
+                    vonce1 = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurLabo") && keyLabo == true)
                 {
