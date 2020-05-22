@@ -281,7 +281,7 @@ public class RaycastPerso : MonoBehaviour
                     keyLabo = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Red Key picked up";
+                    ChatBox.SetMessage = "Badge rouge obtenu.";
                     ChatBox.ChatUpdated = true;
                     keycardrouge = true;
                 }
@@ -289,8 +289,6 @@ public class RaycastPerso : MonoBehaviour
                 {
                     lecteurRouge.SetActive(false);
                     lecteurRougeValide.SetActive(true);
-                    ChatBox.SetMessage = "Card reader picked up";
-                    ChatBox.ChatUpdated = true;
                     lecteurLabo = true;
 
                     FindObjectOfType<AudioManager>().Play("Badger");
@@ -301,7 +299,7 @@ public class RaycastPerso : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == true)
                 {
-                    getDoorSortie = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorSortie = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     if (door2 == false)
                     {
@@ -325,7 +323,7 @@ public class RaycastPerso : MonoBehaviour
                     keySortie = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "White card picked up";
+                    ChatBox.SetMessage = "Badge blanc obtenu";
                     ChatBox.ChatUpdated = true;
                     keycardblanc = true;
                 }
@@ -408,7 +406,7 @@ public class RaycastPerso : MonoBehaviour
                     keyGucci = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Purple card picked up";
+                    ChatBox.SetMessage = "Badge violet obtenu";
                     ChatBox.ChatUpdated = true;
                     keycardviolet = true;
                 }
@@ -449,7 +447,7 @@ public class RaycastPerso : MonoBehaviour
                     keyA = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Blue card picked up";
+                    ChatBox.SetMessage = "Badge bleu obtenu";
                     ChatBox.ChatUpdated = true;
                     keycardbleu = true;
                 }
@@ -457,8 +455,6 @@ public class RaycastPerso : MonoBehaviour
                 {
                     lecteurCA.SetActive(false);
                     lecteurAValide.SetActive(true);
-                    ChatBox.SetMessage = "Card A picked up";
-                    ChatBox.ChatUpdated = true;
                     lecteurA = true;
 
                     FindObjectOfType<AudioManager>().Play("Badger");
@@ -513,6 +509,8 @@ public class RaycastPerso : MonoBehaviour
                     keyC = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
+                    ChatBox.SetMessage = "Badge vert obtenu";
+                    ChatBox.ChatUpdated = true;
                     keycardvert = true;
                 }
                 if (hit.collider.gameObject.CompareTag("LecteurC") && keyC == true)
@@ -552,7 +550,7 @@ public class RaycastPerso : MonoBehaviour
                     keyPause = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Yellow card picked up";
+                    ChatBox.SetMessage = "Badge jaune obtenu";
                     ChatBox.ChatUpdated = true;
                     keycardjaune = true;
                 }
@@ -658,7 +656,7 @@ public class RaycastPerso : MonoBehaviour
                     Ventolines = Ventolines + 1;
 
                     Debug.Log("J'ai  trouvé de la Ventoline");
-                    ChatBox.SetMessage = "Ventoline picked up";
+                    ChatBox.SetMessage = "Ventoline obtenue";
                     ChatBox.ChatUpdated = true;
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
@@ -671,7 +669,7 @@ public class RaycastPerso : MonoBehaviour
                     composant = true;
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
-                    ChatBox.SetMessage = "Component picked up";
+                    ChatBox.SetMessage = "Composant électronique obtenu";
                     ChatBox.ChatUpdated = true;
                     composantb = true;
                 }
@@ -692,7 +690,7 @@ public class RaycastPerso : MonoBehaviour
                     flash.SetActive(false);
                     pchit.SetActive(true);
                     FindObjectOfType<AudioManager>().Play("Take");
-                    ChatBox.SetMessage = "Extinguisher picked up";
+                    ChatBox.SetMessage = "Extincteur obtenu";
                     ChatBox.ChatUpdated = true;
                     extincteurb = true;
                 }
@@ -718,7 +716,7 @@ public class RaycastPerso : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("PlacardGucci"))
                 {
-                    getDoorPlacard = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorPlacard = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -754,7 +752,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("ALeft"))
                 {
-                    getDoorAleft = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorAleft = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -772,7 +770,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("ARight"))
                 {
-                    getDoorAright = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorAright = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -790,7 +788,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("CRight"))
                 {
-                    getDoorCright = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorCright = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -808,7 +806,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("CLeft"))
                 {
-                    getDoorCleft = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorCleft = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -826,7 +824,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("LaboRight"))
                 {
-                    getDoorLabo1right = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorLabo1right = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -844,7 +842,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("ReposRight"))
                 {
-                    getDoorreposright = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorreposright = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -862,7 +860,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("ReposLeft"))
                 {
-                    getDoorreposleft = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorreposleft = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -880,7 +878,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("GucciRight"))
                 {
-                    getDoorgucci1right = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorgucci1right = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -899,7 +897,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("GucciLeft"))
                 {
-                    getDoorgucci1left = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorgucci1left = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -917,7 +915,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("Gucci1Right"))
                 {
-                    getDoorgucci2right = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorgucci2right = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -935,7 +933,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("Gucci1Left"))
                 {
-                    getDoorgucci2left = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorgucci2left = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -953,7 +951,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("BureauB"))
                 {
-                    getDoorbureaub = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorbureaub = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -971,7 +969,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("BureauA"))
                 {
-                    getDoorbureaua = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorbureaua = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
@@ -989,7 +987,7 @@ public class RaycastPerso : MonoBehaviour
                 }
                 if (hit.collider.gameObject.CompareTag("BureauC"))
                 {
-                    getDoorbureauc = true; // getFlash est un static qui va tirgger le script de la flashlight
+                    getDoorbureauc = true; // getFlash est un static qui va trigger le script de la flashlight
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
