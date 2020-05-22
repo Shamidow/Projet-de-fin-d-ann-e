@@ -227,6 +227,9 @@ public class RaycastPerso : MonoBehaviour
     bool vonce4 = false;
     bool vonce5 = false;
 
+    [Header("Documents")]
+    public GameObject doc1;
+
 
     void Start()
     {
@@ -1039,8 +1042,12 @@ public class RaycastPerso : MonoBehaviour
                     }*/
                     Destroy(c);
                 }
+                if (hit.collider.gameObject.CompareTag("Doc1"))
+                {
+                    doc1.SetActive(true);
+                }
 
-                
+
 
                 else
                 {
@@ -1060,6 +1067,10 @@ public class RaycastPerso : MonoBehaviour
 
                 }
             }
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            doc1.SetActive(true);
         }
     }
 }
