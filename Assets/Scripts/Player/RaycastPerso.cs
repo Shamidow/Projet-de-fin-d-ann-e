@@ -707,6 +707,7 @@ public class RaycastPerso : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
                     ChatBox.SetMessage = "Composant électronique obtenu";
+                    FindObjectOfType<AudioManager>().Play("VComponent");
                     ChatBox.ChatUpdated = true;
                     composantb = true;
                 }
