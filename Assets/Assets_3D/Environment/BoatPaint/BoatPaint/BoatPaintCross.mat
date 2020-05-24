@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Paint08
+  m_Name: BoatPaintCross
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHABLEND_ON _EMISSION
   m_LightmapFlags: 2
@@ -37,11 +37,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 33f6d63eb9409124684fc3c7705dead9, type: 3}
+        m_Texture: {fileID: 2800000, guid: e542477a8d95f8b40a724382adf136a7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c93cfb573455d7544bb193f53315b31e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1d91c7f32d098cc418e87a3acd6b8992, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -75,4 +75,4 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.6467498, g: 0.15574935, b: 0.9433962, a: 1}
+    - _EmissionColor: {r: 0.21960784, g: 1.1137255, b: 0.28235295, a: 1}
