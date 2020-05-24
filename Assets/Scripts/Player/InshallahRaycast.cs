@@ -76,7 +76,7 @@ public class InshallahRaycast : MonoBehaviour
                     keyLabo = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Red Key picked up";
+                    ChatBox.SetMessage = "Badge rouge obtenu";
                     ChatBox.ChatUpdated = true;
                     keycardrouge = true;
                 }
@@ -89,8 +89,6 @@ public class InshallahRaycast : MonoBehaviour
                 {
                     lecteurRouge.SetActive(false);
                     lecteurRougeValide.SetActive(true);
-                    ChatBox.SetMessage = "Card reader picked up";
-                    ChatBox.ChatUpdated = true;
                     lecteurLabo = true;
 
                     FindObjectOfType<AudioManager>().Play("Badger");
