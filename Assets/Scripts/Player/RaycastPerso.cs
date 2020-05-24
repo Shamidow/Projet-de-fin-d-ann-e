@@ -217,8 +217,8 @@ public class RaycastPerso : MonoBehaviour
     public GameObject cgc;
 
     [Header("Interfaces")]
-    public GameObject lunetteshud;
-    public GameObject oeilhud;
+    public GameObject AvecLunettes;
+    public GameObject SansLunettes;
 
     [Header("BoolDoorClose")]
     bool vonce1 = false;
@@ -750,8 +750,8 @@ public class RaycastPerso : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("Take");
                     protolunettes = true;
                     FindObjectOfType<AudioManager>().Play("VLunettes");
-                    lunetteshud.SetActive(true);
-                    oeilhud.SetActive(false);
+                    AvecLunettes.SetActive(true);
+                    SansLunettes.SetActive(false);
                 }
 
                 if (hit.collider.gameObject.CompareTag("PlacardGucci"))
