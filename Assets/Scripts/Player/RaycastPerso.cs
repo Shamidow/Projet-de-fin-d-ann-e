@@ -481,7 +481,7 @@ public class RaycastPerso : MonoBehaviour
                     ChatBox.ChatUpdated = true;
                     keycardbleu = true;
                 }
-                if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == true && vonce3 == true)
+                if (hit.collider.gameObject.CompareTag("LecteurCarteA") && keyA == false && vonce3 == false)
                 {
                     FindObjectOfType<AudioManager>().Play("Door Close");
                     vonce3 = true;
