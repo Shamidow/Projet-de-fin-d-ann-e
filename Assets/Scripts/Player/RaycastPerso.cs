@@ -273,8 +273,8 @@ public class RaycastPerso : MonoBehaviour
             //Détection des plante
             if (hit.collider.gameObject.CompareTag("Obstacle") && VExtincteur == false)
             {
-                
-                FindObjectOfType<AudioManager>().Play("VPlante");
+                Debug.Log("les PLANTES !!!!!");
+                FindObjectOfType<AudioManager>().Play("VPlantes");
                 VExtincteur = true;
             }
 
