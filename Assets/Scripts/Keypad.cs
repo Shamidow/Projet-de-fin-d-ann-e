@@ -19,7 +19,7 @@ public class Keypad : MonoBehaviour
     public GameObject disablecrosshair;
     public AudioSource touche;
     public AudioSource correct;
-
+    public bool SoundVoice = false;
 
     //  public Texture2D cursorArrow;
     // Start is called before the first frame update
@@ -79,6 +79,12 @@ public class Keypad : MonoBehaviour
             Cursor.visible = false;
             iskeying = false;
             }
+            else
+            if (Input.GetKeyUp(KeyCode.E)&& enter == true && iskeying == false && SoundVoice == false)
+        {
+            FindObjectOfType<AudioManager>().Play("VDigicode False");
+            SoundVoice = true;
+        }
     }
     /*
     void OnMouseEnter()
