@@ -129,7 +129,9 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorbureauc = false;
 
+    // Bool des Voicelines
     public bool SoundTableau = false;
+    public bool VExtincteur = false;
 
     // Composant Machines
     public static bool composant = false;
@@ -263,9 +265,17 @@ public class RaycastPerso : MonoBehaviour
             //Détection Code Tableau
             if (hit.collider.gameObject.CompareTag("Tableau") && SoundTableau == false)
             {
-                Debug.Log("code zebi");
+               
                 FindObjectOfType<AudioManager>().Play("VTableau");
                 SoundTableau = true;
+            }
+
+            //Détection des plante
+            if (hit.collider.gameObject.CompareTag("Obstacle") && VExtincteur == false)
+            {
+                
+                FindObjectOfType<AudioManager>().Play("VPlante");
+                VExtincteur = true;
             }
 
             // Input sur le E
@@ -319,7 +329,8 @@ public class RaycastPerso : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == true)
                 {
-                    getDoorSortie = true; // getFlash est un static qui va trigger le script de la flashlight
+                    // getFlash est un static qui va trigger le script de la flashlight
+                    getDoorSortie = true; 
                     Debug.Log("Door Opening");
                     if (door2 == false)
                     {
