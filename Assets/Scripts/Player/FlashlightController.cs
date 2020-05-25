@@ -35,23 +35,24 @@ public class FlashlightController : MonoBehaviour
             tl = tl - 6 * Time.deltaTime;
 
         }
-        if (flCheck == true)
-        {
+        /*if (flCheck == true)
+        {*/
             // Lighttorch();
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                tl = tl + 15;
-            }
-            timerflash = timerflash + Time.deltaTime;
-            Debug.Log(tl);
-            if (once == false)
-            {
-                FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
-                once = true;
-            }
-            isactive = false;
-            spotlight.SetActive(false);
+                tl = tl + 2.5f;
+            FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
         }
+            //timerflash = timerflash + Time.deltaTime;
+            Debug.Log(tl);
+            // if (once == false)
+            //{
+            //    FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
+            //    once = true;
+            //}
+            //isactive = false;
+            // spotlight.SetActive(false);
+       // }
         if (timerflash >= 5f)
         {
             flCheck = false;
@@ -120,7 +121,7 @@ public class FlashlightController : MonoBehaviour
 
     public void Lighttorch()
     {
-        tl = tl + 0.01f * Time.deltaTime;
+        tl = tl + 0.001f * Time.deltaTime;
        
     }
 }
