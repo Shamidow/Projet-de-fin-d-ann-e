@@ -59,6 +59,7 @@ TagManager:
   - BureauB
   - BureauA
   - BureauC
+  - Tableau
   layers:
   - Default
   - TransparentFX

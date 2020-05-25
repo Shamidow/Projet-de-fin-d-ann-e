@@ -129,7 +129,7 @@ public class RaycastPerso : MonoBehaviour
 
     public static bool getDoorbureauc = false;
 
-
+    public bool SoundTableau = false;
 
     // Composant Machines
     public static bool composant = false;
@@ -260,6 +260,13 @@ public class RaycastPerso : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 4, layerMask)) //Range de 4
         {
+            //Détection Code Tableau
+            if (hit.collider.gameObject.CompareTag("Tableau") && SoundTableau == false)
+            {
+                Debug.Log("code zebi");
+                FindObjectOfType<AudioManager>().Play("VTableau");
+                SoundTableau = true;
+            }
 
             // Input sur le E
 
@@ -1050,7 +1057,7 @@ public class RaycastPerso : MonoBehaviour
                     doc1.SetActive(true);
                 }
 
-
+               
 
                 else
                 {
@@ -1075,6 +1082,7 @@ public class RaycastPerso : MonoBehaviour
         {
             doc1.SetActive(true);
         }
+
     }
 }
 
