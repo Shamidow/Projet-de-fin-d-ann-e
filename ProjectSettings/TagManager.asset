@@ -60,6 +60,7 @@ TagManager:
   - BureauA
   - BureauC
   - Tableau
+  - Lampe
   layers:
   - Default
   - TransparentFX

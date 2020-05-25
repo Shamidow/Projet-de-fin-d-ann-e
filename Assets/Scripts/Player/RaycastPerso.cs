@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class RaycastPerso : MonoBehaviour
 {
+
+    public GameObject lampetorche;
+    public static bool torche = false;
+
     public static int Ventolines = 0;
 
     // Grillage
@@ -1067,8 +1071,15 @@ public class RaycastPerso : MonoBehaviour
                 {
                     doc1.SetActive(true);
                 }
+                if (hit.collider.gameObject.CompareTag("Lampe"))
+                {
+                    FlashlightController.isactive = true;
+                    lampetorche.SetActive(true);
+                    torche = true;
+                    Destroy(hit.transform.gameObject);  
+                }
 
-               
+
 
                 else
                 {
