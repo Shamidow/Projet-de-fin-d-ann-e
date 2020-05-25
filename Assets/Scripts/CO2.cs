@@ -7,6 +7,8 @@ public class CO2 : MonoBehaviour
     public GameObject extincteur;
     public GameObject empty;
     public GameObject auEx;
+    public bool boole = false;
+    public float timer = 0f;
     void Start()
     {
         
@@ -15,33 +17,41 @@ public class CO2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(boole == true)
+        {
+            timer = timer + Time.deltaTime;
+        }
+        if(timer <= 5f)
+        {
+            extincteur.SetActive(false);
+
+
+
+
+
+
+
+
+
+
+            auEx.SetActive(true);
+            auEx.transform.parent = null;
+
+
+
+
+
+            RaycastPerso.extincteur = false;
+            
+            empty.SetActive(false);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
-            extincteur.SetActive(false);
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            auEx.SetActive(true);
-            auEx.transform.parent = null;
-            
-            
-            
-            
-            
-            RaycastPerso.extincteur = false;
-            Destroy(other.transform.gameObject);            
-            empty.SetActive(false);
+            boole = true;
+            Destroy(other.transform.gameObject);
         }
     }
 }
