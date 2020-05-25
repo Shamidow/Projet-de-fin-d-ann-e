@@ -50,7 +50,7 @@ public class Keypad : MonoBehaviour
           //  cursorbutton.transform.position = Cursor.position;
             DetectKey();
         }
-            if (Input.GetKeyUp(KeyCode.E) && enter == true && iskeying == false)
+            if (Input.GetKeyUp(KeyCode.E) && enter == true && iskeying == false && RaycastPerso.cdm == true)
             {
             Screen.lockCursor = true;
 
@@ -189,7 +189,7 @@ public class Keypad : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Correct Code");
             PowerGoodCode = true;
             Debug.Log("Le Code est bon");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         disablecrosshair.gameObject.SetActive(true);
         transform.GetChild(0).gameObject.SetActive(false);
         FPSController.gameObject.SetActive(true);

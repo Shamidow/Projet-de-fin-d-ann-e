@@ -90,7 +90,7 @@ public class Crouch : MonoBehaviour
         }
 
         PlayerMovement();
-        if (Input.GetButton("Fire3") && m_crouch == false)
+       /* if (Input.GetButton("Fire3") && m_crouch == false)
         {
 
             movementSpeed = SprintSpeed;
@@ -106,7 +106,7 @@ public class Crouch : MonoBehaviour
             {
                 movementSpeed = crouchSpeed;
             }
-        }
+        }*/
         if (Input.GetKeyDown(CrouchButton))
         {
 
