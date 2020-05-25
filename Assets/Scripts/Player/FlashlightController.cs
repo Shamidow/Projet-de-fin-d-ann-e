@@ -38,7 +38,7 @@ public class FlashlightController : MonoBehaviour
         /*if (flCheck == true)
         {*/
             // Lighttorch();
-            if (Input.GetKeyDown(KeyCode.A) && RaycastPerso.torche == true)
+            if (Input.GetKeyDown(KeyCode.A) && FlashlightTake.torche == true)
             {
                 tl = tl + 2.5f;
             FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
@@ -63,13 +63,13 @@ public class FlashlightController : MonoBehaviour
             once = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.A) && RaycastPerso.torche == true)
+        if (Input.GetKeyDown(KeyCode.A) && FlashlightTake.torche == true)
         {
             flCheck = true;
             once = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && RaycastPerso.torche == true)
+        if (Input.GetKeyDown(KeyCode.F) && FlashlightTake.torche == true)
         {
             if (isactive == true)
             {
@@ -98,13 +98,13 @@ public class FlashlightController : MonoBehaviour
             isactive = false;
             spotlight.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && RaycastPerso.torche == true)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && FlashlightTake.torche == true)
         {
             FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
             isactive = false;
             spotlight.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && RaycastPerso.torche == true)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && FlashlightTake.torche == true)
         {
             FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
             isactive = true;

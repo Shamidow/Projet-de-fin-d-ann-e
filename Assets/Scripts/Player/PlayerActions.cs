@@ -35,7 +35,7 @@ public class PlayerActions : MonoBehaviour
             ventolineCheck = true;
             // FindObjectOfType<AudioManager>().Play("Ventoline");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && RaycastPerso.torche == true) 
+        if (Input.GetKeyDown(KeyCode.Alpha1) && FlashlightTake.torche == true) 
         {
             fire.SetActive(false);
             flash.SetActive(true);
