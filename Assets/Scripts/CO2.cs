@@ -19,9 +19,9 @@ public class CO2 : MonoBehaviour
     {
         if(boole == true)
         {
-            timer = timer + Time.deltaTime;
+            timer = timer + 1 * Time.deltaTime;
         }
-        if(timer <= 5f)
+        if(timer >= 5f)
         {
             extincteur.SetActive(false);
 

@@ -35,10 +35,11 @@ public class PlayerActions : MonoBehaviour
             ventolineCheck = true;
             // FindObjectOfType<AudioManager>().Play("Ventoline");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && RaycastPerso.torche == true) 
         {
             fire.SetActive(false);
             flash.SetActive(true);
+            FlashlightController.isactive = true;
             FindObjectOfType<AudioManager>().Play("Change Weapon");
         }
         if(Input.GetKeyDown(KeyCode.Alpha2) && RaycastPerso.extincteur == true)
@@ -46,6 +47,7 @@ public class PlayerActions : MonoBehaviour
             fire.SetActive(true);
             flash.SetActive(false);
             FindObjectOfType<AudioManager>().Play("Change Weapon");
+            FlashlightController.isactive = false;
         }
     }
     public void Ventoline()
