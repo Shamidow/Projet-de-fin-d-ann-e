@@ -1071,7 +1071,7 @@ public class RaycastPerso : MonoBehaviour
                 {
                     doc1.SetActive(true);
                 }
-                /*if (hit.collider.gameObject.CompareTag("Lampe"))
+              /*  if (hit.collider.gameObject.CompareTag("Lampe"))
                 {
                     FlashlightController.isactive = true;
                     lampetorche.SetActive(true);
