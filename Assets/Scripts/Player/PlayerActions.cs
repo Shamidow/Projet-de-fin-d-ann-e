@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerActions : MonoBehaviour
 {
@@ -9,8 +10,14 @@ public class PlayerActions : MonoBehaviour
     public static int ventoline = 0;
     public GameObject flash;
     public GameObject fire;
+    public Image HealthBar;
+    public Image HealthBarG;
+    public Text VentoText;
+    public Text VentoTextG;
+    public RaycastPerso perso;
     void Start()
     {
+        VentoText = GetComponent<Text>();
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
     }
@@ -33,6 +40,8 @@ public class PlayerActions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V) && ventolineCheck == false && ventoline != 0)
         {
             ventolineCheck = true;
+            VentoText.text = "0" + RaycastPerso.Ventolines;
+            VentoTextG.text = "0" + RaycastPerso.Ventolines;
             // FindObjectOfType<AudioManager>().Play("Ventoline");
         }
         if (Input.GetKeyDown(KeyCode.Alpha1) && FlashlightTake.torche == true) 
@@ -53,5 +62,7 @@ public class PlayerActions : MonoBehaviour
     public void Ventoline()
     {
         PlayerHP.hp = PlayerHP.hp + 5 * Time.deltaTime;
+        HealthBar.fillAmount = PlayerHP.hp / 100f;
+        HealthBarG.fillAmount = PlayerHP.hp / 100f;
     }
 }
