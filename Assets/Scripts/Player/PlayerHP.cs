@@ -6,9 +6,12 @@ public class PlayerHP : MonoBehaviour
 {
     public static float hp = 100, xMin = 0, xMax = 100;
     private bool trigger;
+    public GameObject dcamera;
+    public GameObject interfacey;
+    public GameObject interfaceg;
     void Start()
     {
-        
+        dcamera.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,8 +27,13 @@ public class PlayerHP : MonoBehaviour
         
         if(hp <= 0)
         {
-            Destroy(gameObject);
+            dcamera.SetActive(true);
+            interfaceg.SetActive(false);
+            interfacey.SetActive(false);
+            dcamera.transform.parent = null;
+
             FindObjectOfType<AudioManager>().Play("Death");
+            Destroy(gameObject);
         }
         hp = Mathf.Clamp(hp, 0, 100);
     }

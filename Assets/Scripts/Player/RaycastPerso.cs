@@ -1102,7 +1102,7 @@ public class RaycastPerso : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            doc1.SetActive(true);
+            doc1.SetActive(false);
         }
 
     }
