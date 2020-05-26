@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject menuMenu;
     public GameObject pausemenu;
+    public GameObject loading;
 
     public Scene currentScene;
 

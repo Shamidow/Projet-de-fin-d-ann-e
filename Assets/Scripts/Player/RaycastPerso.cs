@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class RaycastPerso : MonoBehaviour
 {
 
@@ -238,10 +239,18 @@ public class RaycastPerso : MonoBehaviour
     public GameObject doc1;
 
 
+    public GameObject endscreen;
+    public GameObject huds;
+    
+
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
+  
+
+            
+        
 
     }
 
@@ -340,14 +349,19 @@ public class RaycastPerso : MonoBehaviour
                     {
                         FindObjectOfType<AudioManager>().Play("Door");
                         door2 = true;
-                        return;
+                        
                     }
-                    if (door2 == true)
+                    endscreen.SetActive(true);
+                    SceneManager.LoadScene(2);
+                    /*if (door2 == true)
                     {
                         FindObjectOfType<AudioManager>().Play("Door Close");
                         door2 = false;
                         return;
-                    }
+                    }*/
+                    huds.SetActive(false);
+                    endscreen.SetActive(true);
+                    SceneManager.LoadScene(2);
                 }
                 if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == false)
                 {

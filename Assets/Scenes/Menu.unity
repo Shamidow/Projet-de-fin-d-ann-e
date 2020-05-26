@@ -301,6 +301,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1601599648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9132093160137368071, guid: 897df94c187e72a4a9b0eb00703188b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2001873836235530000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!328 &1601599649
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601599648}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 616fbc6b5a429394ca06ea68689e4c78, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1 &2106424356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2001873835359374029, guid: 897df94c187e72a4a9b0eb00703188b2,
