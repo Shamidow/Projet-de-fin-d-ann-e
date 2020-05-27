@@ -222,6 +222,7 @@ public class RaycastPerso : MonoBehaviour
     public GameObject bm1;
     public GameObject gc;
     public GameObject cgc;
+    public GameObject cem;
 
     [Header("Interfaces")]
     public GameObject AvecLunettes;
@@ -770,6 +771,7 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Machine") && composant == true && machinecheck == false)
                 {
                     cdm = true;
+                    Destroy(cem);
                     composantMachine.SetActive(true);
                     FindObjectOfType<AudioManager>().Play("Machine");
                     machinecheck = true;
