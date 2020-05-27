@@ -11,6 +11,8 @@ public class Menu : MonoBehaviour
     public GameObject menuMenu;
     public GameObject pausemenu;
     public GameObject loading;
+    bool istrue = false;
+    float timer = 0f;
 
     public Scene currentScene;
 
@@ -25,12 +27,21 @@ public class Menu : MonoBehaviour
     void Update()
     {
         scenename = currentScene.name;
+        if(istrue == true)
+        {
+            timer = timer + Time.deltaTime;
+        }
+        if(timer >= 5f)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void PlayGame()
     {
         loading.SetActive(true);
-        SceneManager.LoadScene("SampleScene 15");
+        istrue = true;
+        
         Time.timeScale = 1f;
     }
 

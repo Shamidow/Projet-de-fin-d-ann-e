@@ -241,6 +241,11 @@ public class RaycastPerso : MonoBehaviour
 
     public GameObject endscreen;
     public GameObject huds;
+    public GameObject Player;
+    public GameObject camend;
+
+    bool istrue = false;
+    float timer = 0f;
     
 
     void Start()
@@ -257,6 +262,16 @@ public class RaycastPerso : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(istrue == true)
+        {
+            timer = timer + Time.deltaTime;
+        }
+        if(timer >= 5f)
+        {
+            SceneManager.LoadScene(2);
+        }
+
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         // Bit shift the index of the layer (8) to get a bit mask
         int layerMask = 1 << 8;
@@ -360,8 +375,12 @@ public class RaycastPerso : MonoBehaviour
                         return;
                     }*/
                     huds.SetActive(false);
+                    camend.SetActive(true);
+                    camend.transform.parent = null;
+                    Player.SetActive(false);
                     endscreen.SetActive(true);
-                    SceneManager.LoadScene(2);
+                    istrue = true;
+                    
                 }
                 if (hit.collider.gameObject.CompareTag("Door Sortie") && lecteurS == false)
                 {
