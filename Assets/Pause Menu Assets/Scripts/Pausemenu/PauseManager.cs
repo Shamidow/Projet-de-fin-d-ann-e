@@ -530,7 +530,7 @@ Screen.lockCursor = true;
             ChatBox.ChatUpdated = false;
             RaycastPerso.Ventolines = 0;
             PlayerActions.ventoline = 0;
-            FlashlightController.isactive = true;
+            FlashlightController.isactive = false;
             FlashlightController.tl = 100f;
             // Grillage
 
