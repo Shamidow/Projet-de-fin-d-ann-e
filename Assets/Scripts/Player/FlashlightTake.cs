@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlashlightTake : MonoBehaviour
 {
     public GameObject lampetorche;
+    public GameObject hud;
     public static bool torche;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,8 @@ public class FlashlightTake : MonoBehaviour
     {
         if (other.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
+            FindObjectOfType<AudioManager>().Play("Take");
+            hud.SetActive(true);
             Tuto.TutoStep = 1;
             FlashlightController.isactive = true;
             lampetorche.SetActive(true);
