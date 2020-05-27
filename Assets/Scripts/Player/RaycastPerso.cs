@@ -9,7 +9,7 @@ public class RaycastPerso : MonoBehaviour
     /*public GameObject lampetorche;
     public static bool torche = false;*/
 
-    public static int Ventolines = 0;
+    // public static int Ventolines = 0;
 
     // Grillage
 
@@ -747,7 +747,7 @@ public class RaycastPerso : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Ventoline"))
                 {
                     PlayerActions.ventoline++;
-                    Ventolines = Ventolines + 1;
+                    // Ventolines = Ventolines + 1;
 
                     Debug.Log("J'ai  trouvé de la Ventoline");
                     ChatBox.SetMessage = "Ventoline obtenue";

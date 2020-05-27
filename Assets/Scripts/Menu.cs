@@ -101,7 +101,7 @@ public class Menu : MonoBehaviour
         Crouch.ControllerStatus = false;
         ChatBox.SetMessage = "";
         ChatBox.ChatUpdated = false;
-        RaycastPerso.Ventolines = 0;
+        // RaycastPerso.Ventolines = 0;
         PlayerActions.ventoline = 0;
         FlashlightController.isactive = true;
         FlashlightController.tl = 100f;

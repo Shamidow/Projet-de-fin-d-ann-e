@@ -18,7 +18,7 @@ public class VentoCompte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VentoText.text = "0" + RaycastPerso.Ventolines;
-        VentoTextG.text = "0" + RaycastPerso.Ventolines;
+        VentoText.text = "0" + PlayerActions.ventoline;
+        VentoTextG.text = "0" + PlayerActions.ventoline;
     }
 }
