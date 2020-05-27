@@ -14,6 +14,7 @@ public class FlashlightController : MonoBehaviour
     public bool onceextin = false;
     public Image FlashBar;
     public Image FlashBarG;
+    public GameObject flash;
 
 
     void Start()
@@ -69,7 +70,7 @@ public class FlashlightController : MonoBehaviour
             once = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && FlashlightTake.torche == true)
+        if (Input.GetKeyDown(KeyCode.F) && FlashlightTake.torche == true && flash.activeSelf)
         {
             if (isactive == true)
             {
