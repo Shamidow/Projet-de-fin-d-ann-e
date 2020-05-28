@@ -61,6 +61,7 @@ TagManager:
   - BureauC
   - Tableau
   - Lampe
+  - Chrono
   layers:
   - Default
   - TransparentFX
