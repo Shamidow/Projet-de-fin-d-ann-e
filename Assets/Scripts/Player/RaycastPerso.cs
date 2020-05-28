@@ -375,6 +375,7 @@ public class RaycastPerso : MonoBehaviour
                         door2 = false;
                         return;
                     }*/
+                    Chrono.timeron = false;
                     huds.SetActive(false);
                     camend.SetActive(true);
                     camend.transform.parent = null;
