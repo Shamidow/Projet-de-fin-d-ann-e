@@ -20,13 +20,13 @@ public class Tuto : MonoBehaviour
         Debug.Log(FlashlightTake.torche);
         if (TutoStep == 1 && FlashlightController.tl < 1)
         {
-            transform.GetComponentInChildren<Text>().text = "Appuyer plusieurs fois sur A pour recharger la dynamo de la lampe torche";
+            transform.GetComponentInChildren<Text>().text = "Press 'A' several times to recharge the dynamo of the flashlight";
                 TutoStep = 2;
             Debug.Log("To recharge the flashlight battery press A");
         }
         if (TutoStep == 2 && FlashlightController.tl > 50)
         {
-            transform.GetComponentInChildren<Text>().text = "Presser α1 pour allumer la lampe torche et α2 pour l'éteindre";
+            transform.GetComponentInChildren<Text>().text = "Press 'F' to turn the flashlight on or off";
             TutoStep = 3;
         }
         if (TutoStep == 3 && FlashlightController.isactive == true)
@@ -36,13 +36,13 @@ public class Tuto : MonoBehaviour
         }
         if(TutoStep == 4 && RaycastPerso.extincteur == true)
         {
-            transform.GetComponentInChildren<Text>().text = "Appuie sur click gauche pour utiliser l'extincteur";
+            transform.GetComponentInChildren<Text>().text = "Press 'Left Mouse Button' to use the extinguisher";
             TutoStep = 5;
         }
         if (TutoStep == 5 && FireController.ExtinctUse == true)
         {
 
-            transform.GetComponentInChildren<Text>().text = "Appuie sur α1 pour prendre la lampe torche et α2 pour prendre l'extincteur";
+            transform.GetComponentInChildren<Text>().text = "Press '&' to take the flashlight and 'é' to take the extinguisher";
             TutoStep = 6;
         }
         if(TutoStep == 6 && Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))

@@ -18,6 +18,8 @@ namespace GreatArcStudios
     public class PauseManager : MonoBehaviour
     {
         public GameObject OtherCanvas;
+        public GameObject OtherCanvas2;
+        public GameObject OtherCanvas3;
         public GameObject CanvasStart;
         /// <summary>
         /// This is the main panel holder, which holds the main panel and should be called "main panel"
@@ -383,9 +385,12 @@ Time.timeScale = timeScale;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
-            OtherCanvas.SetActive(true);
-            
-            
+            OtherCanvas.transform.GetComponent<Image>().enabled = true;
+            OtherCanvas2.transform.GetComponent<Image>().enabled = true;
+            OtherCanvas3.transform.GetComponent<Image>().enabled = true;
+            //  OtherCanvas.SetActive(true);
+
+
 
             mainPanel.SetActive(false);
             vidPanel.SetActive(false);
@@ -473,8 +478,12 @@ Time.timeScale = timeScale;
             {
                 // Screen.lockCursor = true;
                 Cursor.visible = true;
-                OtherCanvas.SetActive(false);
-        CanvasStart.SetActive(true);
+               OtherCanvas.transform.GetComponent<Image>().enabled = false;
+                OtherCanvas2.transform.GetComponent<Image>().enabled = false;
+                OtherCanvas3.transform.GetComponent<Image>().enabled = false;
+                //   yolo.enabled = false;
+                //         OtherCanvas.SetActive(false);
+                CanvasStart.SetActive(true);
                 uiEventSystem.SetSelectedGameObject(defualtSelectedMain);
                 mainPanel.SetActive(true);
                 vidPanel.SetActive(false);
@@ -497,7 +506,10 @@ Time.timeScale = timeScale;
 Screen.lockCursor = true;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Confined;
-                OtherCanvas.SetActive(true);
+                OtherCanvas.transform.GetComponent<Image>().enabled = true;
+                OtherCanvas2.transform.GetComponent<Image>().enabled = true;
+                OtherCanvas3.transform.GetComponent<Image>().enabled = true;
+                //    OtherCanvas.SetActive(true);
                 mainPanel.SetActive(false);
                 vidPanel.SetActive(false);
                 audioPanel.SetActive(false);
@@ -515,6 +527,8 @@ Screen.lockCursor = true;
 
         public void ResetStatic()
         {
+            Chrono.timer = 0;
+            Chrono.timeron = true;
             PlayerHP.hp = 100;
             PlayerHP.xMin = 0;
             PlayerHP.xMax = 100;
