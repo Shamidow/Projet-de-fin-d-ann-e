@@ -9,6 +9,8 @@ public class PlayerHP : MonoBehaviour
     public GameObject dcamera;
     public GameObject interfacey;
     public GameObject interfaceg;
+    public GameObject deathScreen;
+    public GameObject pauseMenu;
     void Start()
     {
         dcamera.SetActive(false);
@@ -31,6 +33,8 @@ public class PlayerHP : MonoBehaviour
             interfaceg.SetActive(false);
             interfacey.SetActive(false);
             dcamera.transform.parent = null;
+            deathScreen.SetActive(true);
+            Destroy(pauseMenu);
 
             FindObjectOfType<AudioManager>().Play("Death");
             Destroy(gameObject);

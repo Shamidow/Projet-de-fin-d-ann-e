@@ -8,6 +8,9 @@ public class Backtomenu : MonoBehaviour
     private float counterbacktomenu = 0f;
 
     private GameObject chrono;
+
+    public GameObject scoredisplay;
+    public GameObject video;
     void Start()
     {
         chrono = GameObject.FindGameObjectWithTag("Chrono");
@@ -19,7 +22,12 @@ public class Backtomenu : MonoBehaviour
 
         counterbacktomenu = counterbacktomenu + Time.deltaTime;
 
-        if(counterbacktomenu >= 41f)
+        if (counterbacktomenu >= 41f)
+        {
+            scoredisplay.SetActive(true);
+
+        }
+        if (counterbacktomenu >= 46f)
         {
             SceneManager.LoadScene(0);
             Destroy(chrono);
