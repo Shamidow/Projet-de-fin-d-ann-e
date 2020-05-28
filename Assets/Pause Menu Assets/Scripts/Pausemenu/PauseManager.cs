@@ -19,6 +19,7 @@ namespace GreatArcStudios
     {
         public GameObject OtherCanvas;
         public GameObject OtherCanvas2;
+        public GameObject OtherCanvas3;
         public GameObject CanvasStart;
         /// <summary>
         /// This is the main panel holder, which holds the main panel and should be called "main panel"
@@ -386,6 +387,7 @@ Time.timeScale = timeScale;
             Cursor.visible = false;
             OtherCanvas.transform.GetComponent<Image>().enabled = true;
             OtherCanvas2.transform.GetComponent<Image>().enabled = true;
+            OtherCanvas3.transform.GetComponent<Image>().enabled = true;
             //  OtherCanvas.SetActive(true);
 
 
@@ -478,6 +480,7 @@ Time.timeScale = timeScale;
                 Cursor.visible = true;
                OtherCanvas.transform.GetComponent<Image>().enabled = false;
                 OtherCanvas2.transform.GetComponent<Image>().enabled = false;
+                OtherCanvas3.transform.GetComponent<Image>().enabled = false;
                 //   yolo.enabled = false;
                 //         OtherCanvas.SetActive(false);
                 CanvasStart.SetActive(true);
@@ -505,6 +508,7 @@ Screen.lockCursor = true;
                 Cursor.lockState = CursorLockMode.Confined;
                 OtherCanvas.transform.GetComponent<Image>().enabled = true;
                 OtherCanvas2.transform.GetComponent<Image>().enabled = true;
+                OtherCanvas3.transform.GetComponent<Image>().enabled = true;
                 //    OtherCanvas.SetActive(true);
                 mainPanel.SetActive(false);
                 vidPanel.SetActive(false);
