@@ -12,7 +12,7 @@ public class VentoCompte : MonoBehaviour
     void Start()
     {
         VentoText = GetComponent<Text>();
-        
+        VentoTextG = GetComponent<Text>();
     }
 
     // Update is called once per frame

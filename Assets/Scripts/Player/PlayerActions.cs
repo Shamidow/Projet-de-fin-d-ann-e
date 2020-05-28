@@ -21,7 +21,8 @@ public class PlayerActions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ventolineCheck == true)
+        HealthBarG.fillAmount = PlayerHP.hp / 100f;
+        if (ventolineCheck == true)
         {
             
             Ventoline();
