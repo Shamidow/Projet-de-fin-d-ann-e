@@ -283,6 +283,7 @@ public class RaycastPerso : MonoBehaviour
 
         layerMask = ~layerMask;
 
+
         RaycastHit hit;
 
         // Does the ray intersect any objects excluding the player layer
