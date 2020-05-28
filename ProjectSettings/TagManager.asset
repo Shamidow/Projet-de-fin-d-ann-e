@@ -62,6 +62,7 @@ TagManager:
   - Tableau
   - Lampe
   - Chrono
+  - BDoc1
   layers:
   - Default
   - TransparentFX

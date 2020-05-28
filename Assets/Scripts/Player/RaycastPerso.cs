@@ -237,7 +237,10 @@ public class RaycastPerso : MonoBehaviour
     bool vonce5 = false;
 
     [Header("Documents")]
-    public GameObject doc1;
+    public GameObject bdoc1;
+    public GameObject bdoc2;
+    public GameObject bdoc3;
+    public GameObject bdoc4;
 
 
     public GameObject endscreen;
@@ -247,24 +250,65 @@ public class RaycastPerso : MonoBehaviour
 
     bool istrue = false;
     float timer = 0f;
+
+    private int bdoc = 0;
     
 
     void Start()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
-  
-
-            
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(istrue == true)
+       
+
+        Debug.Log(bdoc);
+
+        if (bdoc == 1)
+        {
+            bdoc1.SetActive(true);
+            bdoc3.SetActive(false);
+            bdoc4.SetActive(false);
+            bdoc2.SetActive(false);
+        }
+        if(bdoc == 2)
+        {
+            bdoc2.SetActive(true);
+            bdoc3.SetActive(false);
+            bdoc4.SetActive(false);
+            bdoc1.SetActive(false);
+        }
+        if (bdoc == 3)
+        {
+            bdoc3.SetActive(true);
+            bdoc2.SetActive(false);
+            bdoc4.SetActive(false);
+            bdoc1.SetActive(false);
+        }
+        if (bdoc == 4)
+        {
+            bdoc4.SetActive(true);
+            bdoc2.SetActive(false);
+            bdoc3.SetActive(false);
+            bdoc1.SetActive(false);
+        }
+        if (bdoc != 0 && Input.GetKeyDown(KeyCode.E) || bdoc == 4 && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            bdoc2.SetActive(false);
+            bdoc3.SetActive(false);
+            bdoc4.SetActive(false);
+            bdoc1.SetActive(false);
+            bdoc = 0;
+        }
+        if (bdoc != 0 && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            bdoc++;
+        }
+
+        if (istrue == true)
         {
             timer = timer + Time.deltaTime;
         }
@@ -1104,9 +1148,9 @@ public class RaycastPerso : MonoBehaviour
                     }*/
                     Destroy(c);
                 }
-                if (hit.collider.gameObject.CompareTag("Doc1"))
+                if (hit.collider.gameObject.CompareTag("BDoc1"))
                 {
-                    doc1.SetActive(true);
+                    bdoc++;
                 }
               /*  if (hit.collider.gameObject.CompareTag("Lampe"))
                 {
@@ -1139,7 +1183,7 @@ public class RaycastPerso : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            doc1.SetActive(false);
+            
         }
 
     }
