@@ -76,7 +76,7 @@ public class InshallahRaycast : MonoBehaviour
                     keyLabo = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Badge rouge obtenu";
+                    ChatBox.SetMessage = "Red pass acquired";
                     ChatBox.ChatUpdated = true;
                     keycardrouge = true;
                 }

@@ -340,7 +340,7 @@ public class RaycastPerso : MonoBehaviour
                     keyLabo = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Badge rouge obtenu.";
+                    ChatBox.SetMessage = "Red pass acquired";
                     ChatBox.ChatUpdated = true;
                     keycardrouge = true;
                 }
@@ -392,7 +392,7 @@ public class RaycastPerso : MonoBehaviour
                     keySortie = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Badge blanc obtenu";
+                    ChatBox.SetMessage = "White pass acquired";
                     ChatBox.ChatUpdated = true;
                     keycardblanc = true;
                 }
@@ -480,7 +480,7 @@ public class RaycastPerso : MonoBehaviour
                     keyGucci = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Badge violet obtenu";
+                    ChatBox.SetMessage = "Purple pass acquired";
                     ChatBox.ChatUpdated = true;
                     keycardviolet = true;
                 }
@@ -526,7 +526,7 @@ public class RaycastPerso : MonoBehaviour
                     keyA = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Badge bleu obtenu";
+                    ChatBox.SetMessage = "Blue pass acquired";
                     ChatBox.ChatUpdated = true;
                     keycardbleu = true;
                 }
@@ -593,7 +593,7 @@ public class RaycastPerso : MonoBehaviour
                     keyC = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Badge vert obtenu";
+                    ChatBox.SetMessage = "Green pass acquired";
                     ChatBox.ChatUpdated = true;
                     keycardvert = true;
                 }
@@ -639,7 +639,7 @@ public class RaycastPerso : MonoBehaviour
                     keyPause = true;
                     FindObjectOfType<AudioManager>().Play("Take");
                     Destroy(hit.transform.gameObject);
-                    ChatBox.SetMessage = "Badge jaune obtenu";
+                    ChatBox.SetMessage = "Yellow pass acquired";
                     ChatBox.ChatUpdated = true;
                     keycardjaune = true;
                 }
@@ -750,7 +750,7 @@ public class RaycastPerso : MonoBehaviour
                     // Ventolines = Ventolines + 1;
 
                     Debug.Log("J'ai  trouvé de la Ventoline");
-                    ChatBox.SetMessage = "Ventoline obtenue";
+                    ChatBox.SetMessage = "Ventolin acquired";
                     ChatBox.ChatUpdated = true;
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
@@ -763,7 +763,7 @@ public class RaycastPerso : MonoBehaviour
                     composant = true;
                     Destroy(hit.transform.gameObject);
                     FindObjectOfType<AudioManager>().Play("Take");
-                    ChatBox.SetMessage = "Composant électronique obtenu";
+                    ChatBox.SetMessage = "Electronic component acquired";
                     FindObjectOfType<AudioManager>().Play("VComponent");
                     ChatBox.ChatUpdated = true;
                     composantb = true;
@@ -786,7 +786,7 @@ public class RaycastPerso : MonoBehaviour
                     flash.SetActive(false);
                     pchit.SetActive(true);
                     FindObjectOfType<AudioManager>().Play("Take");
-                    ChatBox.SetMessage = "Extincteur obtenu";
+                    ChatBox.SetMessage = "Extinguisher acquired";
                     ChatBox.ChatUpdated = true;
                     extincteurb = true;
                 }
