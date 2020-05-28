@@ -8,19 +8,23 @@ public class OnParticleCollider : MonoBehaviour
     public GameObject extincteur;
     public GameObject empty;
     public GameObject auEx;
+    public bool boole = false;
+    public float timer = 0f;
+    private GameObject fire;
 
     void Start()
     {
         part = GetComponent<ParticleSystem>();
     }
 
-    void OnParticleCollision(GameObject other)
+    void Update()
     {
-        if (other.tag == "Obstacle")
+        if (boole == true)
         {
-            Debug.Log(other.tag);
-            Debug.Log("Oeoeoe");
-
+            timer = timer + 1 * Time.deltaTime;
+        }
+        if (timer >= 5f)
+        {
             extincteur.SetActive(false);
 
 
@@ -40,8 +44,19 @@ public class OnParticleCollider : MonoBehaviour
 
 
             RaycastPerso.extincteur = false;
-            Destroy(other.transform.gameObject);
+
             empty.SetActive(false);
+            Destroy(fire);
+        }
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        if (other.tag == "Obstacle")
+        {
+            
+            boole = true;
+            fire = other;
         }
     }
 }

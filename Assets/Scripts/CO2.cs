@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CO2 : MonoBehaviour
 {
-    public GameObject extincteur;
+    /*public GameObject extincteur;
     public GameObject empty;
     public GameObject auEx;
     public bool boole = false;
@@ -53,5 +53,5 @@ public class CO2 : MonoBehaviour
             boole = true;
             Destroy(other.transform.gameObject);
         }
-    }
+    }*/
 }
