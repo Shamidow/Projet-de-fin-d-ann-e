@@ -23,7 +23,7 @@ public class OnParticleCollider : MonoBehaviour
         {
             timer = timer + 1 * Time.deltaTime;
         }
-        if (timer >= 5f)
+        if (timer >= 1.5f)
         {
             extincteur.SetActive(false);
 
