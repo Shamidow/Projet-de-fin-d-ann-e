@@ -6,6 +6,7 @@ public class PlayerHP : MonoBehaviour
 {
     public static float hp = 100, xMin = 0, xMax = 100;
     private bool trigger;
+    private bool isDeath = false;
     public GameObject dcamera;
     public GameObject interfacey;
     public GameObject interfaceg;
@@ -20,15 +21,20 @@ public class PlayerHP : MonoBehaviour
     void Update()
     {
 
-            /* if (trigger == true)
-            {
-                hp = hp - 3 * Time.deltaTime;
-                Debug.Log(hp);
-                
-            }*/
-        
-        if(hp <= 0)
+        /* if (trigger == true)
         {
+            hp = hp - 3 * Time.deltaTime;
+            Debug.Log(hp);
+
+        }*/
+        if(isDeath == true)
+        { 
+        Cursor.visible = true;
+        Debug.Log(Cursor.visible);
+        }
+        if (hp <= 0)
+        {
+            isDeath = true;
             dcamera.SetActive(true);
             interfaceg.SetActive(false);
             interfacey.SetActive(false);
@@ -39,7 +45,7 @@ public class PlayerHP : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Death");
             Cursor.visible = true;
             Destroy(gameObject);
-
+            Cursor.visible = true;
         }
         hp = Mathf.Clamp(hp, 0, 100);
     }

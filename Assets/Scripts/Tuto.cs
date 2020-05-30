@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Tuto : MonoBehaviour
 {
     public static int TutoStep = 0;
+    private bool StepFiveSkip = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +39,9 @@ public class Tuto : MonoBehaviour
         {
             transform.GetComponentInChildren<Text>().text = "Press 'Left Mouse Button' to use the extinguisher";
             TutoStep = 5;
+            StartCoroutine(StepFive());
         }
-        if (TutoStep == 5 && FireController.ExtinctUse == true)
+        if (TutoStep == 5 && FireController.ExtinctUse == true || StepFiveSkip == true)
         {
 
             transform.GetComponentInChildren<Text>().text = "Press '&' to take the flashlight and 'é' to take the extinguisher";
@@ -51,5 +53,15 @@ public class Tuto : MonoBehaviour
             TutoStep = 7;
         }
 
+
+        IEnumerator StepFive()
+        {
+            yield return new WaitForSeconds(5f);
+            if(TutoStep == 5)
+            {
+             StepFiveSkip = true;
+            }
+            
+        }
     }
 }
