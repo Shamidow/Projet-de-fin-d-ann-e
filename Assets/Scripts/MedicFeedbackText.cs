@@ -21,7 +21,7 @@ public class MedicFeedbackText : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Destroy(text);
+            Destroy(text, 6);
         }
     }
 }
