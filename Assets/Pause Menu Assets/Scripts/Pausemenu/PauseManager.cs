@@ -527,6 +527,7 @@ Screen.lockCursor = true;
 
         public void ResetStatic()
         {
+            Tuto.TutoStep = 0;
             Chrono.timer = 0;
             Chrono.timeron = true;
             PlayerHP.hp = 100;
