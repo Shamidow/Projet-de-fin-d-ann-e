@@ -29,6 +29,7 @@ public class Backtomenu : MonoBehaviour
         }
         if (counterbacktomenu >= 46f)
         {
+            Cursor.visible = true;
             SceneManager.LoadScene(0);
             Destroy(chrono);
             

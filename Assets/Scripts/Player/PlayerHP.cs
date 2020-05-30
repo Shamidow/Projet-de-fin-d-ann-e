@@ -37,7 +37,9 @@ public class PlayerHP : MonoBehaviour
             Destroy(pauseMenu);
 
             FindObjectOfType<AudioManager>().Play("Death");
+            Cursor.visible = true;
             Destroy(gameObject);
+
         }
         hp = Mathf.Clamp(hp, 0, 100);
     }

@@ -39,8 +39,8 @@ public class Pausemenu : MonoBehaviour
     
     void Resume()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+     //   Cursor.visible = false;
+     //   Cursor.lockState = CursorLockMode.Confined;
         pauseMenuUI.SetActive(false);
         // crosshair.SetActive(true);
         Time.timeScale = 1f;
@@ -48,8 +48,8 @@ public class Pausemenu : MonoBehaviour
     }
     void Pause()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+      //  Cursor.visible = true;
+     //   Cursor.lockState = CursorLockMode.None;
         pauseMenuUI.SetActive(true);
         // crosshair.SetActive(false);
 
