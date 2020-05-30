@@ -153,10 +153,10 @@ public class RaycastPerso : MonoBehaviour
     public GameObject lunettes1;
     public GameObject lunettes2;
     public GameObject lunettes3;
-    public GameObject lunettes4;
-    public GameObject lunettes5;   
+    public GameObject lunettes4;    
     public GameObject lunettesmap;*/
     public GameObject lunettes6;
+    public GameObject lunettes5;
     public GameObject lunettesfollowme;
     public GameObject lunettespass;
 
@@ -847,9 +847,10 @@ public class RaycastPerso : MonoBehaviour
                      lunettes2.SetActive(true);
                      lunettes3.SetActive(true);
                      lunettes4.SetActive(true);
-                     lunettes5.SetActive(true);                     
+                                      
                      lunettesmap.SetActive(true); */
                     lunettes6.SetActive(true);
+                    Destroy(lunettes5);
                     lunettesfollowme.SetActive(true);
                      lunettespass.SetActive(true);
                     FindObjectOfType<AudioManager>().Play("Take");
