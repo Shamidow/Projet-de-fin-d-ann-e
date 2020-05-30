@@ -33,7 +33,7 @@ public class FlashlightController : MonoBehaviour
         if (isactive == true)
         {
             
-            tl = tl - 6 * Time.deltaTime;
+            tl = tl - 4 * Time.deltaTime;
 
         }
         /*if (flCheck == true)
@@ -41,7 +41,7 @@ public class FlashlightController : MonoBehaviour
             // Lighttorch();
             if (Input.GetKeyDown(KeyCode.A) && FlashlightTake.torche == true)
             {
-                tl = tl + 2.5f;
+                tl = tl + 7.5f;
             FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
         }
             //timerflash = timerflash + Time.deltaTime;
