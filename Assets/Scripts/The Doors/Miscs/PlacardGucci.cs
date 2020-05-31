@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlacardGucci : MonoBehaviour
 {
+    public GameObject doc;
     Animator m_Animator;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,13 @@ public class PlacardGucci : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("Autre");
+            Invoke ("Activate", 1f);
         }
 
+    }
+
+    private void Activate()
+    {
+        doc.SetActive(true);
     }
 }
