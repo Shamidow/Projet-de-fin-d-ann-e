@@ -5,6 +5,7 @@ using UnityEngine;
 public class CloudScript : MonoBehaviour
 {
     public GameObject cloud1;
+    public GameObject tuto4;
     public GameObject tuto3;
     public GameObject tuto2;
     public GameObject tuto1;
@@ -25,6 +26,7 @@ public class CloudScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             cloud1.SetActive(true);
+            Destroy(tuto4);
             Destroy(tuto3);
             Destroy(tuto2);
             Destroy(tuto1);
