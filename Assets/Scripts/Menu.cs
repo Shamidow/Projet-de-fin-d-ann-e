@@ -31,7 +31,7 @@ public class Menu : MonoBehaviour
         {
             timer = timer + Time.deltaTime;
         }
-        if(timer >= 5f)
+        if(timer >= 9f)
         {
             SceneManager.LoadScene(1);
         }
