@@ -849,6 +849,7 @@ public class RaycastPerso : MonoBehaviour
                      lunettes4.SetActive(true);
                                       
                      lunettesmap.SetActive(true); */
+                    Tuto.TutoStep = 7;
                     lunettes6.SetActive(true);
                     Destroy(lunettes5);
                     lunettesfollowme.SetActive(true);
