@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     public GameObject menuMenu;
     public GameObject pausemenu;
     public GameObject loading;
+    public GameObject menu;
     bool istrue = false;
     float timer = 0f;
 
@@ -39,6 +40,7 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
+        menu.SetActive(false);
         loading.SetActive(true);
         istrue = true;
         

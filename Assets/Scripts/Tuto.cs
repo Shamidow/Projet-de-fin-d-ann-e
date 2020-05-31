@@ -62,6 +62,10 @@ public class Tuto : MonoBehaviour
             transform.GetComponentInChildren<Text>().text = "";
             TutoStep = 7;
         }
+        if (TutoStep == 7)
+        {
+            transform.GetComponentInChildren<Text>().text = "";
+        }
 
 
         IEnumerator StepFive()
