@@ -379,6 +379,7 @@ namespace GreatArcStudios
         /// </summary>
         public void Resume()
         {
+            Read.isPausing = false;
             Debug.Log("resume");
 Time.timeScale = timeScale;
             Screen.lockCursor = true;
@@ -476,6 +477,7 @@ Time.timeScale = timeScale;
 
             if (Input.GetKeyDown(KeyCode.Escape) && mainPanel.active == false)
             {
+                Read.isPausing = true ;
                 // Screen.lockCursor = true;
                 Cursor.visible = true;
                OtherCanvas.transform.GetComponent<Image>().enabled = false;
@@ -503,7 +505,8 @@ Time.timeScale = timeScale;
             else if(Input.GetKeyDown(KeyCode.Escape) && mainPanel.active == true) {
                 
                 Time.timeScale = timeScale;
-Screen.lockCursor = true;
+                Read.isPausing = false;
+                Screen.lockCursor = true;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Confined;
                 OtherCanvas.transform.GetComponent<Image>().enabled = true;
@@ -527,6 +530,7 @@ Screen.lockCursor = true;
 
         public void ResetStatic()
         {
+            Read.isPausing = false;
             Tuto.TutoStep = 0;
             Chrono.timer = 0;
             Chrono.timeron = true;
