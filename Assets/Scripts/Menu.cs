@@ -40,6 +40,7 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
+        FindObjectOfType<AudioManager>().Play("Clique");
         menu.SetActive(false);
         loading.SetActive(true);
         istrue = true;

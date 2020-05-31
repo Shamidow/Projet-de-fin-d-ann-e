@@ -976,7 +976,7 @@ public class RaycastPerso : MonoBehaviour
                     Debug.Log("Door Opening");
                     /*if (door7 == false)
                     {
-                        FindObjectOfType<AudioManager>().Play("Door");
+                        ;
                         door7 = true;
                         return;
                     }
