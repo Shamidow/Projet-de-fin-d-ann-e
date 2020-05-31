@@ -10,6 +10,8 @@ public class Read : MonoBehaviour
 
     private GameObject FPSController;
     public static bool isPausing = false;
+    public GameObject Camera1;
+    public GameObject Canvas1;
     private bool enter = false;
     private bool iskeying = false;
     private int Pagenum = 0;
@@ -45,7 +47,7 @@ public class Read : MonoBehaviour
         {
             if (iskeying == true)
             {
-                transform.GetChild(1).gameObject.SetActive(true);
+                Canvas1.SetActive(true);
                 Cursor.visible = true;
                 if (Input.GetKeyUp(KeyCode.LeftArrow))
                 {
@@ -69,8 +71,8 @@ public class Read : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.E) && enter == true && iskeying == false)
             {
                 Screen.lockCursor = true;
-                transform.GetChild(0).gameObject.SetActive(true);
-                transform.GetChild(1).gameObject.SetActive(true);
+                Camera1.SetActive(true);
+                Canvas1.SetActive(true);
                 FPSController.gameObject.SetActive(false);
 
                 disablecrosshair.gameObject.SetActive(false);
@@ -90,8 +92,8 @@ public class Read : MonoBehaviour
 
                 disablecrosshair.gameObject.SetActive(true);
                 //   transform.GetChild(0).gameObject.SetActive(false);
-                transform.GetChild(0).gameObject.SetActive(false);
-                transform.GetChild(1).gameObject.SetActive(false);
+                Camera1.SetActive(false);
+                Canvas1.SetActive(false);
                 FPSController.gameObject.SetActive(true);
 
                 bool newsstatus = true;
@@ -110,7 +112,7 @@ public class Read : MonoBehaviour
         else
         {
 
-            transform.GetChild(1).gameObject.SetActive(false);
+            Canvas1.SetActive(false);
         }
     }
     /*
