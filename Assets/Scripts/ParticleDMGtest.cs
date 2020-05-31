@@ -9,11 +9,27 @@ public class ParticleDMGtest : MonoBehaviour
     public Image HealthBar;
     public Image HealthBarG;
     public GameObject dmgScreen;
+    private float timer = 0f;
+    private bool timerB = false;
     
     void Start()
     {
         part = GetComponent<ParticleSystem>();
        
+    }
+
+    private void Update()
+    {
+        if (timerB == true)
+        {
+            timer = timer + Time.deltaTime;
+        }
+        if(timer >= 0.25f)
+        {
+            dmgScreen.SetActive(false);
+            timer = 0f;
+            timerB = false;
+        }
     }
 
     void OnParticleCollision(GameObject other)
@@ -26,7 +42,7 @@ public class ParticleDMGtest : MonoBehaviour
             HealthBar.fillAmount = PlayerHP.hp / 100f;
             HealthBarG.fillAmount = PlayerHP.hp / 100f;
             Debug.Log("Nique ta race" + PlayerHP.hp);
-            dmgScreen.SetActive(false);
+            timerB = true;
 
         }
     }
