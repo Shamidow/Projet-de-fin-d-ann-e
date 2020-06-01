@@ -21,8 +21,12 @@ public class BureauB : MonoBehaviour
         {
             // Ici présent 
             m_Animator.SetTrigger("Autre");
-            doc.SetActive(true);
+            Invoke("Activate", 1f);
         }
 
+    }
+    public void Activate()
+    {
+        doc.SetActive(true);
     }
 }

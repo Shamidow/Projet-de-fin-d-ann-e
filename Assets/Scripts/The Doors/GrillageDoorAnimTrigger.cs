@@ -5,12 +5,12 @@ using UnityEngine;
 public class GrillageDoorAnimTrigger : MonoBehaviour
 {
     Animator m_Animator;
-    public AudioSource dooropening;
-    public AudioSource lockeddoor;
+    private bool Voiceline = false;
     // Start is called before the first frame update
     void Start()
     {
-        m_Animator = gameObject.GetComponent<Animator>(); // Prendre l'animator        
+        // Prendre l'animator 
+        m_Animator = gameObject.GetComponent<Animator>();        
     }
 
     // Update is called once per frame
@@ -38,9 +38,16 @@ public class GrillageDoorAnimTrigger : MonoBehaviour
 
             else
             {
-                FindObjectOfType<AudioManager>().Play("Grid locked");
+                FindObjectOfType<AudioManager>().Play("Locked Grid");
+                
                 Debug.Log("joue zebi");
                 RaycastPerso.getDoorGrillage = false;
+                if(Voiceline == false)
+                {
+                    FindObjectOfType<AudioManager>().Play("VGrille Locked");
+                    Voiceline = true;
+                }
+
             }
         }
         

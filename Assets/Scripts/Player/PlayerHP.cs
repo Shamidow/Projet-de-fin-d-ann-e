@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
     public static float hp = 100, xMin = 0, xMax = 100;
@@ -12,9 +12,13 @@ public class PlayerHP : MonoBehaviour
     public GameObject interfaceg;
     public GameObject deathScreen;
     public GameObject pauseMenu;
+    public GameObject DmgScreen;
+    public Image dmgImage;
+    private float alphaIncrease = 2.5f;
     void Start()
     {
         dcamera.SetActive(false);
+        dmgImage = DmgScreen.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -48,6 +52,8 @@ public class PlayerHP : MonoBehaviour
             Cursor.visible = true;
         }
         hp = Mathf.Clamp(hp, 0, 100);
+        
+       
     }
     private void OnTriggerEnter(Collider other)
     {
