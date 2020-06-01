@@ -50,12 +50,6 @@ public class Tuto : MonoBehaviour
 
             transform.GetComponentInChildren<Text>().text = "Press '&' to take the flashlight and 'é' to take the extinguisher";
             TutoStep = 6;
-            StartCoroutine(StepSix());
-        }
-        if (TutoStep == 6 && StepSixSkip == true)
-        {
-            transform.GetComponentInChildren<Text>().text = "";
-            TutoStep = 7;
         }
         if (TutoStep == 6 && Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -75,15 +69,14 @@ public class Tuto : MonoBehaviour
             {
              StepFiveSkip = true;
             }
-            
-        }
-        IEnumerator StepSix()
-        {
+            Debug.Log("yolo etape 6");
             yield return new WaitForSeconds(6f);
-            if (TutoStep == 5)
-            {
-                StepSixSkip = true;
-            }
+            Debug.Log("yolo etape 7");
+             TutoStep = 7;
+            transform.GetComponentInChildren<Text>().enabled = false;
+            transform.GetComponentInChildren<Text>().text = "";
+            
+
 
         }
     }

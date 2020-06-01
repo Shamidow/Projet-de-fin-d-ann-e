@@ -34,6 +34,7 @@ public class Menu : MonoBehaviour
         }
         if(timer >= 9f)
         {
+            ResetStatic();
             SceneManager.LoadScene(1);
         }
     }
@@ -91,6 +92,10 @@ public class Menu : MonoBehaviour
 
     public void ResetStatic()
     {
+        Read.isPausing = false;
+        Tuto.TutoStep = 0;
+        Chrono.timer = 0;
+        Chrono.timeron = true;
         PlayerHP.hp = 100;
         PlayerHP.xMin = 0;
         PlayerHP.xMax = 100;
@@ -106,7 +111,7 @@ public class Menu : MonoBehaviour
         ChatBox.ChatUpdated = false;
         // RaycastPerso.Ventolines = 0;
         PlayerActions.ventoline = 0;
-        FlashlightController.isactive = true;
+        FlashlightController.isactive = false;
         FlashlightController.tl = 100f;
         // Grillage
 
