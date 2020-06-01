@@ -369,6 +369,7 @@ namespace GreatArcStudios
         /// </summary>
         public void Restart()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             ResetStatic();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Resume();
@@ -379,6 +380,7 @@ namespace GreatArcStudios
         /// </summary>
         public void Resume()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             Read.isPausing = false;
             Debug.Log("resume");
 Time.timeScale = timeScale;
@@ -419,6 +421,7 @@ Time.timeScale = timeScale;
         /// </summary>
         public void quitOptions()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             vidPanel.SetActive(false);
             audioPanel.SetActive(false);
             quitPanelAnimator.enabled = true;
@@ -430,8 +433,8 @@ Time.timeScale = timeScale;
         /// </summary>
         public void quitGame()
         {
-            
-             Application.Quit();
+            FindObjectOfType<AudioManager>().Play("Menu");
+            Application.Quit();
  #if UNITY_EDITOR
              UnityEditor.EditorApplication.isPlaying = false;
  #endif
@@ -441,6 +444,7 @@ Time.timeScale = timeScale;
         /// </summary>
         public void quitCancel()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             quitPanelAnimator.Play("QuitPanelOut");
         }
         /// <summary>
@@ -448,6 +452,7 @@ Time.timeScale = timeScale;
         /// </summary>
         public void returnToMenu()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             ResetStatic();
             SceneManager.LoadScene("Menu");
             uiEventSystem.SetSelectedGameObject(defualtSelectedMain);
@@ -477,6 +482,7 @@ Time.timeScale = timeScale;
 
             if (Input.GetKeyDown(KeyCode.Escape) && mainPanel.active == false)
             {
+                FindObjectOfType<AudioManager>().Play("Menu");
                 Read.isPausing = true ;
                 // Screen.lockCursor = true;
                 Cursor.visible = true;
@@ -503,7 +509,7 @@ Time.timeScale = timeScale;
                  }  */
             }
             else if(Input.GetKeyDown(KeyCode.Escape) && mainPanel.active == true) {
-                
+                FindObjectOfType<AudioManager>().Play("Menu");
                 Time.timeScale = timeScale;
                 Read.isPausing = false;
                 Screen.lockCursor = true;
@@ -707,6 +713,7 @@ Time.timeScale = timeScale;
         /// </summary>
         public void Audio()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             mainPanel.SetActive(false);
             vidPanel.SetActive(false);
             audioPanel.SetActive(true);
@@ -808,6 +815,7 @@ Time.timeScale = timeScale;
         /// </summary>
         public void applyAudio()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             StartCoroutine(applyAudioMain());
             uiEventSystem.SetSelectedGameObject(defualtSelectedMain);
            
@@ -833,6 +841,7 @@ Time.timeScale = timeScale;
         /// </summary>
         public void cancelAudio()
         {
+            FindObjectOfType<AudioManager>().Play("Menu");
             uiEventSystem.SetSelectedGameObject(defualtSelectedMain);
             StartCoroutine(cancelAudioMain());
         }
