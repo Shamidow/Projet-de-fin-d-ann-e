@@ -346,13 +346,16 @@ public class RaycastPerso : MonoBehaviour
             }
 
             //Détection des plante
-            if (hit.collider.gameObject.CompareTag("Obstacle") && VExtincteur == false)
+            if (door9 == true) 
             {
-                Debug.Log("les PLANTES !!!!!");
-                FindObjectOfType<AudioManager>().Play("VPlantes");
-                VExtincteur = true;
-            }
+                if (hit.collider.gameObject.CompareTag("Obstacle") && VExtincteur == false)
+                {
+                    Debug.Log("les PLANTES !!!!!");
+                    FindObjectOfType<AudioManager>().Play("VPlantes");
+                    VExtincteur = true;
+                }
 
+            }
             // Input sur le E
 
             if (Input.GetKeyDown(KeyCode.E))
