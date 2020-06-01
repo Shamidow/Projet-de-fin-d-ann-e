@@ -7,8 +7,7 @@ public class ParticleDMGtest : MonoBehaviour
 {
 
     public ParticleSystem part;
-    public Image HealthBar;
-    public Image HealthBarG;
+    
     public GameObject dmgScreen;
     public Image Imagedmg;
     public GameObject FpsController;
@@ -45,17 +44,18 @@ public class ParticleDMGtest : MonoBehaviour
         {
             
             Debug.Log(other.tag);
-            PlayerHP.hp = PlayerHP.hp - 0.20f;           
+            PlayerHP.hp = PlayerHP.hp - 0.20f;
+            
             var colores = Imagedmg.color;
             colores.a += 0.003f;
             Imagedmg.color = colores;
-            //Debug.Log(dmgScreen.GetComponent<Image>().color);
-            HealthBar.fillAmount = PlayerHP.hp / 100f;
-            HealthBarG.fillAmount = PlayerHP.hp / 100f;
-            Debug.Log("Nique ta race" + PlayerHP.hp);
+            Debug.Log(dmgScreen.GetComponent<Image>().color);
+           
+            //Debug.Log("Nique ta race" + PlayerHP.hp);
             //timerB = true;
 
         }
     }
+    
     
 }

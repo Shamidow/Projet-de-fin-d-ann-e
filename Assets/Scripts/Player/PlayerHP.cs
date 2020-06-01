@@ -15,6 +15,8 @@ public class PlayerHP : MonoBehaviour
     public GameObject DmgScreen;
     public Image dmgImage;
     private float alphaIncrease = 2.5f;
+    public Image HealthBar;
+    public Image HealthBarG;
     void Start()
     {
         dcamera.SetActive(false);
@@ -52,8 +54,10 @@ public class PlayerHP : MonoBehaviour
             Cursor.visible = true;
         }
         hp = Mathf.Clamp(hp, 0, 100);
-        
-       
+
+        HealthBar.fillAmount = PlayerHP.hp / 100f;
+        HealthBarG.fillAmount = PlayerHP.hp / 100f;
+
     }
     private void OnTriggerEnter(Collider other)
     {
