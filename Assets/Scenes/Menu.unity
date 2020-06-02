@@ -1419,7 +1419,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 316ebfa41b2d5144891d89687e33913a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4214,12 +4214,12 @@ MonoBehaviour:
   sounds:
   - name: Clic
     clip: {fileID: 8300000, guid: 30d5af19f52e7534ab92c297ead2f7e7, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - name: Clique
     clip: {fileID: 8300000, guid: e1be3d8c9e125d74a941a5b432f6458d, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1968270448
@@ -7513,7 +7513,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bf8c8bb7a95c2f5479ebc05dca8f206c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
