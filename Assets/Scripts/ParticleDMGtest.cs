@@ -11,6 +11,10 @@ public class ParticleDMGtest : MonoBehaviour
     public GameObject dmgScreen;
     private float timer = 0f;
     private bool timerB = false;
+    private bool timercoub = false;
+    private float timercou = 0f;
+
+    private bool firsttoux = false;
 
     void Start()
     {
@@ -23,6 +27,16 @@ public class ParticleDMGtest : MonoBehaviour
         if (timerB == true)
         {
             timer = timer + Time.deltaTime;
+        }
+        if(timercoub == true)
+        {
+            timercou = timercou + Time.deltaTime;
+        }
+        if(timercou >= 5) { 
+        
+            FindObjectOfType<AudioManager>().Play("VCough2");
+            timercou = 0f;
+            timercoub = false;
         }
         if (timer >= 0.25f)
         {
@@ -42,7 +56,13 @@ public class ParticleDMGtest : MonoBehaviour
             PlayerHP.hp = PlayerHP.hp - 0.20f;
            
             Debug.Log("Nique ta race" + PlayerHP.hp);
+            if (firsttoux == false)
+            {
+                FindObjectOfType<AudioManager>().Play("VCough2");
+                firsttoux = true;
+            }
             timerB = true;
+            timercoub = true;
 
         }
     }
