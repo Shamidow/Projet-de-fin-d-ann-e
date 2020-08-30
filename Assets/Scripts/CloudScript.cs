@@ -34,7 +34,7 @@ public class CloudScript : MonoBehaviour
             {
                 firstclose = true;
                 firstTime = true;
-                FindObjectOfType<AudioManager>().Play("Door Grillage");
+                //FindObjectOfType<AudioManager>().Play("Door Grillage");
             }
         }
     }

@@ -263,9 +263,6 @@ public class RaycastPerso : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-       
-
         Debug.Log(bdoc);
 
         if (bdoc == 1)
@@ -823,7 +820,7 @@ public class RaycastPerso : MonoBehaviour
                     cdm = true;
                     Destroy(cem);
                     composantMachine.SetActive(true);
-                    FindObjectOfType<AudioManager>().Play("Machine");
+                    FindObjectOfType<AudioManager>().Play("Courant");
                     machinecheck = true;
                 }
 
