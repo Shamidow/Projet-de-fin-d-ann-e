@@ -35,7 +35,7 @@ public class ChatBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(SetMessagenum[1]);
+
         if(num ==1)
         {
          GameObject.Find("Line1").GetComponentInChildren<Text>().text = SetMessagenum[1];

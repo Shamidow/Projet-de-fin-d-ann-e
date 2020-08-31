@@ -51,7 +51,7 @@ public class Crouch : MonoBehaviour
 
                 //Son : marcher
                 FindObjectOfType<AudioManager>().Play("Footstep");
-                Debug.Log("marche");
+                
                 stepDelay = stepDelayWalking;
             }
             else
@@ -69,7 +69,7 @@ public class Crouch : MonoBehaviour
             else
             {
                 FindObjectOfType<AudioManager>().Stop("Footstep");
-                Debug.Log("arreter le son");
+
             }
 
             yield return new WaitForSeconds(stepDelay);

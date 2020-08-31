@@ -20,7 +20,7 @@ public class Tuto : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(FlashlightTake.torche);
+
         if (TutoStep == 1 && FlashlightController.tl < 1)
         {
             StepFiveSkip = false;

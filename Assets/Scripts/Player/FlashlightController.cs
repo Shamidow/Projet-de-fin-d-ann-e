@@ -45,7 +45,7 @@ public class FlashlightController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");
         }
             //timerflash = timerflash + Time.deltaTime;
-            Debug.Log(tl);
+
             // if (once == false)
             //{
             //    FindObjectOfType<AudioManager>().Play("Flashlight ON/OFF");

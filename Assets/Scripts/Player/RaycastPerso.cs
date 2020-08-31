@@ -263,7 +263,7 @@ public class RaycastPerso : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(bdoc);
+
 
         if (bdoc == 1)
         {

@@ -30,7 +30,7 @@ public class Read : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(Page.Count);
+
         //Page = new GameObject[4];
         /*    Page[0] = NewPage[0];
             Page[1] = Page2;
